@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 5428125820868006982}
   - component: {fileID: 1737844909942085443}
   - component: {fileID: 2051305408578146314}
+  - component: {fileID: 3830582516969026363}
   m_Layer: 5
   m_Name: Annotation
   m_TagString: Untagged
@@ -207,6 +208,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3830582516969026363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586392074992474947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 1
+  m_CheckFor3DOcclusion: 1
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &3807238521425906919
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,8 +1010,8 @@ MonoBehaviour:
   m_Annotations:
   - m_AnnotationVisualization: {fileID: 586392074992474947}
     m_MaxFOVCenterOffsetAngle: 3.14
-    m_MinAnnotationRange: 0
-    m_MaxAnnotationRange: 3
+    m_MinAnnotationRange: 0.3
+    m_MaxAnnotationRange: 1.5
 --- !u!1 &7828324788904883592
 GameObject:
   m_ObjectHideFlags: 0
