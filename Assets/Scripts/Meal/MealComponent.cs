@@ -30,9 +30,9 @@ public class MealComponent : MonoBehaviour
     private void Start()
     {
         // Make sure the highlighter is not visible at the start
-        highlighter.SetActive(false);
+        // highlighter.SetActive(false);
         // Make sure the placeholder is visible at the start
-        platform.SetActive(true);
+        // platform.SetActive(true);
     }
 
     public void Select()
