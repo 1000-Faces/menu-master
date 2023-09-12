@@ -8,32 +8,32 @@ public class FoodObject : MonoBehaviour
 
     private MealComponent mealComponent;
 
-    public MealComponent MealComponent
-    {
-        get => mealComponent;
-        set
-        {
-            // Clean the old meal component
-            if (this.mealComponent != null)
-            {
-                this.mealComponent.ClearFoodObject();
-            }
+    //public MealComponent MealComponent
+    //{
+    //    get => mealComponent;
+    //    set
+    //    {
+    //        // Clean the old meal component
+    //        if (this.mealComponent != null)
+    //        {
+    //            this.mealComponent.ClearFoodObject();
+    //        }
 
-            mealComponent = value;
+    //        mealComponent = value;
 
-            // Chec if the new meal component already has a food object
-            if (mealComponent.HasFoodObject())
-            {
-                Debug.LogError("Meal Component already has a Food Object");
-            }
+    //        // Chec if the new meal component already has a food object
+    //        if (mealComponent.HasFoodObject())
+    //        {
+    //            Debug.LogError("Meal Component already has a Food Object");
+    //        }
 
-            mealComponent.FoodObject = this;
+    //        mealComponent.FoodObject = this;
 
-            // Set position and parent
-            transform.parent = mealComponent.getFoodAnchorPoint();
-            transform.localPosition = Vector3.zero;  // Reset the position of the anchor point
-        }
-    }
+    //        // Set position and parent
+    //        transform.parent = mealComponent.getFoodAnchorPoint();
+    //        transform.localPosition = Vector3.zero;  // Reset the position of the anchor point
+    //    }
+    //}
 
     public FoodScriptableObject GetScriptableObject()
     {

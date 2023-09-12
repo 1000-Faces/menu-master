@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Utils
 {
+    public enum FoodCategory
+    {
+        Unknown,
+        MainCourse,
+        SideDish,
+        Beverage,
+        Dessert,
+    }
+
     public static void ShowToastMessage(string message)
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
