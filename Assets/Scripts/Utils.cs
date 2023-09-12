@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum FoodCategory
+{
+    Unknown,
+    MainCourse,
+    SideDish,
+    Beverage,
+    Dessert,
+}
+
 public class Utils
 {
-    public enum FoodCategory
-    {
-        Unknown,
-        MainCourse,
-        SideDish,
-        Beverage,
-        Dessert,
-    }
+    
 
     public static void ShowToastMessage(string message)
     {

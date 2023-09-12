@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Food", menuName = "ScriptableObjects/Food")]
-public class FoodScriptableObject : ScriptableObject
+[CreateAssetMenu(fileName = "NewFood", menuName = "ScriptableObjects/Food")]
+public class FoodSO : ScriptableObject
 {
     public bool requirePlatform = false;
 

@@ -6,17 +6,17 @@ using UnityEngine;
 public class MealComponent : MonoBehaviour
 {
     [SerializeField] private Transform foodAnchorPoint;
-    [SerializeField] private FoodScriptableObject food;
+    [SerializeField] private FoodSO food;
     [SerializeField] private MealComponentVisual foodCategoryVisualizer;
     
-    private Utils.FoodCategory foodCategory = Utils.FoodCategory.Unknown;
+    private FoodCategory foodCategory = FoodCategory.Unknown;
 
     public FoodObject FoodObject { get; set; }
 
     public static event EventHandler<SelectedFoodChangedEventArgs> OnSelectedFoodChanged;
     public class SelectedFoodChangedEventArgs : EventArgs
     {
-        public FoodScriptableObject SelectedFood { get; set; }
+        public FoodSO SelectedFood { get; set; }
     }
 
     private void Start()
@@ -59,7 +59,7 @@ public class MealComponent : MonoBehaviour
     //    }
     //}
 
-    public void ChangeCategory(Utils.FoodCategory category)
+    public void ChangeCategory(FoodCategory category)
     {
         foodCategoryVisualizer.SwapObject(category);
     }

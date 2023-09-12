@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FoodVisual : MonoBehaviour, IObjectSwapper <string>
+public class FoodVisual : MonoBehaviour, IObjectSwapper <string, FoodSO>
 {
     private GameObject _currentObject;
 
-    public List<FoodScriptableObject> swappableObjects = new();
+    [SerializeField] private List<FoodSO> swappableObjects = new();
 
-    public void AddObject(FoodScriptableObject obj)
+    public List<FoodSO> SwappableObjects => swappableObjects;
+
+    public void AddObject(FoodSO obj)
     {
         if (!swappableObjects.Contains(obj))
         {

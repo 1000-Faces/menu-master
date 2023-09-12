@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FoodObject : MonoBehaviour
 {
-    [SerializeField] private FoodScriptableObject foodScriptableObject;
+    [SerializeField] private FoodSO foodScriptableObject;
 
     private MealComponent mealComponent;
 
@@ -35,7 +35,7 @@ public class FoodObject : MonoBehaviour
     //    }
     //}
 
-    public FoodScriptableObject GetScriptableObject()
+    public FoodSO GetScriptableObject()
     {
         return foodScriptableObject;
     }
