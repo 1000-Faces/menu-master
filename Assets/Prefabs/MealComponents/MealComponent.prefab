@@ -554,11 +554,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3447011099612262872}
   - component: {fileID: 1376249258407484725}
+  - component: {fileID: 5742388378735547461}
   - component: {fileID: 4855784679323852348}
   - component: {fileID: -8132577770049504646}
   - component: {fileID: -8377205897124039993}
   - component: {fileID: 2665645200867760304}
-  - component: {fileID: 5742388378735547461}
   m_Layer: 7
   m_Name: MealComponent
   m_TagString: Untagged
@@ -608,6 +608,21 @@ CapsuleCollider:
   m_Height: 0.55
   m_Direction: 1
   m_Center: {x: 0, y: 0.08, z: 0}
+--- !u!114 &5742388378735547461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7674628287609192443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1537fdfc3c0cdd4cb54f522203da972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodAnchorPoint: {fileID: 3929170927798805432}
+  food: {fileID: 0}
+  foodCategoryVisualizer: {fileID: 1767606722860977455}
 --- !u!114 &4855784679323852348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,21 +1056,6 @@ MonoBehaviour:
     m_MaxFOVCenterOffsetAngle: 3.14
     m_MinAnnotationRange: 1
     m_MaxAnnotationRange: 2
---- !u!114 &5742388378735547461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7674628287609192443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1537fdfc3c0cdd4cb54f522203da972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodAnchorPoint: {fileID: 3929170927798805432}
-  food: {fileID: 0}
-  foodCategoryVisualizer: {fileID: 1767606722860977455}
 --- !u!1 &7828324788904883592
 GameObject:
   m_ObjectHideFlags: 0

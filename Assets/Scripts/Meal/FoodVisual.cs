@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FoodVisual : MonoBehaviour, IObjectSwapper <string, FoodSO>
+public class FoodVisual : MonoBehaviour, IObjectLoader <string, FoodSO>
 {
     private GameObject _currentObject;
 
@@ -19,15 +19,8 @@ public class FoodVisual : MonoBehaviour, IObjectSwapper <string, FoodSO>
         }
     }
 
-    public void SwapObject(string name)
+    public void LoadObject(string name)
     {
-        // If the object exists, remove it
-        if (_currentObject != null)
-        {
-            Destroy(_currentObject);
-        }
-
-        // spawn the new object
         try
         {
             var obj = swappableObjects.Where(obj => obj.foodName == name).FirstOrDefault();
@@ -39,5 +32,17 @@ public class FoodVisual : MonoBehaviour, IObjectSwapper <string, FoodSO>
         {
             Debug.LogError("Food not found");
         }
+    }
+
+    public void SwapObject(string name)
+    {
+        // If the object exists, remove it
+        if (_currentObject != null)
+        {
+            Destroy(_currentObject);
+        }
+
+        // spawn the new object
+        LoadObject(name);
     }
 }

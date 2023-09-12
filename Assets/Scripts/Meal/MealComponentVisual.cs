@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class MealComponentVisual : MonoBehaviour, IObjectSwapper <FoodCategory, MealCategorySO>
+public class MealComponentVisual : MonoBehaviour, IObjectLoader <FoodCategory, MealCategorySO>
 {
     private GameObject _currentObject;
     [SerializeField] private List<MealCategorySO> swappableObjects = new();
@@ -28,14 +28,8 @@ public class MealComponentVisual : MonoBehaviour, IObjectSwapper <FoodCategory, 
         }
     }
 
-    public void SwapObject(FoodCategory name)
+    public void LoadObject(FoodCategory name)
     {
-        // If the object exists, remove it
-        if (_currentObject != null)
-        {
-            Destroy(_currentObject);
-        }
-
         try
         {
             // spawn the new object
@@ -48,5 +42,16 @@ public class MealComponentVisual : MonoBehaviour, IObjectSwapper <FoodCategory, 
         {
             Debug.LogError("Meal Component not found");
         }
+    }
+
+    public void SwapObject(FoodCategory name)
+    {
+        // If the object exists, remove it
+        if (_currentObject != null)
+        {
+            Destroy(_currentObject);
+        }
+
+        LoadObject(name);
     }
 }
