@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FoodVisual : MonoBehaviour, IObjectLoader <string, FoodSO>
 {
-    private GameObject _currentObject;
+    private Transform _currentObject;
 
     [SerializeField] private List<FoodSO> swappableObjects = new();
 
@@ -25,8 +25,7 @@ public class FoodVisual : MonoBehaviour, IObjectLoader <string, FoodSO>
         {
             var obj = swappableObjects.Where(obj => obj.foodName == name).FirstOrDefault();
             // Instantiate the object
-            _currentObject = Instantiate(obj.prefab.gameObject, transform);
-            _currentObject.transform.localPosition = Vector3.zero;
+            _currentObject = Instantiate(obj.prefab, transform);
         }
         catch
         {
@@ -39,7 +38,7 @@ public class FoodVisual : MonoBehaviour, IObjectLoader <string, FoodSO>
         // If the object exists, remove it
         if (_currentObject != null)
         {
-            Destroy(_currentObject);
+            Destroy(_currentObject.gameObject);
         }
 
         // spawn the new object

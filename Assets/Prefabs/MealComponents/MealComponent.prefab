@@ -620,9 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1537fdfc3c0cdd4cb54f522203da972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodAnchorPoint: {fileID: 3929170927798805432}
-  food: {fileID: 0}
   foodCategoryVisualizer: {fileID: 1767606722860977455}
+  category: 0
 --- !u!114 &4855784679323852348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +672,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5742388378735547461}
+        m_TargetAssemblyTypeName: MealComponent, Assembly-CSharp
+        m_MethodName: OnSelectEntered
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1054,7 +1065,7 @@ MonoBehaviour:
   m_Annotations:
   - m_AnnotationVisualization: {fileID: 586392074992474947}
     m_MaxFOVCenterOffsetAngle: 3.14
-    m_MinAnnotationRange: 1
+    m_MinAnnotationRange: 0.5
     m_MaxAnnotationRange: 2
 --- !u!1 &7828324788904883592
 GameObject:

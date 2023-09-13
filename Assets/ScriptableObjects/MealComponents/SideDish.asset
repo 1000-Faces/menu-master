@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad575c8645b0c443a5b6629540be3df, type: 3}
   m_Name: SideDish
   m_EditorClassIdentifier: 
-  categoryName: 1
-  prefab: {fileID: 46722697731825457, guid: 1ace52e1bdf852a439f2150be73427da, type: 3}
+  categoryName: 2
+  prefab: {fileID: 8414828063899717427, guid: ea8bea13a01de144b9c8e664b7d89a6e, type: 3}
   categoryIcon: {fileID: 0}

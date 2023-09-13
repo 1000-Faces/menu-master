@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad575c8645b0c443a5b6629540be3df, type: 3}
   m_Name: Beverage
   m_EditorClassIdentifier: 
-  categoryName: 1
-  prefab: {fileID: 46722697731825457, guid: 1ace52e1bdf852a439f2150be73427da, type: 3}
+  categoryName: 3
+  prefab: {fileID: 1393796400543372500, guid: 38cdd058ad3681c4fbf5079748f63bc6, type: 3}
   categoryIcon: {fileID: 0}

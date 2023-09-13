@@ -2,62 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
 public class MealComponent : MonoBehaviour
 {
-    [SerializeField] private Transform foodAnchorPoint;
-    [SerializeField] private FoodSO food;
     [SerializeField] private MealComponentVisual foodCategoryVisualizer;
-    
-    private FoodCategory foodCategory = FoodCategory.Unknown;
+    [SerializeField] private FoodCategory category;
+    // private ARSelectionInteractable arSelectionInteractable;
+    // private ARPlacementInteractable arPlacementInteractable;
 
-    public FoodObject FoodObject { get; set; }
-
-    public static event EventHandler<SelectedFoodChangedEventArgs> OnSelectedFoodChanged;
-    public class SelectedFoodChangedEventArgs : EventArgs
+    public static event EventHandler<ComponentInitializedEventArgs> OnComponentInitialized;
+    public class ComponentInitializedEventArgs : EventArgs
     {
-        public FoodSO SelectedFood { get; set; }
+        public MealComponent TargetComponent { get; set; }
     }
 
     private void Start()
     {
         // visualize the meal component
-        foodCategoryVisualizer.SwapObject(foodCategory);
+        ChangeCategory(category);
+
+        Utils.ShowToastMessage("Tap to change the category");
     }
 
-    //private void SpawnFood(FoodScriptableObject foodSO)
-    //{
-    //    if (FoodObject == null)
-    //    {
-    //        Transform target;
+    public void OnSelectEntered(SelectEnterEventArgs arg0)
+    {
+        Utils.ShowToastMessage("Change the category");
 
-    //        if (foodSO.requirePlatform)
-    //        {
-    //            // show the platform
-    //            platform.SetActive(true);
-    //            // The object should be spawned on the platform
-    //            target = foodAnchorPoint;
-    //        }
-    //        else
-    //        {
-    //            // hide the platform
-    //            platform.SetActive(false);
-    //            // The object should be spawned center of the meal component
-    //            target = transform;
-    //        }
-
-    //        // spawn the food on the target location
-    //        Transform foodTransform = Instantiate(foodSO.prefab, target);
-    //        foodTransform.GetComponent<FoodObject>().MealComponent = this;
-
-    //        // fire the event
-    //        OnSelectedFoodChanged?.Invoke(this, new SelectedFoodChangedEventArgs { SelectedFood = foodSO });
-    //    }
-    //    else
-    //    {
-    //        Debug.Log($"MealComponent already has a food. (Meal component: {this.name} | Food: {food.name})");
-    //    }
-    //}
+        // fire the event
+        OnComponentInitialized?.Invoke(this, new ComponentInitializedEventArgs { TargetComponent = this });
+    }
 
     public void ChangeCategory(FoodCategory category)
     {
