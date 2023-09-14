@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FoodCategory
+namespace DineEase
 {
-    Unknown,
-    MainCourse,
-    SideDish,
-    Beverage,
-    Dessert,
-}
-
-public class Utils
-{
-    
-
-    public static void ShowToastMessage(string message)
+    public enum FoodCategory
     {
+        Unknown,
+        MainCourse,
+        SideDish,
+        Beverage,
+        Dessert,
+    }
+
+    public class Utils
+    {
+
+
+        public static void ShowToastMessage(string message)
+        {
 #if UNITY_ANDROID && !UNITY_EDITOR
         AndroidJavaClass unityPlayer = new("com.unity3d.player.UnityPlayer");
         AndroidJavaObject unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
@@ -31,7 +33,9 @@ public class Utils
             }));
         }
 #else
-        Debug.Log("Toast Message: " + message);
+            Debug.Log("Toast Message: " + message);
 #endif
+        }
     }
 }
+

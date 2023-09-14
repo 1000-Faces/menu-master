@@ -1,41 +1,85 @@
+using DineEase.AR.Interactables;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.AR;
 
-public class MealComponent : MonoBehaviour
+namespace DineEase.Meal
 {
-    [SerializeField] private MealComponentVisual foodCategoryVisualizer;
-    [SerializeField] private FoodCategory category;
-    // private ARSelectionInteractable arSelectionInteractable;
-    // private ARPlacementInteractable arPlacementInteractable;
-
-    public static event EventHandler<ComponentInitializedEventArgs> OnComponentInitialized;
-    public class ComponentInitializedEventArgs : EventArgs
+    public class ComponentSelectionEventArgs : EventArgs
     {
-        public MealComponent TargetComponent { get; set; }
+        public bool IsSelected { get; set; }
     }
 
-    private void Start()
+    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
+    public class MealComponent : MonoBehaviour
     {
-        // visualize the meal component
-        ChangeCategory(category);
+        const string CATEGORY_SELECTION_MENU = "CategoryWindow";
 
-        Utils.ShowToastMessage("Tap to change the category");
-    }
+        public static event EventHandler<ComponentSelectionEventArgs> OnComponentSelectionChanged;
 
-    public void OnSelectEntered(SelectEnterEventArgs arg0)
-    {
-        Utils.ShowToastMessage("Change the category");
+        [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
 
-        // fire the event
-        OnComponentInitialized?.Invoke(this, new ComponentInitializedEventArgs { TargetComponent = this });
-    }
+        FoodCategory m_Category = FoodCategory.Unknown;
 
-    public void ChangeCategory(FoodCategory category)
-    {
-        foodCategoryVisualizer.SwapObject(category);
+        public FoodCategory Category
+        {
+            get => m_Category;
+            set
+            {
+                m_Category = value;
+                ChangeCategory(m_Category);
+            }
+        }
+
+
+        // private ARSelectionInteractable arSelectionInteractable;
+        // private ARPlacementInteractable arPlacementInteractable;
+        ExtendedAnnotationInteractable m_ExtendedAnnotationInteractable;
+
+        void Awake()
+        {
+            // arSelectionInteractable = GetComponent<ARSelectionInteractable>();
+            // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
+            m_ExtendedAnnotationInteractable = GetComponent<ExtendedAnnotationInteractable>();
+
+            // visualize the meal component
+            ChangeCategory(m_Category);
+        }
+
+        void Start()
+        {
+            Utils.ShowToastMessage("Tap to change the category");
+        }
+
+        void ChangeCategory(FoodCategory category)
+        {
+            m_FoodCategoryVisualizer.SwapObject(m_Category);
+        }
+
+        public void OnSelectEntered(SelectEnterEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
+
+                // Enable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = true;
+            }
+        }
+
+        public void OnSelectExited(SelectExitEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
+
+                // Disable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = false;
+            }
+        }
     }
 }
