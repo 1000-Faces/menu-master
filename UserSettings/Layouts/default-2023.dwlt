@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 54
+  controlID: 29
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 117
+  controlID: 27
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 28
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 34550
+  m_LastSelectedObjectID: -35352
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2246,13 +2246,13 @@ MonoBehaviour:
       workTreeStatus: 3
     changedFilesText: 34 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-09-14T15:52:10.131+05:30
+      updatedTimeString: 2023-09-14T18:50:52.388+05:30
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-09-14T16:10:57.688+05:30
+      updatedTimeString: 2023-09-14T19:03:43.969+05:30
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-09-14T16:07:00.410+05:30
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -12429,9 +12429,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.185924, y: -2.7865045, z: 12.543436}
+    m_Target: {x: -0.09031548, y: 0.10602445, z: 0.35100198}
     speed: 2
-    m_Value: {x: 5.185924, y: -2.7865045, z: 12.543436}
+    m_Value: {x: -0.09031548, y: 0.10602445, z: 0.35100198}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -12477,13 +12477,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.110862136, y: 0.172326, z: -0.01952623, w: 0.9785696}
+    m_Target: {x: 0.2744628, y: -0.09039818, z: 0.025937863, w: 0.95696396}
     speed: 2
-    m_Value: {x: 0.110864, y: 0.17232889, z: -0.019526558, w: 0.9785861}
+    m_Value: {x: 0.27442983, y: -0.09183562, z: 0.026350128, w: 0.9568491}
   m_Size:
-    m_Target: 4.694848
+    m_Target: 2.447272
     speed: 2
-    m_Value: 4.694848
+    m_Value: 2.447272
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -12556,7 +12556,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Samples/XR Interaction Toolkit/2.4.3
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -12566,16 +12566,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Samples/XR Interaction Toolkit/2.4.3
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dashe\My Projects\DineEase\Menu Master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: 9e740000
-    m_LastClickedID: 29854
-    m_ExpandedIDs: 0000000090740000927400009474000096740000987400009a7400009c7400009e740000a2740000a4740000a6740000a8740000aa740000ac74000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 8e740000
+    m_LastClickedID: 29838
+    m_ExpandedIDs: 00000000887400008a7400008c7400008e740000907400009274000094740000967400009c7400009e740000a2740000be740000c6a5000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12603,7 +12603,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 234}
     m_SelectedIDs: 7284ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090740000927400009474000096740000987400009a7400009c7400009e740000a0740000a2740000a4740000a6740000a8740000aa740000ac740000
+    m_ExpandedIDs: 00000000887400008a7400008c7400008e74000090740000927400009474000096740000987400009a7400009c7400009e740000a0740000a2740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12751,7 +12751,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f4f1ffff42f2ffffeef6ffff0cfbffff
+      m_ExpandedIDs: f6f0feff44f1fefffaf4feff003dffff0e3dffff263dffffa650fffff450ffff5c54ffff1a62ffff6662ffff1466ffffca67ffff1680ffff6480ffff1284ffffeea1ffff3aa2ffffa2a5ffff6eb4ffffbab4ffff68b8ffff66ebffffb2ebffff62efffff18fbffffda990000869d0000a89d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
