@@ -1,105 +1,85 @@
+using DineEase.AR;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public enum MealComponentCategory
+namespace DineEase.Meal
 {
-    MainCourse,
-    SideDish,
-    Dessert,
-    Drink
-}
-
-public class MealComponent : MonoBehaviour
-{
-    [SerializeField] private GameObject highlighter;
-    [SerializeField] private GameObject platform;
-    [SerializeField] private Transform foodAnchorPoint;
-    [SerializeField] private FoodScriptableObject food;
-
-    public FoodObject FoodObject { get; set; }
-    public MealComponentCategory category;
-
-    public static event EventHandler<SelectedFoodChangedEventArgs> OnSelectedFoodChanged;
-    public class SelectedFoodChangedEventArgs : EventArgs
+    public class ComponentSelectionEventArgs : EventArgs
     {
-        public FoodScriptableObject SelectedFood { get; set; }
+        public bool IsSelected { get; set; }
     }
 
-    private void Start()
+    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
+    public class MealComponent : MonoBehaviour
     {
-        // Make sure the highlighter is not visible at the start
-        // highlighter.SetActive(false);
-        // Make sure the placeholder is visible at the start
-        // platform.SetActive(true);
-    }
+        const string CATEGORY_SELECTION_MENU = "CategoryWindow";
 
-    public void Select()
-    {
-        highlighter.SetActive(true);
+        public static event EventHandler<ComponentSelectionEventArgs> OnComponentSelectionChanged;
 
-        if (food != null)
+        [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+
+        FoodCategory m_Category = FoodCategory.Unknown;
+
+        public FoodCategory Category
         {
-            SpawnFood(food);
-        }
-    }
-
-    public void Deselect()
-    {
-        highlighter.SetActive(false);
-    }
-
-    public bool HasFoodObject()
-    {
-        return FoodObject != null;
-    }
-
-    public void ClearFoodObject()
-    {
-        if (FoodObject != null)
-        {
-            Destroy(FoodObject.gameObject);
-            FoodObject = null;
-        }
-    }
-
-    public Transform getFoodAnchorPoint()
-    {
-        return foodAnchorPoint;
-    }
-
-    private void SpawnFood(FoodScriptableObject foodSO)
-    {
-        if (FoodObject == null)
-        {
-            Transform target;
-
-            if (foodSO.requirePlatform)
+            get => m_Category;
+            set
             {
-                // show the platform
-                platform.SetActive(true);
-                // The object should be spawned on the platform
-                target = foodAnchorPoint;
+                m_Category = value;
+                ChangeCategory(m_Category);
             }
-            else
-            {
-                // hide the platform
-                platform.SetActive(false);
-                // The object should be spawned center of the meal component
-                target = transform;
-            }
-
-            // spawn the food on the target location
-            Transform foodTransform = Instantiate(foodSO.prefab, target);
-            foodTransform.GetComponent<FoodObject>().MealComponent = this;
-
-            // fire the event
-            OnSelectedFoodChanged?.Invoke(this, new SelectedFoodChangedEventArgs { SelectedFood = foodSO });
         }
-        else
+
+
+        // private ARSelectionInteractable arSelectionInteractable;
+        // private ARPlacementInteractable arPlacementInteractable;
+        ExtendedAnnotationInteractable m_ExtendedAnnotationInteractable;
+
+        void Awake()
         {
-            Debug.Log($"MealComponent already has a food. (Meal component: {this.name} | Food: {food.name})");
+            // arSelectionInteractable = GetComponent<ARSelectionInteractable>();
+            // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
+            m_ExtendedAnnotationInteractable = GetComponent<ExtendedAnnotationInteractable>();
+
+            // visualize the meal component
+            ChangeCategory(m_Category);
+        }
+
+        void Start()
+        {
+            Utils.ShowToastMessage("Tap to change the category");
+        }
+
+        void ChangeCategory(FoodCategory category)
+        {
+            m_FoodCategoryVisualizer.SwapObject(m_Category);
+        }
+
+        public void OnSelectEntered(SelectEnterEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
+
+                // Enable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = true;
+            }
+        }
+
+        public void OnSelectExited(SelectExitEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
+
+                // Disable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = false;
+            }
         }
     }
 }
