@@ -30,7 +30,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/1000-Faces/menu-master">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -39,14 +39,14 @@
   <p align="center">
     An AR food menu visualizer and marketing platform for DineEase application
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/1000-Faces/menu-master"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/1000-Faces/menu-master">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/1000-Faces/menu-master/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/1000-Faces/menu-master/issues">Request Feature</a>
   </p>
 </div>
 
@@ -175,7 +175,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/1000-Faces/menu-master/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,13 +242,13 @@ Use this space to list resources you find helpful and would like to give credit 
 [contributors-shield]: https://img.shields.io/github/contributors/1000-Faces/menu-master.svg?style=for-the-badge
 [contributors-url]: https://github.com/1000-Faces/menu-master/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/1000-Faces/menu-master.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[forks-url]: https://github.com/1000-Faces/menu-master/network/members
+[stars-shield]: https://img.shields.io/github/stars/1000-Faces/menu-master.svg?style=for-the-badge
+[stars-url]: https://github.com/1000-Faces/menu-master/stargazers
+[issues-shield]: https://img.shields.io/github/issues/1000-Faces/menu-master.svg?style=for-the-badge
+[issues-url]: https://github.com/1000-Faces/menu-master/issues
+[license-shield]: https://img.shields.io/github/license/1000-Faces/menu-master.svg?style=for-the-badge
+[license-url]: https://github.com/1000-Faces/menu-master/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
