@@ -1,4 +1,4 @@
-using DineEase.Utils;
+using DineEase;
 using System;
 using System.Collections;
 using System.Collections.Generic;

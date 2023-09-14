@@ -62,6 +62,19 @@ namespace DineEase.AR.Interactables
         }
 
         /// <inheritdoc />
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            
+            // Disable all annotations at first. For safety!
+            foreach (var annotation in m_Annotations)
+            {
+                annotation.IsEnabled = false;
+                annotation.annotationVisualization.SetActive(false);
+            }
+        }
+
+        /// <inheritdoc />
         public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
         {
             base.ProcessInteractable(updatePhase);
@@ -73,6 +86,21 @@ namespace DineEase.AR.Interactables
         public ARDetailedAnnotation GetAnnotation(string name)
         {
             return m_Annotations.Find(annotation => annotation.Name == name);
+        }
+
+        public void ActivateAnnotation(string[] annotationNames)
+        {
+            // Disable all annotations at first
+            foreach (var annotation in m_Annotations)
+            {
+                annotation.IsEnabled = false;
+            }
+
+            // Enable the annotations that are passed in
+            foreach (var name in annotationNames)
+            {
+                m_Annotations.Find(ann => ann.Name == name).IsEnabled = true;
+            }
         }
 
         void UpdateVisualizations()

@@ -1653,18 +1653,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 576319058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &576319060 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 745043343254987035, guid: ca3b29e287d2dea45b32e9a4782d2e5d,
-    type: 3}
-  m_PrefabInstance: {fileID: 576319058}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &629947235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,18 +1959,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1355591485}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1355591487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 745043343254987035, guid: ca3b29e287d2dea45b32e9a4782d2e5d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1355591485}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1400206455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2230,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532258239}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
   m_Name: 
@@ -3096,9 +3072,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ba111796921ab4b91e60ab1af90f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnMenu: {fileID: 1355591487}
-  btnAdd: {fileID: 576319060}
-  mealSelector: {fileID: 3395551098662603746}
+  m_MainCourse: {fileID: 0}
+  m_SideDish: {fileID: 0}
+  m_Beverage: {fileID: 0}
+  m_Dessert: {fileID: 0}
 --- !u!1 &1870760319
 GameObject:
   m_ObjectHideFlags: 0

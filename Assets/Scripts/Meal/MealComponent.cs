@@ -1,63 +1,85 @@
-using DineEase.Utils;
+using DineEase.AR.Interactables;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.AR;
 
-public class ComponentSelectionEventArgs : EventArgs
+namespace DineEase.Meal
 {
-    public bool IsSelected { get; set; }
-}
-
-public class MealComponent : MonoBehaviour
-{
-    [SerializeField] private MealComponentVisual foodCategoryVisualizer;
-    private FoodCategory _category = FoodCategory.Unknown;
-    // private ARSelectionInteractable arSelectionInteractable;
-    // private ARPlacementInteractable arPlacementInteractable;
-
-    public static event EventHandler<ComponentSelectionEventArgs> OnComponentSelectionChanged;
-
-    public FoodCategory Category
+    public class ComponentSelectionEventArgs : EventArgs
     {
-        get => _category;
-        set
+        public bool IsSelected { get; set; }
+    }
+
+    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
+    public class MealComponent : MonoBehaviour
+    {
+        const string CATEGORY_SELECTION_MENU = "CategoryWindow";
+
+        public static event EventHandler<ComponentSelectionEventArgs> OnComponentSelectionChanged;
+
+        [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+
+        FoodCategory m_Category = FoodCategory.Unknown;
+
+        public FoodCategory Category
         {
-            _category = value;
-            ChangeCategory(_category);
+            get => m_Category;
+            set
+            {
+                m_Category = value;
+                ChangeCategory(m_Category);
+            }
         }
-    }
 
-    private void Start()
-    {
-        // visualize the meal component
-        ChangeCategory(_category);
 
-        Utils.ShowToastMessage("Tap to change the category");
-    }
+        // private ARSelectionInteractable arSelectionInteractable;
+        // private ARPlacementInteractable arPlacementInteractable;
+        ExtendedAnnotationInteractable m_ExtendedAnnotationInteractable;
 
-    private void ChangeCategory(FoodCategory category)
-    {
-        foodCategoryVisualizer.SwapObject(category);
-    }
-
-    public void OnSelectEntered(SelectEnterEventArgs arg0)
-    {
-        if (_category == FoodCategory.Unknown)
+        void Awake()
         {
-            // Enable Add button using the event
-            OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
+            // arSelectionInteractable = GetComponent<ARSelectionInteractable>();
+            // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
+            m_ExtendedAnnotationInteractable = GetComponent<ExtendedAnnotationInteractable>();
+
+            // visualize the meal component
+            ChangeCategory(m_Category);
         }
-    }
 
-    public void OnSelectExited(SelectExitEventArgs arg0)
-    {
-        if (_category == FoodCategory.Unknown)
+        void Start()
         {
-            // Enable Add button using the event
-            OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
+            Utils.ShowToastMessage("Tap to change the category");
+        }
+
+        void ChangeCategory(FoodCategory category)
+        {
+            m_FoodCategoryVisualizer.SwapObject(m_Category);
+        }
+
+        public void OnSelectEntered(SelectEnterEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
+
+                // Enable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = true;
+            }
+        }
+
+        public void OnSelectExited(SelectExitEventArgs arg0)
+        {
+            if (m_Category == FoodCategory.Unknown)
+            {
+                // Enable Add button using the event
+                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
+
+                // Disable the Category selection UI
+                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = false;
+            }
         }
     }
 }
