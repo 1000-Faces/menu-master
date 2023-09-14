@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 4855784679323852348}
   - component: {fileID: -8132577770049504646}
   - component: {fileID: -8377205897124039993}
-  - component: {fileID: 2665645200867760304}
+  - component: {fileID: 2546209079914272315}
   m_Layer: 7
   m_Name: MealComponent
   m_TagString: Untagged
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_ARSessionOrigin: {fileID: 0}
   m_RotationRateDegreesDrag: 100
   m_RotationRateDegreesTwist: 2.5
---- !u!114 &2665645200867760304
+--- !u!114 &2546209079914272315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7674628287609192443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce49e6a0a544c46d1863a60030213a8f, type: 3}
+  m_Script: {fileID: 11500000, guid: ab6a26b012a812845a470b77656da817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1079,6 +1079,8 @@ MonoBehaviour:
     m_MaxFOVCenterOffsetAngle: 3.14
     m_MinAnnotationRange: 0.5
     m_MaxAnnotationRange: 2
+    m_Name: CategoryWindow
+    m_IsEnabled: 1
 --- !u!1 &7828324788904883592
 GameObject:
   m_ObjectHideFlags: 0
