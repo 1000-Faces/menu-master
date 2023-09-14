@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.AR;
 
-namespace DineEase.AR.Interactables
+namespace DineEase.AR
 {
     /// <summary>
     /// An annotation that appears when the user hovers over the <see cref="GameObject"/>
