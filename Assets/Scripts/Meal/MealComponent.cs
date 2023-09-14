@@ -1,4 +1,5 @@
 using DineEase.AR;
+using DineEase.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,19 +8,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace DineEase.Meal
 {
-    public class ComponentSelectionEventArgs : EventArgs
-    {
-        public bool IsSelected { get; set; }
-    }
-
     [RequireComponent(typeof(ExtendedAnnotationInteractable))]
     public class MealComponent : MonoBehaviour
     {
         const string CATEGORY_SELECTION_MENU = "CategoryWindow";
 
-        public static event EventHandler<ComponentSelectionEventArgs> OnComponentSelectionChanged;
-
         [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+        [SerializeField] CategorySelectionUI m_CategorySelectionUI;
 
         FoodCategory m_Category = FoodCategory.Unknown;
 
@@ -29,7 +24,7 @@ namespace DineEase.Meal
             set
             {
                 m_Category = value;
-                ChangeCategory(m_Category);
+                m_FoodCategoryVisualizer.SwapObject(m_Category);
             }
         }
 
@@ -44,18 +39,21 @@ namespace DineEase.Meal
             // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
             m_ExtendedAnnotationInteractable = GetComponent<ExtendedAnnotationInteractable>();
 
-            // visualize the meal component
-            ChangeCategory(m_Category);
+            // visualize the 'Unknown' meal component
+            Category = m_Category;
         }
 
         void Start()
         {
             Utils.ShowToastMessage("Tap to change the category");
+
+            // subscribe to the category selection event
+            m_CategorySelectionUI.OnCategorySelectedEvent += OnCategorySelected;
         }
 
-        void ChangeCategory(FoodCategory category)
+        void OnCategorySelected(object sender, ComponentSelectionEventArgs e)
         {
-            m_FoodCategoryVisualizer.SwapObject(m_Category);
+            Category = e.Category;
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)

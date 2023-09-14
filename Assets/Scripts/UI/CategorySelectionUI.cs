@@ -1,36 +1,58 @@
-using DineEase;
-using DineEase.Meal;
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace DineEase.UI
 {
+    public class ComponentSelectionEventArgs : EventArgs
+    {
+        public FoodCategory Category { get; set; }
+    }
+
     public class CategorySelectionUI : MonoBehaviour
     {
-        [SerializeField] Button m_MainCourse;
-        [SerializeField] Button m_SideDish;
-        [SerializeField] Button m_Beverage;
-        [SerializeField] Button m_Dessert;
+        public event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
 
-        void Start()
-        {
-            m_MainCourse.onClick.AddListener(() => OnCategorySelected(FoodCategory.MainCourse));
-            m_SideDish.onClick.AddListener(() => OnCategorySelected(FoodCategory.SideDish));
-            m_Beverage.onClick.AddListener(() => OnCategorySelected(FoodCategory.Beverage));
-            m_Dessert.onClick.AddListener(() => OnCategorySelected(FoodCategory.Dessert));
-        }
+        [SerializeField] ToggleGroup m_ToggleGroup;
 
         void OnCategorySelected(FoodCategory category)
         {
-            Utils.ShowToastMessage($"Category Selected: {category}");
+            OnCategorySelectedEvent?.Invoke(this, new ComponentSelectionEventArgs { Category = category });
         }
 
-        public void OnSelected()
+        public void OnSubmit()
         {
-            Utils.ShowToastMessage($"Category Selected");
+            var toggle = m_ToggleGroup.ActiveToggles().FirstOrDefault();
+            if (toggle != null)
+            {
+                switch (toggle.GetComponentInChildren<Text>().text)
+                {
+                    case "Main Course":
+                        OnCategorySelected(FoodCategory.MainCourse);
+                        break;
+                    case "Side Dish":
+                        OnCategorySelected(FoodCategory.SideDish);
+                        break;
+                    case "Beverage":
+                        OnCategorySelected(FoodCategory.Beverage);
+                        break;
+                    case "Dessert":
+                        OnCategorySelected(FoodCategory.Dessert);
+                        break;
+                    default:
+                        OnCategorySelected(FoodCategory.Unknown);
+                        break;
+                }
+
+                // gameObject.SetActive(false);
+                Debug.Log("Category selected: " + toggle.GetComponentInChildren<Text>().text);
+            }
+        }
+
+        public void OnClose()
+        {
+            OnCategorySelected(FoodCategory.Unknown);
         }
     }
 }
