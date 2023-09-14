@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 29
+  controlID: 267
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 27
+  controlID: 326
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -146,15 +146,15 @@ MonoBehaviour:
     y: 555
     width: 1470
     height: 384
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
   - {fileID: 21}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 28
+  controlID: 266
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 980
     height: 555
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 19}
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -35352
+  m_LastSelectedObjectID: 33280
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Git for Unity\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1467
+    x: 1470
     y: 73
-    width: 452
+    width: 449
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -431,11 +431,11 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 1877.446902
+  progressMessageClearTime: 952.1760163
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 0
+  currentBranchAndRemoteHasUpdate: 1
+  currentTrackingStatusHasUpdate: 1
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
@@ -528,32 +528,36 @@ MonoBehaviour:
     currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
-    currentBranch: feature/core
+    currentBranch: feature/ui
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 0a1aa25d695ea4175bf4920feb2742e1
-        - 9aa88db193eeb6f43ac34503716b4d1d
-        - 262e742d15f1b4d1487c6709552f51e9
-        - 3e0e333a2cee94d43ada3d9e08a82f53
         - 652960599d8c4485a9ae38409999891a
-        - a34127aee67a96d44b7d5813cbbf2e22
         - 32553174355e3a84ba39c93afa89d06f
-        - 38cdd058ad3681c4fbf5079748f63bc6
-        - 428a4aa36fab9de4c88bfd1c5c21f9e6
-        - 1ace52e1bdf852a439f2150be73427da
         - 8638f987f22d16249baa8e7599dff282
-        - a61b5d6cf95fafa4c922e533f976d354
-        - ea8bea13a01de144b9c8e664b7d89a6e
-        - 4136c82981f38fd419236ea6e6e9a12d
+        - f686fef33db9dee479044545dc43b0b6
+        - 5e92237d8dc4389429ac7799049a5972
+        - b9bc644b2e079e64a86dee20c3257ee7
+        - db5bc8f84a3bd304e88f12cb667fad1d
+        - 319dafa5c80f29f428dc1e0d03f04177
+        - d93dd55b5e3f13549ab7e819935c2b3f
+        - 6c6d684cb56fa7d4f869594e9a2dddb5
+        - a0ea40bd139aedc43b0e8374d6139437
+        - b3830b3b2f190ee46a9c88433e985221
+        - 6ac303adce39adb499d7f5c90a77c1c1
+        - 2e16046ebcbcb6742a86569d82e56cce
+        - f585a443d5224c19adcc94a236a4b2d6
+        - 2fd3e07afe5b461490fb8e314976b1b0
+        - b84cd05e1160fe34cab2585022c8cd99
+        - ad818c36731146e994540a1896ad8f24
+        - e71c638c311acc546a63dbfa61f89ab6
+        - beb4e2871579447497fe41dfb108e2cd
+        - 9e8d040e5e602e4429d8792c25d675fc
+        - 76f3439a0ae796e4b81bee3f91f888ee
         - 5cd47ffe85058e34b872a21e75f08d40
         - 6bdce89659816455b9f906fc62d19910
-        - b7dc6893b21fb45f1b98fce4a2e373f4
-        - de1c6704b87252c40b725ab09c59ad15
-        - 28601d677a871a54280496c696aadbf1
-        - 39ba111796921ab4b91e60ab1af90f19
         values:
         - path: Assets
           label: Assets
@@ -573,78 +577,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Materials
-          label: Materials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Materials\PlasticRed.mat
-          label: PlasticRed.mat
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Materials\PlasticRed.mat
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Materials\PlasticRed.mat
-            projectPath: Assets\Materials\PlasticRed.mat
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Models
-          label: Models
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models\marker.fbx
-          label: marker.fbx
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Models\marker.fbx
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\marker.fbx
-            projectPath: Assets\Models\marker.fbx
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Prefabs
           label: Prefabs
           level: 1
@@ -663,24 +595,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs\Anchor.prefab
-          label: Anchor.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\Anchor.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\Anchor.prefab
-            projectPath: Assets\Prefabs\Anchor.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Prefabs\MealComponents
           label: MealComponents
           level: 2
@@ -699,60 +613,6 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs\MealComponents\BeverageBase.prefab
-          label: BeverageBase.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\BeverageBase.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\BeverageBase.prefab
-            projectPath: Assets\Prefabs\MealComponents\BeverageBase.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Prefabs\MealComponents\MainCourse.prefab
-          label: MainCourse.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\MainCourse.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourse.prefab
-            projectPath: Assets\Prefabs\MealComponents\MainCourse.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 5
-        - path: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-          label: MainCourseBase.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourseBase.prefab
-            projectPath: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Prefabs\MealComponents\MealComponent.prefab
           label: MealComponent.prefab
           level: 3
@@ -771,11 +631,11 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
-        - path: Assets\Prefabs\MealComponents\SideDish.prefab
-          label: SideDish.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
+        - path: Assets\Samples
+          label: Samples
+          level: 1
+          isFolder: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -783,17 +643,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\SideDish.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDish.prefab
-            projectPath: Assets\Prefabs\MealComponents\SideDish.prefab
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
             indexStatus: 0
-            workTreeStatus: 5
-        - path: Assets\Prefabs\MealComponents\SideDishBase.prefab
-          label: SideDishBase.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 1
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit
+          label: XR Interaction Toolkit
+          level: 2
+          isFolder: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -801,17 +661,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\SideDishBase.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDishBase.prefab
-            projectPath: Assets\Prefabs\MealComponents\SideDishBase.prefab
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Prefabs\MealComponents\UnknownBase.prefab
-          label: UnknownBase.prefab
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3
+          label: 2.4.3
           level: 3
-          isFolder: 0
-          isContainer: 1
+          isFolder: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -819,12 +679,333 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\UnknownBase.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\UnknownBase.prefab
-            projectPath: Assets\Prefabs\MealComponents\UnknownBase.prefab
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
+          label: Starter Assets
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+          label: DemoScene.unity
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
+          label: Prefabs
+          level: 5
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
+          label: Climb
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+            Wall.prefab
+          label: Climbing Wall.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+              Wall.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+              Wall.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+          label: Ladder.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
+          label: Interactables
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+            Simple Cube.prefab
+          label: Interactable Simple Cube.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+              Simple Cube.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+              Simple Cube.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+              Simple Cube.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
+          label: Interactors
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+            Interactor.prefab
+          label: Direct Interactor.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+              Interactor.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+              Interactor.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+              Interactor.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+            Interactor.prefab
+          label: Gaze Interactor.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+              Interactor.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+              Interactor.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+            Interactor.prefab
+          label: Ray Interactor.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+              Interactor.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+              Interactor.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
+          label: Teleport
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+            Area.prefab
+          label: Teleport Area.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+              Area.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+              Area.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+              Area.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
+          label: UI_3D
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+            Button.prefab
+          label: Push Button.prefab
+          level: 7
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+              Button.prefab
+            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
+            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+              Button.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
         - path: Assets\Scenes
           label: Scenes
           level: 1
@@ -861,89 +1042,22 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\AnchorVisual.cs
-          label: AnchorVisual.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\AnchorVisual.cs
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\AnchorVisual.cs
-            projectPath: Assets\Scripts\AnchorVisual.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\UI
-          label: UI
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\UI\MainUI.cs
-          label: MainUI.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\UI\MainUI.cs
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI\MainUI.cs
-            projectPath: Assets\Scripts\UI\MainUI.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
       folders:
         keys:
         - Assets
-        - Assets\Materials
-        - Assets\Models
         - Assets\Prefabs
         - Assets\Prefabs\MealComponents
+        - Assets\Samples
+        - Assets\Samples\XR Interaction Toolkit
+        - Assets\Samples\XR Interaction Toolkit\2.4.3
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
+        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
         - Assets\Scenes
-        - Assets\Scripts
-        - Assets\Scripts\UI
-        - Packages
         - ProjectSettings
         - UserSettings
         - UserSettings\Layouts
@@ -951,42 +1065,6 @@ MonoBehaviour:
         - path: Assets
           label: Assets
           level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Materials
-          label: Materials
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Models
-          label: Models
-          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1038,8 +1116,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+        - path: Assets\Samples
+          label: Samples
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1056,26 +1134,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\UI
-          label: UI
+        - path: Assets\Samples\XR Interaction Toolkit
+          label: XR Interaction Toolkit
           level: 2
           isFolder: 1
           isContainer: 0
@@ -1092,9 +1152,153 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Packages
-          label: Packages
-          level: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3
+          label: 2.4.3
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
+          label: Starter Assets
+          level: 4
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
+          label: Prefabs
+          level: 5
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
+          label: Climb
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
+          label: Interactables
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
+          label: Interactors
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
+          label: Teleport
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
+          label: UI_3D
+          level: 6
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -1192,24 +1396,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .gitignore
-        label: .gitignore
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: .gitignore
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\.gitignore
-          projectPath: .gitignore
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: Assets
         label: Assets
         level: 0
@@ -1228,150 +1414,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Materials
-        label: Materials
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Materials\PlasticRed.mat
-        label: PlasticRed.mat
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Materials\PlasticRed.mat
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Materials\PlasticRed.mat
-          projectPath: Assets\Materials\PlasticRed.mat
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Materials\PlasticRed.mat.meta
-        label: PlasticRed.mat.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Materials\PlasticRed.mat.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Materials\PlasticRed.mat.meta
-          projectPath: Assets\Materials\PlasticRed.mat.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models
-        label: Models
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Models\cube.fbx
-        label: cube.fbx
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cube.fbx
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\cube.fbx
-          projectPath: Assets\Models\cube.fbx
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Models\cube.fbx.meta
-        label: cube.fbx.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\cube.fbx.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\cube.fbx.meta
-          projectPath: Assets\Models\cube.fbx.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Models\marker.fbx
-        label: marker.fbx
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\marker.fbx
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\marker.fbx
-          projectPath: Assets\Models\marker.fbx
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Models\marker.fbx.meta
-        label: marker.fbx.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Models\marker.fbx.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\marker.fbx.meta
-          projectPath: Assets\Models\marker.fbx.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Prefabs
         label: Prefabs
         level: 1
@@ -1390,78 +1432,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Prefabs\Anchor.prefab
-        label: Anchor.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Anchor.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\Anchor.prefab
-          projectPath: Assets\Prefabs\Anchor.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\Anchor.prefab.meta
-        label: Anchor.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Anchor.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\Anchor.prefab.meta
-          projectPath: Assets\Prefabs\Anchor.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\CubeObject.prefab
-        label: CubeObject.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\CubeObject.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\CubeObject.prefab
-          projectPath: Assets\Prefabs\CubeObject.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\CubeObject.prefab.meta
-        label: CubeObject.prefab.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\CubeObject.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\CubeObject.prefab.meta
-          projectPath: Assets\Prefabs\CubeObject.prefab.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
       - path: Assets\Prefabs\MealComponents
         label: MealComponents
         level: 2
@@ -1480,114 +1450,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Prefabs\MealComponents\BeverageBase.prefab
-        label: BeverageBase.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\BeverageBase.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\BeverageBase.prefab
-          projectPath: Assets\Prefabs\MealComponents\BeverageBase.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-        label: BeverageBase.prefab.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\MainCourse.prefab
-        label: MainCourse.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\MainCourse.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourse.prefab
-          projectPath: Assets\Prefabs\MealComponents\MainCourse.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-        label: MainCourse.prefab.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-        label: MainCourseBase.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourseBase.prefab
-          projectPath: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-        label: MainCourseBase.prefab.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Prefabs\MealComponents\MealComponent.prefab
         label: MealComponent.prefab
         level: 3
@@ -1606,11 +1468,11 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
-      - path: Assets\Prefabs\MealComponents\SideDish.prefab
-        label: SideDish.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
+      - path: Assets\Samples
+        label: Samples
+        level: 1
+        isFolder: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1618,16 +1480,16 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\SideDish.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDish.prefab
-          projectPath: Assets\Prefabs\MealComponents\SideDish.prefab
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\MealComponents\SideDish.prefab.meta
-        label: SideDish.prefab.meta
-        level: 4
-        isFolder: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit
+        label: XR Interaction Toolkit
+        level: 2
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -1636,17 +1498,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\SideDish.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDish.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\SideDish.prefab.meta
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 5
-      - path: Assets\Prefabs\MealComponents\SideDishBase.prefab
-        label: SideDishBase.prefab
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3
+        label: 2.4.3
         level: 3
-        isFolder: 0
-        isContainer: 1
+        isFolder: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1654,15 +1516,33 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\SideDishBase.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDishBase.prefab
-          projectPath: Assets\Prefabs\MealComponents\SideDishBase.prefab
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
-        label: SideDishBase.prefab.meta
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
+        label: Starter Assets
         level: 4
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+        label: DemoScene.unity
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1672,17 +1552,18 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\UnknownBase.prefab
-        label: UnknownBase.prefab
-        level: 3
-        isFolder: 0
-        isContainer: 1
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
+        label: Prefabs
+        level: 5
+        isFolder: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -1690,15 +1571,34 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\UnknownBase.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\UnknownBase.prefab
-          projectPath: Assets\Prefabs\MealComponents\UnknownBase.prefab
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
-        label: UnknownBase.prefab.meta
-        level: 4
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
+        label: Climb
+        level: 6
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+          Wall.prefab
+        label: Climbing Wall.prefab
+        level: 7
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -1708,12 +1608,239 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
-          projectPath: Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+            Wall.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+            Wall.prefab
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+        label: Ladder.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
+        label: Interactables
+        level: 6
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+          Simple Cube.prefab
+        label: Interactable Simple Cube.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+            Simple Cube.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+            Simple Cube.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+            Simple Cube.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
+        label: Interactors
+        level: 6
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+          Interactor.prefab
+        label: Direct Interactor.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+            Interactor.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct Interactor.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+            Interactor.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+          Interactor.prefab
+        label: Gaze Interactor.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+            Interactor.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+            Interactor.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+          Interactor.prefab
+        label: Ray Interactor.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+            Interactor.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+            Interactor.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
+        label: Teleport
+        level: 6
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+          Area.prefab
+        label: Teleport Area.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+            Area.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport Area.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+            Area.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
+        label: UI_3D
+        level: 6
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+          Button.prefab
+        label: Push Button.prefab
+        level: 7
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+            Button.prefab
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
+          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+            Button.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scenes
         label: Scenes
         level: 1
@@ -1747,186 +1874,6 @@ MonoBehaviour:
           path: Assets\Scenes\MealCustomizer.unity
           fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scenes\MealCustomizer.unity
           projectPath: Assets\Scenes\MealCustomizer.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\AnchorVisual.cs
-        label: AnchorVisual.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\AnchorVisual.cs
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\AnchorVisual.cs
-          projectPath: Assets\Scripts\AnchorVisual.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\AnchorVisual.cs.meta
-        label: AnchorVisual.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\AnchorVisual.cs.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\AnchorVisual.cs.meta
-          projectPath: Assets\Scripts\AnchorVisual.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\UI.meta
-        label: UI.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\UI.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI.meta
-          projectPath: Assets\Scripts\UI.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\UI
-        label: UI
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\UI\MainUI.cs
-        label: MainUI.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\UI\MainUI.cs
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI\MainUI.cs
-          projectPath: Assets\Scripts\UI\MainUI.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\UI\MainUI.cs.meta
-        label: MainUI.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\UI\MainUI.cs.meta
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI\MainUI.cs.meta
-          projectPath: Assets\Scripts\UI\MainUI.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Packages
-        label: Packages
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Packages\manifest.json
-        label: manifest.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages\manifest.json
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Packages\manifest.json
-          projectPath: Packages\manifest.json
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Packages\packages-lock.json
-        label: packages-lock.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages\packages-lock.json
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Packages\packages-lock.json
-          projectPath: Packages\packages-lock.json
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -1984,6 +1931,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -2040,195 +2005,93 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: .gitignore
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\.gitignore
-      projectPath: .gitignore
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Materials\PlasticRed.mat
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Materials\PlasticRed.mat
-      projectPath: Assets\Materials\PlasticRed.mat
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Materials\PlasticRed.mat.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Materials\PlasticRed.mat.meta
-      projectPath: Assets\Materials\PlasticRed.mat.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\cube.fbx
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\cube.fbx
-      projectPath: Assets\Models\cube.fbx
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Models\cube.fbx.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\cube.fbx.meta
-      projectPath: Assets\Models\cube.fbx.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Models\marker.fbx
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\marker.fbx
-      projectPath: Assets\Models\marker.fbx
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Models\marker.fbx.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Models\marker.fbx.meta
-      projectPath: Assets\Models\marker.fbx.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\Anchor.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\Anchor.prefab
-      projectPath: Assets\Prefabs\Anchor.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\Anchor.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\Anchor.prefab.meta
-      projectPath: Assets\Prefabs\Anchor.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\CubeObject.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\CubeObject.prefab
-      projectPath: Assets\Prefabs\CubeObject.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\CubeObject.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\CubeObject.prefab.meta
-      projectPath: Assets\Prefabs\CubeObject.prefab.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\MealComponents\BeverageBase.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\BeverageBase.prefab
-      projectPath: Assets\Prefabs\MealComponents\BeverageBase.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\BeverageBase.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\MainCourse.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourse.prefab
-      projectPath: Assets\Prefabs\MealComponents\MainCourse.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\MainCourse.prefab.meta
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourseBase.prefab
-      projectPath: Assets\Prefabs\MealComponents\MainCourseBase.prefab
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\MainCourseBase.prefab.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
     - path: Assets\Prefabs\MealComponents\MealComponent.prefab
       fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MealComponent.prefab
       projectPath: Assets\Prefabs\MealComponents\MealComponent.prefab
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Prefabs\MealComponents\SideDish.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDish.prefab
-      projectPath: Assets\Prefabs\MealComponents\SideDish.prefab
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
       originalPath: 
       indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\MealComponents\SideDish.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDish.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\SideDish.prefab.meta
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+        Wall.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
+        Wall.prefab
       originalPath: 
       indexStatus: 0
-      workTreeStatus: 5
-    - path: Assets\Prefabs\MealComponents\SideDishBase.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDishBase.prefab
-      projectPath: Assets\Prefabs\MealComponents\SideDishBase.prefab
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\SideDishBase.prefab.meta
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+        Simple Cube.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+        Simple Cube.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
+        Simple Cube.prefab
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\UnknownBase.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\UnknownBase.prefab
-      projectPath: Assets\Prefabs\MealComponents\UnknownBase.prefab
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+        Interactor.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct Interactor.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
+        Interactor.prefab
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
-      projectPath: Assets\Prefabs\MealComponents\UnknownBase.prefab.meta
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+        Interactor.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
+        Interactor.prefab
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+        Interactor.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
+        Interactor.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+        Area.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport Area.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
+        Area.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+        Button.prefab
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
+        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
+      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
+        Button.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: Assets\Scenes\MealCustomizer.unity
       fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scenes\MealCustomizer.unity
       projectPath: Assets\Scenes\MealCustomizer.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scripts\AnchorVisual.cs
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\AnchorVisual.cs
-      projectPath: Assets\Scripts\AnchorVisual.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\AnchorVisual.cs.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\AnchorVisual.cs.meta
-      projectPath: Assets\Scripts\AnchorVisual.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\UI.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI.meta
-      projectPath: Assets\Scripts\UI.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\UI\MainUI.cs
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI\MainUI.cs
-      projectPath: Assets\Scripts\UI\MainUI.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\UI\MainUI.cs.meta
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scripts\UI\MainUI.cs.meta
-      projectPath: Assets\Scripts\UI\MainUI.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Packages\manifest.json
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Packages\manifest.json
-      projectPath: Packages\manifest.json
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Packages\packages-lock.json
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Packages\packages-lock.json
-      projectPath: Packages\packages-lock.json
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -2238,21 +2101,27 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: UserSettings\Layouts\default-2023.dwlt
       fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\Layouts\default-2023.dwlt
       projectPath: UserSettings\Layouts\default-2023.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 34 changed files
+    changedFilesText: 14 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-09-14T18:50:52.388+05:30
+      updatedTimeString: 2023-09-15T00:33:11.313+05:30
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-09-14T19:03:43.969+05:30
+      updatedTimeString: 2023-09-15T00:34:50.016+05:30
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-09-15T00:34:49.729+05:30
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -11984,13 +11853,13 @@ MonoBehaviour:
     m_Tooltip: Url of the D-Naveenz remote
     m_TextWithWhitespace: "https://github.com/D-Naveenz/menu-master.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-09-12T01:38:23.181+05:30
+    updatedTimeString: 2023-09-14T21:32:27.304+05:30
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-09-12T01:44:56.589+05:30
+    updatedTimeString: 2023-09-14T21:41:14.106+05:30
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-09-12T19:11:40.837+05:30
+    updatedTimeString: 2023-09-14T21:41:14.093+05:30
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -12012,7 +11881,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: 
     m_TextWithWhitespace: "Fetch\u200B"
-  repositoryProgressValue: 0.96363634
+  repositoryProgressValue: 1
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -12429,9 +12298,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.09031548, y: 0.10602445, z: 0.35100198}
+    m_Target: {x: 538.88165, y: 986.45105, z: 6.723755}
     speed: 2
-    m_Value: {x: -0.09031548, y: 0.10602445, z: 0.35100198}
+    m_Value: {x: 538.88165, y: 986.45105, z: 6.723755}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -12477,13 +12346,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2744628, y: -0.09039818, z: 0.025937863, w: 0.95696396}
+    m_Target: {x: 0.26871598, y: -0.09055218, z: 0.02539447, w: 0.9585926}
     speed: 2
-    m_Value: {x: 0.27442983, y: -0.09183562, z: 0.026350128, w: 0.9568491}
+    m_Value: {x: 0.26872236, y: -0.09055433, z: 0.025395071, w: 0.95861536}
   m_Size:
-    m_Target: 2.447272
+    m_Target: 1101.4536
     speed: 2
-    m_Value: 2.447272
+    m_Value: 1101.4536
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -12501,7 +12370,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.08657723, y: 0.0080652265, z: 0.00070218445, w: -0.9962003}
+  m_LastSceneViewRotation: {x: 0.2744628, y: -0.09039818, z: 0.025937863, w: 0.95696396}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -12556,7 +12425,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Samples/XR Interaction Toolkit/2.4.3
+    - Assets/Prefabs/MealComponents
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -12566,16 +12435,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Samples/XR Interaction Toolkit/2.4.3
+  - Assets/Prefabs/MealComponents
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dashe\My Projects\DineEase\Menu Master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 8e740000
-    m_LastClickedID: 29838
-    m_ExpandedIDs: 00000000887400008a7400008c7400008e740000907400009274000094740000967400009c7400009e740000a2740000be740000c6a5000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c6740000
+    m_LastClickedID: 29894
+    m_ExpandedIDs: 000000008c7400008e74000090740000927400009474000096740000987400009a7400009c7400009e740000a0740000a2740000a474000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12603,7 +12472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 234}
     m_SelectedIDs: 7284ffff
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000887400008a7400008c7400008e74000090740000927400009474000096740000987400009a7400009c7400009e740000a0740000a2740000
+    m_ExpandedIDs: 000000008c7400008e74000090740000927400009474000096740000987400009a7400009c7400009e740000a0740000a2740000a4740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -12628,8 +12497,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: fc700000
+    m_LastClickedInstanceID: 28924
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e4b50000ea6f0000000000009e7600009e790000a8760000c6760000a2710000907100007a72000098790000
     m_RenameOverlay:
@@ -12751,7 +12620,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f6f0feff44f1fefffaf4feff003dffff0e3dffff263dffffa650fffff450ffff5c54ffff1a62ffff6662ffff1466ffffca67ffff1680ffff6480ffff1284ffffeea1ffff3aa2ffffa2a5ffff6eb4ffffbab4ffff68b8ffff66ebffffb2ebffff62efffff18fbffffda990000869d0000a89d0000
+      m_ExpandedIDs: 1adfffff66dfffffd0e2ffff2ef1ffff7cf1ffff30f5ffff18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

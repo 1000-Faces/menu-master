@@ -45,6 +45,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anchor
       objectReference: {fileID: 0}
+    - target: {fileID: 807173191502442546, guid: a34127aee67a96d44b7d5813cbbf2e22,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820682860122555732, guid: a34127aee67a96d44b7d5813cbbf2e22,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7992990193596599949, guid: a34127aee67a96d44b7d5813cbbf2e22,
         type: 3}
       propertyPath: m_LocalPosition.x

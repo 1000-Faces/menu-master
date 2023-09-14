@@ -3,45 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FoodVisual : MonoBehaviour, IObjectLoader <string, FoodSO>
+namespace DineEase.Meal
 {
-    private Transform _currentObject;
-
-    [SerializeField] private List<FoodSO> swappableObjects = new();
-
-    public List<FoodSO> SwappableObjects => swappableObjects;
-
-    public void AddObject(FoodSO obj)
+    public class FoodVisual : MonoBehaviour, IObjectLoader<string, FoodSO>
     {
-        if (!swappableObjects.Contains(obj))
-        {
-            swappableObjects.Add(obj);
-        }
-    }
+        private Transform _currentObject;
 
-    public void LoadObject(string name)
-    {
-        try
-        {
-            var obj = swappableObjects.Where(obj => obj.foodName == name).FirstOrDefault();
-            // Instantiate the object
-            _currentObject = Instantiate(obj.prefab, transform);
-        }
-        catch
-        {
-            Debug.LogError("Food not found");
-        }
-    }
+        [SerializeField] private List<FoodSO> swappableObjects = new();
 
-    public void SwapObject(string name)
-    {
-        // If the object exists, remove it
-        if (_currentObject != null)
+        public List<FoodSO> SwappableObjects => swappableObjects;
+
+        public void AddObject(FoodSO obj)
         {
-            Destroy(_currentObject.gameObject);
+            if (!swappableObjects.Contains(obj))
+            {
+                swappableObjects.Add(obj);
+            }
         }
 
-        // spawn the new object
-        LoadObject(name);
+        public void LoadObject(string name)
+        {
+            try
+            {
+                var obj = swappableObjects.Where(obj => obj.foodName == name).FirstOrDefault();
+                // Instantiate the object
+                _currentObject = Instantiate(obj.prefab, transform);
+            }
+            catch
+            {
+                Debug.LogError("Food not found");
+            }
+        }
+
+        public void SwapObject(string name)
+        {
+            // If the object exists, remove it
+            if (_currentObject != null)
+            {
+                Destroy(_currentObject.gameObject);
+            }
+
+            // spawn the new object
+            LoadObject(name);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace DineEase
         Dessert,
     }
 
-    public class Utils
+    public static class Utils
     {
 
 

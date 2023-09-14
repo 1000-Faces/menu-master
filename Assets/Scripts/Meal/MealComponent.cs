@@ -1,4 +1,4 @@
-using DineEase.AR.Interactables;
+using DineEase.AR;
 using System;
 using System.Collections;
 using System.Collections.Generic;

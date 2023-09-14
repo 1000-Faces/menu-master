@@ -189,6 +189,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 576199479914919262, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -223,6 +228,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229121911741278362, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625942695880243977, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2811559753260097268, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
@@ -379,6 +394,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4048185114977798738, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265122458354047880, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4265122458354047880, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_IsActive
@@ -388,6 +413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427814770420669393, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4975655953296474429, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
@@ -416,6 +446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5233782845064536172, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233782845064536172, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -423,6 +458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BtnMainCourse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487814140637196130, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7376412277606411574, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
