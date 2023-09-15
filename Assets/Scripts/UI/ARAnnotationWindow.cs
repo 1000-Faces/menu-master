@@ -30,12 +30,6 @@ namespace DineEase.UI
         /// <inheritdoc />
         protected virtual void Awake()
         {
-            // check if the annotation is null
-            if (m_Annotation == null)
-            {
-                throw new NoNullAllowedException("Annotation cannot be null");
-            }
-
             // set the visualization GameObject to this
             m_Annotation.AnnotationVisualization = gameObject;
 
@@ -62,5 +56,7 @@ namespace DineEase.UI
             // disable the annotation
             m_Annotation.IsEnabled = false;
         }
+
+        public abstract void OnSubmit();
     }
 }

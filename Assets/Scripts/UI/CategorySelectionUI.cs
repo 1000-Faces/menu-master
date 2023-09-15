@@ -7,7 +7,7 @@ namespace DineEase.UI
 {
     public class ComponentSelectionEventArgs : EventArgs
     {
-        public FoodCategory Category { get; set; }
+        public MealCategory Category { get; set; }
     }
 
     public class CategorySelectionUI : ARAnnotationWindow
@@ -16,12 +16,12 @@ namespace DineEase.UI
 
         [SerializeField] ToggleGroup m_ToggleGroup;
 
-        void OnCategorySelected(FoodCategory category)
+        void OnCategorySelected(MealCategory category)
         {
             OnCategorySelectedEvent?.Invoke(this, new ComponentSelectionEventArgs { Category = category });
         }
 
-        public void OnSubmit()
+        public override void OnSubmit()
         {
             var toggle = m_ToggleGroup.ActiveToggles().FirstOrDefault();
             if (toggle != null)
@@ -29,30 +29,30 @@ namespace DineEase.UI
                 switch (toggle.GetComponentInChildren<Text>().text)
                 {
                     case "Main Course":
-                        OnCategorySelected(FoodCategory.MainCourse);
+                        OnCategorySelected(MealCategory.MainCourse);
                         break;
                     case "Side Dish":
-                        OnCategorySelected(FoodCategory.SideDish);
+                        OnCategorySelected(MealCategory.SideDish);
                         break;
                     case "Beverage":
-                        OnCategorySelected(FoodCategory.Beverage);
+                        OnCategorySelected(MealCategory.Beverage);
                         break;
                     case "Dessert":
-                        OnCategorySelected(FoodCategory.Dessert);
+                        OnCategorySelected(MealCategory.Dessert);
                         break;
                     default:
-                        OnCategorySelected(FoodCategory.Unknown);
+                        OnCategorySelected(MealCategory.Unknown);
                         break;
                 }
 
-                // gameObject.SetActive(false);
-                Debug.Log("Category selected: " + toggle.GetComponentInChildren<Text>().text);
+                // close the window
+                base.Close();
             }
         }
 
         public override void Close()
         {
-            OnCategorySelected(FoodCategory.Unknown);
+            OnCategorySelected(MealCategory.Unknown);
 
             base.Close();
         }

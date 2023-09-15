@@ -11,14 +11,18 @@ namespace DineEase.Meal
     [RequireComponent(typeof(ExtendedAnnotationInteractable))]
     public class MealComponent : MonoBehaviour
     {
-        const string CATEGORY_SELECTION_MENU = "CategoryWindow";
-
         [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+
         [SerializeField] CategorySelectionUI m_CategorySelectionUI;
 
-        FoodCategory m_Category = FoodCategory.Unknown;
+        [SerializeField] FoodVisual m_FoodVisualizer;
 
-        public FoodCategory Category
+        [SerializeField] FoodSelectionUI m_FoodSelectionUI;
+
+
+        DineEase.MealCategory m_Category = DineEase.MealCategory.Unknown;
+
+        public DineEase.MealCategory Category
         {
             get => m_Category;
             set
@@ -28,15 +32,20 @@ namespace DineEase.Meal
             }
         }
 
+        Transform m_Food;
 
-        // private ARSelectionInteractable arSelectionInteractable;
-        // private ARPlacementInteractable arPlacementInteractable;
+        public Transform Food
+        {
+            get => m_Food;
+            set
+            {
+                m_Food = value;
+                m_FoodVisualizer.SwapObject(m_Food);
+            }
+        }
 
         void Awake()
         {
-            // arSelectionInteractable = GetComponent<ARSelectionInteractable>();
-            // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
-
             // visualize the 'Unknown' meal component
             Category = m_Category;
         }
@@ -47,6 +56,9 @@ namespace DineEase.Meal
 
             // subscribe to the category selection event
             m_CategorySelectionUI.OnCategorySelectedEvent += OnCategorySelected;
+
+            // subscribe to the food selection changing event
+            m_FoodSelectionUI.OnFoodSelectedEvent += OnFoodSelected;
         }
 
         void OnCategorySelected(object sender, ComponentSelectionEventArgs e)
@@ -54,27 +66,45 @@ namespace DineEase.Meal
             Category = e.Category;
         }
 
+        void OnFoodSelected(object sender, FoodSelectionChangedEventArgs e)
+        {
+            if (e.NewFoodSelection != null)
+            {
+                Food = e.NewFoodSelection;
+            }
+        }
+
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            if (m_Category == FoodCategory.Unknown)
+            if (m_Category == DineEase.MealCategory.Unknown)
             {
                 // Enable Add button using the event
                 // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
 
                 // Open the Category selection UI
+                Debug.Log("Opening Category Selection UI");
                 m_CategorySelectionUI.Open();
+            }
+            else
+            {
+                Debug.Log("Opening Food Selection UI");
+                m_FoodSelectionUI.Open();
             }
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            if (m_Category == FoodCategory.Unknown)
+            if (m_Category == DineEase.MealCategory.Unknown)
             {
                 // Enable Add button using the event
                 // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
 
                 // Close the Category selection UI
                 m_CategorySelectionUI.Close();
+            }
+            else
+            {
+                m_FoodSelectionUI.Close();
             }
         }
     }

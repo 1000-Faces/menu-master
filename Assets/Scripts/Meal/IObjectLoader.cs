@@ -5,15 +5,10 @@ using UnityEngine;
 
 namespace DineEase.Meal
 {
-    public interface IObjectLoader<TKey, TObj>
+    public interface IObjectLoader<T>
     {
-        List<TObj> SwappableObjects { get; }
+        void LoadObject(T obj);
 
-        void AddObject(TObj obj);
-
-        void LoadObject(TKey name);
-
-        void SwapObject(TKey name);
+        void SwapObject(T obj);
     }
-
 }

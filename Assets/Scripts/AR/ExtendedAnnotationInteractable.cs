@@ -139,19 +139,20 @@ namespace DineEase.AR
                 {
                     ARDetailedAnnotation annotation = annotationWindow.Annotation;
 
-                    // If annotation is disabled, simply hide the visual and skip the heavy processing.
-                    if (!annotation.IsEnabled)
-                    {
-                        annotation.AnnotationVisualization.SetActive(false);
-                        continue;
-                    }
-                    
                     var enableThisFrame =
                         (Mathf.Acos(dotProd) < annotation.MaxFOVCenterOffsetAngle &&
                         distSquare >= Mathf.Pow(annotation.MinAnnotationRange, 2f) &&
                         distSquare < Mathf.Pow(annotation.MaxAnnotationRange, 2f));
+
                     if (annotation.AnnotationVisualization != null)
                     {
+                        // If annotation is disabled, simply hide the visual.
+                        if (!annotation.IsEnabled)
+                        {
+                            annotation.AnnotationVisualization.SetActive(false);
+                            continue;
+                        }
+
                         if (enableThisFrame && !annotation.AnnotationVisualization.activeSelf)
                             annotation.AnnotationVisualization.SetActive(true);
                         else if (!enableThisFrame && annotation.AnnotationVisualization.activeSelf)
