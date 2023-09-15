@@ -31,13 +31,11 @@ namespace DineEase.Meal
 
         // private ARSelectionInteractable arSelectionInteractable;
         // private ARPlacementInteractable arPlacementInteractable;
-        ExtendedAnnotationInteractable m_ExtendedAnnotationInteractable;
 
         void Awake()
         {
             // arSelectionInteractable = GetComponent<ARSelectionInteractable>();
             // arPlacementInteractable = GetComponent<ARPlacementInteractable>();
-            m_ExtendedAnnotationInteractable = GetComponent<ExtendedAnnotationInteractable>();
 
             // visualize the 'Unknown' meal component
             Category = m_Category;
@@ -63,8 +61,8 @@ namespace DineEase.Meal
                 // Enable Add button using the event
                 // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
 
-                // Enable the Category selection UI
-                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = true;
+                // Open the Category selection UI
+                m_CategorySelectionUI.Open();
             }
         }
 
@@ -75,8 +73,8 @@ namespace DineEase.Meal
                 // Enable Add button using the event
                 // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
 
-                // Disable the Category selection UI
-                m_ExtendedAnnotationInteractable.GetAnnotation(CATEGORY_SELECTION_MENU).IsEnabled = false;
+                // Close the Category selection UI
+                m_CategorySelectionUI.Close();
             }
         }
     }

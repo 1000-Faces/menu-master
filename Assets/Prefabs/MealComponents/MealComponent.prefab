@@ -1075,13 +1075,8 @@ MonoBehaviour:
   m_XROrigin: {fileID: 0}
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
-  m_Annotations:
-  - m_AnnotationVisualization: {fileID: 1936005446525092806}
-    m_MaxFOVCenterOffsetAngle: 3.14
-    m_MinAnnotationRange: 0.5
-    m_MaxAnnotationRange: 2
-    m_Name: CategoryWindow
-    m_IsEnabled: 0
+  m_AnnotationWindows:
+  - {fileID: 7207574718708239228}
 --- !u!1 &7828324788904883592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,19 +1541,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb50775068b62a4488add08afd4a502, type: 3}
---- !u!1 &1936005446525092806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2222614749885977913, guid: 9cb50775068b62a4488add08afd4a502,
-    type: 3}
-  m_PrefabInstance: {fileID: 289992777128138495}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7207574718708239228 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6917583865860464003, guid: 9cb50775068b62a4488add08afd4a502,
     type: 3}
   m_PrefabInstance: {fileID: 289992777128138495}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936005446525092806}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39ba111796921ab4b91e60ab1af90f19, type: 3}

@@ -10,7 +10,7 @@ namespace DineEase.UI
         public FoodCategory Category { get; set; }
     }
 
-    public class CategorySelectionUI : MonoBehaviour
+    public class CategorySelectionUI : ARAnnotationWindow
     {
         public event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
 
@@ -50,9 +50,11 @@ namespace DineEase.UI
             }
         }
 
-        public void OnClose()
+        public override void Close()
         {
             OnCategorySelected(FoodCategory.Unknown);
+
+            base.Close();
         }
     }
 }
