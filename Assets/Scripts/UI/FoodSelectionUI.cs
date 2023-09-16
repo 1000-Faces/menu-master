@@ -21,7 +21,7 @@ namespace DineEase.UI
         public event EventHandler<FoodSelectionChangedEventArgs> OnFoodSelectedEvent;
 
         [SerializeField] TextMeshProUGUI m_SelectionText;
-        [SerializeField] FoodSO m_TestFoodSO; // for debuging
+        [SerializeField] FoodMenuUI m_FoodMenuUI;
 
         FoodSO m_CurrentFoodSelection;
 
@@ -35,7 +35,7 @@ namespace DineEase.UI
             m_SelectionText.text = SELECTION_TEXT_DEFAULT;
         }
 
-        void OnFoodSelected(FoodSO newFoodSelection)
+        public void OnFoodSelected(FoodSO newFoodSelection)
         {
             if (m_CurrentFoodSelection != newFoodSelection)
             {
@@ -46,12 +46,9 @@ namespace DineEase.UI
             }
         }
 
-        public void OnSlectionChanged()
+        public void OnSlection()
         {
-            // Change the text to the new selection
-            m_SelectionText.text = m_TestFoodSO.foodName;
-
-            OnFoodSelected(m_TestFoodSO);
+            m_FoodMenuUI.Open();
         }
 
         public override void OnSubmit()
