@@ -32,15 +32,15 @@ namespace DineEase.Meal
             }
         }
 
-        Transform m_Food;
+        FoodSO m_Food;
 
-        public Transform Food
+        public FoodSO Food
         {
             get => m_Food;
             set
             {
                 m_Food = value;
-                m_FoodVisualizer.SwapObject(m_Food);
+                m_FoodVisualizer.SwapObject(m_Food.prefab);
             }
         }
 
@@ -70,6 +70,15 @@ namespace DineEase.Meal
         {
             if (e.NewFoodSelection != null)
             {
+                if (e.NewFoodSelection.requirePlatform)
+                {
+                    m_FoodCategoryVisualizer.ToggleVisibility(false);
+                }
+                else
+                {
+                    m_FoodCategoryVisualizer.ToggleVisibility(true);
+                }
+
                 Food = e.NewFoodSelection;
             }
         }
@@ -82,12 +91,11 @@ namespace DineEase.Meal
                 // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
 
                 // Open the Category selection UI
-                Debug.Log("Opening Category Selection UI");
                 m_CategorySelectionUI.Open();
             }
             else
             {
-                Debug.Log("Opening Food Selection UI");
+                m_FoodSelectionUI.Title = m_Category.ToString();
                 m_FoodSelectionUI.Open();
             }
         }

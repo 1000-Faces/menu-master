@@ -69,6 +69,14 @@ namespace DineEase.Meal
 
             LoadObject(category);
         }
+
+        public void ToggleVisibility(bool visible)
+        {
+            if (_currentObject != null)
+            {
+                _currentObject.gameObject.SetActive(visible);
+            }
+        }
     }
 }
 

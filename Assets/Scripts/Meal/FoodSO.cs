@@ -10,10 +10,14 @@ namespace DineEase.Meal
     {
         public bool requirePlatform = false;
 
-        public Transform prefab;
+        public string foodName;
+
+        public string description;
 
         public Sprite foodIcon;
 
-        public string foodName;
+        public Transform prefab;
+
+        public float price;
     }
 }

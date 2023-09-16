@@ -11,7 +11,7 @@ namespace DineEase.UI
 {
     public class FoodSelectionChangedEventArgs : EventArgs
     {
-        public Transform NewFoodSelection { get; set; }
+        public FoodSO NewFoodSelection { get; set; }
     }
 
     public class FoodSelectionUI : ARAnnotationWindow
@@ -42,7 +42,7 @@ namespace DineEase.UI
                 m_NewFoodSelection = newFoodSelection;
 
                 // fire off the event to change the food visual
-                OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = newFoodSelection.prefab });
+                OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = newFoodSelection });
             }
         }
 
@@ -60,7 +60,7 @@ namespace DineEase.UI
             m_CurrentFoodSelection = m_NewFoodSelection;
 
             // fire off the event to change the food visual
-            OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection.prefab });
+            OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection });
 
             // Close the window.
             // The default close method is overriden. So It sould be used to the simple close method of the base class
@@ -78,7 +78,7 @@ namespace DineEase.UI
                 m_SelectionText.text = m_CurrentFoodSelection.foodName;
 
                 // fire off the event to change the food visual back to the previous selection
-                OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection.prefab });
+                OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection });
             }
 
             // Close the window.
