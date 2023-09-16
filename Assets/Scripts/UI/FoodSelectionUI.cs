@@ -49,18 +49,7 @@ namespace DineEase.UI
             m_SelectionText.text = m_NewFoodSelection.foodName;
         }
 
-        //public void OnFoodSelected(FoodSO newFoodSelection)
-        //{
-        //    if (m_CurrentFoodSelection != newFoodSelection)
-        //    {
-        //        m_NewFoodSelection = newFoodSelection;
-
-        //        // fire off the event to change the food visual
-        //        OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = newFoodSelection });
-        //    }
-        //}
-
-        public void OnSlection()
+        public void OnFoodMenuOpen()
         {
             m_FoodMenuUI.Open();
         }

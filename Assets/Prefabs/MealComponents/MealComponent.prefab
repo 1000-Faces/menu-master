@@ -1242,7 +1242,7 @@ PrefabInstance:
     - target: {fileID: 61556879443645285, guid: 4ecf9938183a254479042c863e9ca0ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnSlection
+      value: OnFoodMenuOpen
       objectReference: {fileID: 0}
     - target: {fileID: 61556879443645285, guid: 4ecf9938183a254479042c863e9ca0ae,
         type: 3}
@@ -1545,6 +1545,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3447011099612262872}
     m_Modifications:
+    - target: {fileID: 648167507393543928, guid: 4a2ac4321a447ec40a48ec3e0fd38ef3,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1261280390967348120, guid: 4a2ac4321a447ec40a48ec3e0fd38ef3,
         type: 3}
       propertyPath: m_SizeDelta.y

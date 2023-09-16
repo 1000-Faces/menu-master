@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 namespace DineEase.UI
 {
+    [RequireComponent(typeof(Toggle))]
     public class FoodListItem : MonoBehaviour
     {
         [SerializeField] FoodSO m_Food;
@@ -28,6 +29,17 @@ namespace DineEase.UI
         [SerializeField] TextMeshProUGUI m_DescriptionText;
 
         [SerializeField] TextMeshProUGUI m_PriceText;
+
+        Toggle m_CheckBox;
+
+        public Toggle CheckBox => m_CheckBox;
+
+
+        private void Awake()
+        {
+            m_CheckBox = GetComponent<Toggle>();
+            if (!m_CheckBox.group) m_CheckBox.group = GetComponentInParent<ToggleGroup>();
+        }
 
         void Start()
         {

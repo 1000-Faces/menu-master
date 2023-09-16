@@ -16,53 +16,62 @@ namespace DineEase.UI
     {
         public event EventHandler<FoodSelectedEventArgs> OnFoodSelectedEvent;
 
-        const string TEXT_DEFAULT = "N/A";
-
-        [SerializeField] GameObject m_FoodListItemPrefab;
+        [SerializeField] GameObject m_FoodListItemTemplate;
         [SerializeField] ToggleGroup m_ToggleGroup;
-        [SerializeField] FoodSO m_TestFood;
+        [SerializeField] List<FoodSO> m_FoodList;
 
         FoodListItem m_CurrentFoodListItem;
 
-        FoodListItem m_NewFoodItem;
+        FoodListItem m_NewFoodListItem;
 
         protected override void Start()
         {
             base.Start();
 
-            for (int i = 0; i < 5; i++)
+            // Create the list of food items
+            foreach (var item in m_FoodList)
             {
-                // FoodSO food = FoodManager.Instance.FoodList[i];
+                // Instantiate
+                CreateFoodlistItem(item);
+            }
 
-                GameObject foodListItem = Instantiate(m_FoodListItemPrefab, m_FoodListItemPrefab.transform.parent);
-                foodListItem.name = "Pizza" + i;
-
-                FoodListItem foodListItemComponent = foodListItem.GetComponent<FoodListItem>();
-                foodListItemComponent.Food = m_TestFood;
-
-                Toggle toggle = foodListItem.GetComponent<Toggle>();
-                toggle.group = m_ToggleGroup;
-
-                toggle.onValueChanged.AddListener((bool value) =>
-                {
-                    if (value)
-                    {
-                        m_CurrentFoodListItem = foodListItemComponent;
-                    }
-                });
+            // Select the current food item if available
+            if (m_CurrentFoodListItem != null)
+            {
+                m_CurrentFoodListItem.CheckBox.isOn = true;
             }
 
             // Destroy the template list item
-            Destroy(m_FoodListItemPrefab);
+            Destroy(m_FoodListItemTemplate);
+        }
+
+        void CreateFoodlistItem(FoodSO food)
+        {
+            // Instantiate GameObject using the template
+            GameObject foodListItem = Instantiate(m_FoodListItemTemplate, m_FoodListItemTemplate.transform.parent);
+            foodListItem.name = "ListItem: " + food.foodName;
+
+            // Instantiate FoodListItem Data
+            FoodListItem foodListItemComponent = foodListItem.GetComponent<FoodListItem>();
+            foodListItemComponent.Food = food;
+
+            // Add event listner
+            foodListItemComponent.CheckBox.onValueChanged.AddListener((bool value) =>
+            {
+                if (value)
+                {
+                    m_NewFoodListItem = foodListItemComponent;
+                }
+            });
         }
 
         public override void OnSubmit()
         {
             // Change current food selection to the new one
-            m_NewFoodItem = m_CurrentFoodListItem;
-            
+            m_CurrentFoodListItem = m_NewFoodListItem;
+
             // fire off the event to change the food visual
-            OnFoodSelectedEvent?.Invoke(this, new FoodSelectedEventArgs { NewFoodSelection = m_TestFood });
+            OnFoodSelectedEvent?.Invoke(this, new FoodSelectedEventArgs { NewFoodSelection = m_CurrentFoodListItem.Food });
 
             Close();
         }
