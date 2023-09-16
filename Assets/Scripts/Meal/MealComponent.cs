@@ -64,6 +64,8 @@ namespace DineEase.Meal
         void OnCategorySelected(object sender, ComponentSelectionEventArgs e)
         {
             Category = e.Category;
+
+            OpenFoodSelectionUI();
         }
 
         void OnFoodSelected(object sender, FoodSelectionChangedEventArgs e)
@@ -83,20 +85,22 @@ namespace DineEase.Meal
             }
         }
 
+        private void OpenFoodSelectionUI()
+        {
+            m_FoodSelectionUI.Title = m_Category.ToString();
+            m_FoodSelectionUI.Open();
+        }
+
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
             if (m_Category == DineEase.MealCategory.Unknown)
             {
-                // Enable Add button using the event
-                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
-
                 // Open the Category selection UI
                 m_CategorySelectionUI.Open();
             }
             else
             {
-                m_FoodSelectionUI.Title = m_Category.ToString();
-                m_FoodSelectionUI.Open();
+                OpenFoodSelectionUI();
             }
         }
 
@@ -104,9 +108,6 @@ namespace DineEase.Meal
         {
             if (m_Category == DineEase.MealCategory.Unknown)
             {
-                // Enable Add button using the event
-                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
-
                 // Close the Category selection UI
                 m_CategorySelectionUI.Close();
             }

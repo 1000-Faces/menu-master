@@ -1,4 +1,5 @@
 using DineEase.Meal;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,15 @@ using UnityEngine.UI;
 
 namespace DineEase.UI
 {
+    public class FoodSelectedEventArgs : EventArgs
+    {
+        public FoodSO NewFoodSelection { get; set; }
+    }
+
     public class FoodMenuUI : ARAnnotationWindow
     {
+        public event EventHandler<FoodSelectedEventArgs> OnFoodSelectedEvent;
+
         const string TEXT_DEFAULT = "N/A";
 
         [SerializeField] GameObject m_FoodListItemPrefab;
@@ -50,7 +58,13 @@ namespace DineEase.UI
 
         public override void OnSubmit()
         {
-            throw new System.NotImplementedException();
+            // Change current food selection to the new one
+            m_NewFoodItem = m_CurrentFoodListItem;
+            
+            // fire off the event to change the food visual
+            OnFoodSelectedEvent?.Invoke(this, new FoodSelectedEventArgs { NewFoodSelection = m_TestFood });
+
+            Close();
         }
     }
 }
