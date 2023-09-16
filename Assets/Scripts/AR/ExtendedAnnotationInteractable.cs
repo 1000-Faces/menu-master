@@ -1,5 +1,5 @@
+using DineEase.UI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -10,24 +10,21 @@ namespace DineEase.AR
     /// <summary>
     /// An annotation that appears when the user hovers over the <see cref="GameObject"/>
     /// that the <see cref="ARAnnotationInteractable"/> component governing this annotation is attached to.
-    /// This is a extended version of <see cref="ARAnnotation"/> that allows for more detailed annotations.
+    /// This is a variation of <see cref="ARAnnotation"/> that allows for more detailed annotations.
     /// </summary>
     [Serializable]
-    public class ARDetailedAnnotation : ARAnnotation
+    public class ARDetailedAnnotation
     {
-        [SerializeField]
-        [Tooltip("The identifier of the annotation element")]
-        string m_Name;
+        GameObject m_AnnotationVisualization;
 
         /// <summary>
-        /// The identifier of the annotation element
+        /// The visualization <see cref="GameObject"/> that will become active when the user hovers over this object.
         /// </summary>
-        public string Name
+        public GameObject AnnotationVisualization
         {
-            get => m_Name;
-            set => m_Name = value;
+            get => m_AnnotationVisualization;
+            set => m_AnnotationVisualization = value;
         }
-
 
         [SerializeField]
         [Tooltip("The state of the annotation")]
@@ -41,6 +38,45 @@ namespace DineEase.AR
             get => m_IsEnabled;
             set => m_IsEnabled = value;
         }
+
+        [SerializeField]
+        [Tooltip("Maximum angle (in radians) off of FOV horizontal center to show annotation.")]
+        float m_MaxFOVCenterOffsetAngle = 0.25f;
+
+        /// <summary>
+        /// Maximum angle (in radians) off of FOV horizontal center to show annotation.
+        /// </summary>
+        public float MaxFOVCenterOffsetAngle
+        {
+            get => m_MaxFOVCenterOffsetAngle;
+            set => m_MaxFOVCenterOffsetAngle = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Minimum range to show annotation at.")]
+        float m_MinAnnotationRange;
+
+        /// <summary>
+        /// Minimum range to show annotation at.
+        /// </summary>
+        public float MinAnnotationRange
+        {
+            get => m_MinAnnotationRange;
+            set => m_MinAnnotationRange = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Maximum range to show annotation at.")]
+        float m_MaxAnnotationRange = 10f;
+
+        /// <summary>
+        /// Maximum range to show annotation at.
+        /// </summary>
+        public float MaxAnnotationRange
+        {
+            get => m_MaxAnnotationRange;
+            set => m_MaxAnnotationRange = value;
+        }
     }
 
     /// <summary>
@@ -50,28 +86,15 @@ namespace DineEase.AR
     public class ExtendedAnnotationInteractable : ARBaseGestureInteractable
     {
         [SerializeField]
-        List<ARDetailedAnnotation> m_Annotations = new();
+        List<ARAnnotationWindow> m_AnnotationWindows = new();
 
         /// <summary>
         /// The list of annotations.
         /// </summary>
-        public List<ARDetailedAnnotation> Annotations
+        public List<ARAnnotationWindow> AnnotationWindows
         {
-            get => m_Annotations;
-            set => m_Annotations = value;
-        }
-
-        /// <inheritdoc />
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            
-            // Disable all annotations at first. For safety!
-            foreach (var annotation in m_Annotations)
-            {
-                annotation.IsEnabled = false;
-                annotation.annotationVisualization.SetActive(false);
-            }
+            get => m_AnnotationWindows;
+            set => m_AnnotationWindows = value;
         }
 
         /// <inheritdoc />
@@ -83,34 +106,15 @@ namespace DineEase.AR
                 UpdateVisualizations();
         }
 
-        public ARDetailedAnnotation GetAnnotation(string name)
-        {
-            return m_Annotations.Find(annotation => annotation.Name == name);
-        }
-
-        public void ActivateAnnotation(string[] annotationNames)
-        {
-            // Disable all annotations at first
-            foreach (var annotation in m_Annotations)
-            {
-                annotation.IsEnabled = false;
-            }
-
-            // Enable the annotations that are passed in
-            foreach (var name in annotationNames)
-            {
-                m_Annotations.Find(ann => ann.Name == name).IsEnabled = true;
-            }
-        }
-
+        /// <inheritdoc />
         void UpdateVisualizations()
         {
             // Disable all annotations if not hovered.
             if (!isHovered)
             {
-                foreach (var annotation in m_Annotations)
+                foreach (var annotation in m_AnnotationWindows)
                 {
-                    annotation.annotationVisualization.SetActive(false);
+                    annotation.Annotation.AnnotationVisualization.SetActive(false);
                 }
             }
             else
@@ -131,30 +135,33 @@ namespace DineEase.AR
                 fromCamera.Normalize();
                 var dotProd = Vector3.Dot(fromCamera, cameraTransform.forward);
 
-                foreach (var annotation in m_Annotations)
+                foreach (var annotationWindow in m_AnnotationWindows)
                 {
-                    // If annotation is disabled, simply hide the visual and skip the heavy processing.
-                    if (!annotation.IsEnabled)
-                    {
-                        annotation.annotationVisualization.SetActive(false);
-                        continue;
-                    }
-                    
+                    ARDetailedAnnotation annotation = annotationWindow.Annotation;
+
                     var enableThisFrame =
-                        (Mathf.Acos(dotProd) < annotation.maxFOVCenterOffsetAngle &&
-                        distSquare >= Mathf.Pow(annotation.minAnnotationRange, 2f) &&
-                        distSquare < Mathf.Pow(annotation.maxAnnotationRange, 2f));
-                    if (annotation.annotationVisualization != null)
+                        (Mathf.Acos(dotProd) < annotation.MaxFOVCenterOffsetAngle &&
+                        distSquare >= Mathf.Pow(annotation.MinAnnotationRange, 2f) &&
+                        distSquare < Mathf.Pow(annotation.MaxAnnotationRange, 2f));
+
+                    if (annotation.AnnotationVisualization != null)
                     {
-                        if (enableThisFrame && !annotation.annotationVisualization.activeSelf)
-                            annotation.annotationVisualization.SetActive(true);
-                        else if (!enableThisFrame && annotation.annotationVisualization.activeSelf)
-                            annotation.annotationVisualization.SetActive(false);
+                        // If annotation is disabled, simply hide the visual.
+                        if (!annotation.IsEnabled)
+                        {
+                            annotation.AnnotationVisualization.SetActive(false);
+                            continue;
+                        }
+
+                        if (enableThisFrame && !annotation.AnnotationVisualization.activeSelf)
+                            annotation.AnnotationVisualization.SetActive(true);
+                        else if (!enableThisFrame && annotation.AnnotationVisualization.activeSelf)
+                            annotation.AnnotationVisualization.SetActive(false);
 
                         // If enabled, align to camera
-                        if (annotation.annotationVisualization.activeSelf)
+                        if (annotation.AnnotationVisualization.activeSelf)
                         {
-                            annotation.annotationVisualization.transform.rotation =
+                            annotation.AnnotationVisualization.transform.rotation =
                                 Quaternion.LookRotation(fromCamera, transform.up);
                         }
                     }
