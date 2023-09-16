@@ -12,12 +12,12 @@ namespace DineEase.Meal
     {
         [SerializeField]
         [Tooltip("The food category (enum)")]
-        FoodCategory m_CategoryName;
+        DineEase.MealCategory m_CategoryName;
 
         /// <summary>
         /// The food category (enum)
         /// </summary>
-        public FoodCategory CategoryName { get => m_CategoryName; set => m_CategoryName = value; }
+        public DineEase.MealCategory CategoryName { get => m_CategoryName; set => m_CategoryName = value; }
 
         [SerializeField]
         [Tooltip("The gamobject of the category")]
@@ -29,7 +29,7 @@ namespace DineEase.Meal
         public Transform Prefab { get => m_Prefab; set => m_Prefab = value; }
     }
 
-    public class MealComponentVisual : MonoBehaviour, IObjectLoader<FoodCategory, MealCategory>
+    public class MealComponentVisual : MonoBehaviour, IObjectLoader<DineEase.MealCategory>
     {
         private Transform _currentObject;
         [SerializeField] private List<MealCategory> m_SwappableObjects;
@@ -44,12 +44,12 @@ namespace DineEase.Meal
             }
         }
 
-        public void LoadObject(FoodCategory name)
+        public void LoadObject(DineEase.MealCategory category)
         {
             try
             {
                 // spawn the new object
-                var obj = m_SwappableObjects.Where(obj => obj.CategoryName == name).FirstOrDefault();
+                var obj = m_SwappableObjects.Where(obj => obj.CategoryName == category).FirstOrDefault();
                 // Instantiate the object
                 _currentObject = Instantiate(obj.Prefab, transform);
             }
@@ -59,7 +59,7 @@ namespace DineEase.Meal
             }
         }
 
-        public void SwapObject(FoodCategory name)
+        public void SwapObject(DineEase.MealCategory category)
         {
             // If the object exists, remove it
             if (_currentObject != null)
@@ -67,7 +67,15 @@ namespace DineEase.Meal
                 Destroy(_currentObject.gameObject);
             }
 
-            LoadObject(name);
+            LoadObject(category);
+        }
+
+        public void ToggleVisibility(bool visible)
+        {
+            if (_currentObject != null)
+            {
+                _currentObject.gameObject.SetActive(visible);
+            }
         }
     }
 }

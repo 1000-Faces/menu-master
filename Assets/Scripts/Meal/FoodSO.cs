@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewFood", menuName = "ScriptableObjects/Food")]
-public class FoodSO : ScriptableObject
+
+namespace DineEase.Meal
 {
-    public bool requirePlatform = false;
+    [CreateAssetMenu(fileName = "NewFood", menuName = "ScriptableObjects/Food")]
+    public class FoodSO : ScriptableObject
+    {
+        public bool requirePlatform = false;
 
-    public Transform prefab;
+        public string foodName;
 
-    public Sprite foodIcon;
+        public string description;
 
-    public string foodName;
+        public Sprite foodIcon;
+
+        public Transform prefab;
+
+        public float price;
+    }
 }
