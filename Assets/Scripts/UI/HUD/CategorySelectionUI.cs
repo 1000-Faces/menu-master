@@ -1,3 +1,4 @@
+using DineEase.Meal;
 using System;
 using System.Linq;
 using UnityEngine;
@@ -7,18 +8,36 @@ namespace DineEase.UI
 {
     public class ComponentSelectionEventArgs : EventArgs
     {
+        public Placeholder Placeholder { get; set; }
+
         public MealCategory Category { get; set; }
     }
 
-    public class CategorySelectionUI : ARAnnotationWindow
+    public class CategorySelectionUI : MessageBox
     {
-        public event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
+        public static event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
 
         [SerializeField] ToggleGroup m_ToggleGroup;
 
+        Placeholder m_Placeholder;
+
+        void Start()
+        {
+            // subscribe to the placeholder selection event
+            Placeholder.OnPlaceholderSelectedEvent += OnPlaceholderSelected;
+        }
+
+        void OnPlaceholderSelected(object sender, ToggleEventArgs e)
+        {
+            if (e.Toggle)
+            {
+                m_Placeholder = (Placeholder)sender;
+            }
+        }
+
         void OnCategorySelected(MealCategory category)
         {
-            OnCategorySelectedEvent?.Invoke(this, new ComponentSelectionEventArgs { Category = category });
+            if (m_Placeholder) OnCategorySelectedEvent?.Invoke(this, new ComponentSelectionEventArgs { Placeholder = m_Placeholder, Category = category });
         }
 
         public override void OnSubmit()
@@ -46,15 +65,8 @@ namespace DineEase.UI
                 }
 
                 // close the window
-                base.Close();
+                OnClose(1);
             }
-        }
-
-        public override void Close()
-        {
-            OnCategorySelected(MealCategory.Unknown);
-
-            base.Close();
         }
     }
 }

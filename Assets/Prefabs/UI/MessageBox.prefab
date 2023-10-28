@@ -155,9 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageTitle: {fileID: 4904483084041501114}
-  messageContent: {fileID: 4138143701021614078}
-  messageOKButton: {fileID: 203901315981611079}
-  messageCancelButton: {fileID: 8815226007870431750}
 --- !u!1 &4334812106081424355
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +650,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4341420994126494076}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.MessageBox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8669360112538813694, guid: 7502372001b15864882024cc7ad4058b,
         type: 3}
       propertyPath: m_Name
@@ -669,18 +701,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1118881613960039277}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8815226007870431750 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1118881613960039277}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5544525672592952775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,18 +834,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0fca63192bb0bc40bf208bead0b949f, type: 3}
---- !u!114 &203901315981611079 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
-    type: 3}
-  m_PrefabInstance: {fileID: 5544525672592952775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &4551895620013496435 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8347853236109071796, guid: a0fca63192bb0bc40bf208bead0b949f,

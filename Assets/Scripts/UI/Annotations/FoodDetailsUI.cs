@@ -1,8 +1,5 @@
 using DineEase.Meal;
-using DineEase.UI;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,7 +11,7 @@ namespace DineEase.UI
         public FoodSO NewFoodSelection { get; set; }
     }
 
-    public class FoodSelectionUI : ARAnnotationWindow
+    public class FoodDetailsUI : ARAnnotationWindow
     {
         const string SELECTION_TEXT_DEFAULT = "Select a food";
 

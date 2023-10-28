@@ -8,16 +8,16 @@ using UnityEngine;
 namespace DineEase.Meal
 {
     [Serializable]
-    public class MealCategory
+    public class MealCategoryVisual
     {
         [SerializeField]
         [Tooltip("The food category (enum)")]
-        DineEase.MealCategory m_CategoryName;
+        MealCategory m_CategoryName;
 
         /// <summary>
         /// The food category (enum)
         /// </summary>
-        public DineEase.MealCategory CategoryName { get => m_CategoryName; set => m_CategoryName = value; }
+        public MealCategory CategoryName { get => m_CategoryName; set => m_CategoryName = value; }
 
         [SerializeField]
         [Tooltip("The gamobject of the category")]
@@ -29,14 +29,14 @@ namespace DineEase.Meal
         public Transform Prefab { get => m_Prefab; set => m_Prefab = value; }
     }
 
-    public class MealComponentVisual : MonoBehaviour, IObjectLoader<DineEase.MealCategory>
+    public class MealComponentBaseVisual : MonoBehaviour, IObjectLoader<MealCategory>
     {
         private Transform _currentObject;
-        [SerializeField] private List<MealCategory> m_SwappableObjects;
+        [SerializeField] private List<MealCategoryVisual> m_SwappableObjects;
 
-        public List<MealCategory> SwappableObjects => m_SwappableObjects;
+        public List<MealCategoryVisual> SwappableObjects => m_SwappableObjects;
 
-        public void AddObject(MealCategory obj)
+        public void AddObject(MealCategoryVisual obj)
         {
             if (!m_SwappableObjects.Contains(obj))
             {
@@ -44,7 +44,7 @@ namespace DineEase.Meal
             }
         }
 
-        public void LoadObject(DineEase.MealCategory category)
+        public void LoadObject(MealCategory category)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace DineEase.Meal
             }
         }
 
-        public void SwapObject(DineEase.MealCategory category)
+        public void SwapObject(MealCategory category)
         {
             // If the object exists, remove it
             if (_currentObject != null)
