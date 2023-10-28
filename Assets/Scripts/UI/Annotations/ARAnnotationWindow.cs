@@ -6,18 +6,8 @@ using UnityEngine.UI;
 
 namespace DineEase.UI
 {
-    public abstract class ARAnnotationWindow : MonoBehaviour
+    public abstract class ARAnnotationWindow : FormWindow
     {
-        [SerializeField] TextMeshProUGUI m_Title;
-
-        public string Title
-        {
-            get => m_Title.text;
-            set => m_Title.text = value;
-        }
-
-        [SerializeField] Button m_CloseButton;
-
         [SerializeField] ARDetailedAnnotation m_Annotation;
 
         public ARDetailedAnnotation Annotation
@@ -25,7 +15,6 @@ namespace DineEase.UI
             get => m_Annotation;
             set => m_Annotation = value;
         }
-
 
         /// <inheritdoc />
         protected virtual void Awake()
@@ -38,25 +27,20 @@ namespace DineEase.UI
             gameObject.SetActive(false);
         }
 
-        /// <inheritdoc />
-        protected virtual void Start()
-        {
-            // handling events
-            m_CloseButton.onClick.AddListener(Close);
-        }
-
-        public virtual void Open()
+        public override void Open(string title)
         {
             // enable the annotation
             m_Annotation.IsEnabled = true;
+
+            base.Open(title);
         }
 
-        public virtual void Close()
+        public override void Close(int state)
         {
             // disable the annotation
             m_Annotation.IsEnabled = false;
-        }
 
-        public abstract void OnSubmit();
+            base.Close(state);
+        }
     }
 }

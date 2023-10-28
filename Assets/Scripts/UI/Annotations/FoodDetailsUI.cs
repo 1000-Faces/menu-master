@@ -6,80 +6,55 @@ using UnityEngine;
 
 namespace DineEase.UI
 {
-    public class FoodSelectionChangedEventArgs : EventArgs
-    {
-        public FoodSO NewFoodSelection { get; set; }
-    }
-
     public class FoodDetailsUI : ARAnnotationWindow
     {
         const string SELECTION_TEXT_DEFAULT = "Select a food";
 
-        public event EventHandler<FoodSelectionChangedEventArgs> OnFoodSelectedEvent;
-
         [SerializeField] TextMeshProUGUI m_SelectionText;
         [SerializeField] FoodMenuUI m_FoodMenuUI;
-
-        FoodSO m_CurrentFoodSelection;
-
-        FoodSO m_NewFoodSelection;
 
         protected override void Awake()
         {
             base.Awake();
 
             // set the default text
-            m_SelectionText.text = SELECTION_TEXT_DEFAULT;
+            Title = SELECTION_TEXT_DEFAULT;
         }
 
-        protected override void Start()
+        protected void Start()
         {
-            base.Start();
-
-            // subscribe to the food selection event
-            m_FoodMenuUI.OnFoodSelectedEvent += OnFoodSelected;
+            // subscribe to the FoodMenuUI response event
+            OnFormResponseEvent += OnFoodMenuFormResponse;
         }
 
-        private void OnFoodSelected(object sender, FoodSelectedEventArgs e)
+        private void OnFoodMenuFormResponse(object sender, FormResponse e)
         {
-            m_NewFoodSelection = e.NewFoodSelection;
-            m_SelectionText.text = m_NewFoodSelection.foodName;
+            // if the food menu is closed in success, There is no need to show this. The response is 0 (success)
+            if (sender is FoodMenuUI && e.Response == 0 && IsOpened)
+            {
+                Close(0);
+            }
+        }
+
+        public void LoadSelectedFood(FoodSO food)
+        {
+            m_SelectionText.text = food.foodName;
         }
 
         public void OnFoodMenuOpen()
         {
-            m_FoodMenuUI.Open();
+            m_FoodMenuUI.Open($"Select food from {Title} Category");
         }
 
-        public override void OnSubmit()
+        public override void Close(int state)
         {
-            // Change current food selection to the new one
-            m_CurrentFoodSelection = m_NewFoodSelection;
-
-            // fire off the event to change the food visual
-            OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection });
-
-            // Close the window.
-            // The default close method is overriden. So It sould be used to the simple close method of the base class
-            base.Close();
-        }
-
-        public override void Close()
-        {
-            // Reset the new food selection
-            m_NewFoodSelection = null;
-
-            if (m_CurrentFoodSelection)
+            if (state != 0)
             {
-                // Reset the text
-                m_SelectionText.text = m_CurrentFoodSelection.foodName;
-
-                // fire off the event to change the food visual back to the previous selection
-                OnFoodSelectedEvent?.Invoke(this, new FoodSelectionChangedEventArgs { NewFoodSelection = m_CurrentFoodSelection });
+                // Close the food menu if it is open
+                m_FoodMenuUI.Close(state);
             }
 
-            // Close the window.
-            base.Close();
+            base.Close(state);
         }
     }
 }

@@ -7,27 +7,27 @@ using UnityEngine.UI;
 
 namespace DineEase.UI
 {
-    public class FoodSelectedEventArgs : EventArgs
-    {
-        public FoodSO NewFoodSelection { get; set; }
-    }
-
     public class FoodMenuUI : ARAnnotationWindow
     {
-        public event EventHandler<FoodSelectedEventArgs> OnFoodSelectedEvent;
-
         [SerializeField] GameObject m_FoodListItemTemplate;
         [SerializeField] ToggleGroup m_ToggleGroup;
         [SerializeField] List<FoodSO> m_FoodList;
+
+        MealComponent m_MealComponent;
 
         FoodListItem m_CurrentFoodListItem;
 
         FoodListItem m_NewFoodListItem;
 
-        protected override void Start()
+        protected override void Awake()
         {
-            base.Start();
+            m_MealComponent = GetComponentInParent<MealComponent>();
 
+            base.Awake();
+        }
+
+        protected void Start()
+        {
             // Create the list of food items
             foreach (var item in m_FoodList)
             {
@@ -68,12 +68,12 @@ namespace DineEase.UI
         public override void OnSubmit()
         {
             // Change current food selection to the new one
-            m_CurrentFoodListItem = m_NewFoodListItem;
+            if (m_NewFoodListItem) m_CurrentFoodListItem = m_NewFoodListItem;
 
-            // fire off the event to change the food visual
-            OnFoodSelectedEvent?.Invoke(this, new FoodSelectedEventArgs { NewFoodSelection = m_CurrentFoodListItem.Food });
+            // Change the food selection in the meal component
+            m_MealComponent.OnSelectedFoodChange(m_CurrentFoodListItem.Food);
 
-            Close();
+            base.OnSubmit();
         }
     }
 }

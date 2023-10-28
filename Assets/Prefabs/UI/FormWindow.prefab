@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 292413129999722954}
   - component: {fileID: 4341420994126494076}
   m_Layer: 5
-  m_Name: MessageBox
+  m_Name: FormWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35a6090bc69a64c834d83cc0afeab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageTitle: {fileID: 4904483084041501114}
+  title: {fileID: 4904483084041501114}
 --- !u!1 &4334812106081424355
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 8280768360919495558}
   - component: {fileID: 4138143701021614078}
   m_Layer: 5
-  m_Name: MessageContent
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 5201585603883298033}
   - component: {fileID: 4904483084041501114}
   m_Layer: 5
-  m_Name: MessageTitle
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 6811240588710725693}
   - component: {fileID: 9172560708627170557}
   m_Layer: 5
-  m_Name: Title
+  m_Name: TitleBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

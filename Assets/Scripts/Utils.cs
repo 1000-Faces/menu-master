@@ -6,7 +6,6 @@ namespace DineEase
 {
     public enum MealCategory
     {
-        Unknown,
         MainCourse,
         SideDish,
         Beverage,

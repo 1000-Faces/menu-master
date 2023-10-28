@@ -13,7 +13,7 @@ namespace DineEase.UI
         public MealCategory Category { get; set; }
     }
 
-    public class CategorySelectionUI : MessageBox
+    public class CategorySelectionUI : FormWindow
     {
         public static event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
 
@@ -60,12 +60,12 @@ namespace DineEase.UI
                         OnCategorySelected(MealCategory.Dessert);
                         break;
                     default:
-                        OnCategorySelected(MealCategory.Unknown);
+                        OnCategorySelected(MealCategory.MainCourse);
                         break;
                 }
 
                 // close the window
-                OnClose(1);
+                Close(1);
             }
         }
     }

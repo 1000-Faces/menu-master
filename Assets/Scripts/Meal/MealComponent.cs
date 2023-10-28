@@ -1,5 +1,6 @@
 using DineEase.AR;
 using DineEase.UI;
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,13 +8,12 @@ namespace DineEase.Meal
 {
     [RequireComponent(typeof(ExtendedAnnotationInteractable))]
     [RequireComponent(typeof(ExtendedSelectionInteractable))]
-    public class MealComponent : MessageBox
+    public class MealComponent : MonoBehaviour
     {
         [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
-
         [SerializeField] FoodVisual m_FoodVisualizer;
-
-        [SerializeField] FoodDetailsUI m_FoodSelectionUI;
+        [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
+        [SerializeField] FoodMenuUI m_FoodMenuUI;
 
 
         MealCategory m_Category;
@@ -40,31 +40,21 @@ namespace DineEase.Meal
             }
         }
 
-        void Start()
+        public void OnSelectedFoodChange(FoodSO newFood)
         {
-            // subscribe to the food selection changing event
-            m_FoodSelectionUI.OnFoodSelectedEvent += OnFoodSelected;
-        }
+            m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
 
-        void OnFoodSelected(object sender, FoodSelectionChangedEventArgs e)
-        {
-            if (e.NewFoodSelection != null)
-            {
-                m_FoodCategoryVisualizer.ToggleVisibility(e.NewFoodSelection.requirePlatform);
-
-                Food = e.NewFoodSelection;
-            }
+            Food = newFood;
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            m_FoodSelectionUI.Title = m_Category.ToString();
-            m_FoodSelectionUI.Open();
+            m_FoodDetailsWindow.Open(m_Category.ToString());
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            m_FoodSelectionUI.Close();
+            m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
         }
     }
 }

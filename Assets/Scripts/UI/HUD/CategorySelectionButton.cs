@@ -15,12 +15,12 @@ namespace DineEase.UI
             // subscribe to the placeholder selection event
             Placeholder.OnPlaceholderSelectedEvent += OnPlaceholderSelected;
             // subscribe to the message box response event
-            MessageBox.OnMessageBoxResponseEvent += OnMessageBoxResponse;
+            FormWindow.OnFormResponseEvent += OnMessageBoxResponse;
         }
 
-        private void OnMessageBoxResponse(object sender, MessageBoxResponse e)
+        private void OnMessageBoxResponse(object sender, FormResponse e)
         {
-            if (e.Response == 1)
+            if (sender is CategorySelectionUI && e.Response == 0)
             {
                 // Hide the button
                 gameObject.SetActive(false);
