@@ -1,29 +1,32 @@
 using DineEase.AR;
 using DineEase.UI;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace DineEase.Meal
 {
-    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
+    public class MealSelectionChangedEventArgs : EventArgs
+    {
+        public bool IsSelected { get; set; }
+
+        public MealCategory Category { get; set; }
+    }
+    
     public class MealComponent : MonoBehaviour
     {
-        [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+        public static event EventHandler<MealSelectionChangedEventArgs> OnMealSelectionChangedEvent;
 
-        [SerializeField] CategorySelectionUI m_CategorySelectionUI;
-
+        [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
+        [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
+        [SerializeField] FoodMenuUI m_FoodMenuUI;
 
-        [SerializeField] FoodSelectionUI m_FoodSelectionUI;
 
+        MealCategory m_Category;
 
-        DineEase.MealCategory m_Category = DineEase.MealCategory.Unknown;
-
-        public DineEase.MealCategory Category
-        {
+        public MealCategory Category
+        { 
             get => m_Category;
             set
             {
@@ -43,77 +46,42 @@ namespace DineEase.Meal
                 m_FoodVisualizer.SwapObject(m_Food.prefab);
             }
         }
-
-        void Awake()
-        {
-            // visualize the 'Unknown' meal component
-            Category = m_Category;
-        }
-
+        
         void Start()
         {
+            // Set the default category to the placeholder(unknown)
+            Category = MealCategory.Unknown;
+
             Utils.ShowToastMessage("Tap to change the category");
-
-            // subscribe to the category selection event
-            m_CategorySelectionUI.OnCategorySelectedEvent += OnCategorySelected;
-
-            // subscribe to the food selection changing event
-            m_FoodSelectionUI.OnFoodSelectedEvent += OnFoodSelected;
         }
 
-        void OnCategorySelected(object sender, ComponentSelectionEventArgs e)
+        public void OnSelectedFoodChange(FoodSO newFood)
         {
-            Category = e.Category;
-        }
+            m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
 
-        void OnFoodSelected(object sender, FoodSelectionChangedEventArgs e)
-        {
-            if (e.NewFoodSelection != null)
-            {
-                if (e.NewFoodSelection.requirePlatform)
-                {
-                    m_FoodCategoryVisualizer.ToggleVisibility(false);
-                }
-                else
-                {
-                    m_FoodCategoryVisualizer.ToggleVisibility(true);
-                }
-
-                Food = e.NewFoodSelection;
-            }
+            Food = newFood;
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            if (m_Category == DineEase.MealCategory.Unknown)
+            if (Category != MealCategory.Unknown)
             {
-                // Enable Add button using the event
-                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = true });
+                m_FoodDetailsWindow.Open(m_Category.ToString(), Food);
+                
+            }
 
-                // Open the Category selection UI
-                m_CategorySelectionUI.Open();
-            }
-            else
-            {
-                m_FoodSelectionUI.Title = m_Category.ToString();
-                m_FoodSelectionUI.Open();
-            }
+            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            if (m_Category == DineEase.MealCategory.Unknown)
+            if (Category != MealCategory.Unknown)
             {
-                // Enable Add button using the event
-                // OnComponentSelectionChanged?.Invoke(this, new ComponentSelectionEventArgs { IsSelected = false });
+                m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
+                
+            }
 
-                // Close the Category selection UI
-                m_CategorySelectionUI.Close();
-            }
-            else
-            {
-                m_FoodSelectionUI.Close();
-            }
+            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
         }
     }
 }

@@ -8,16 +8,18 @@ namespace DineEase.Meal
     [CreateAssetMenu(fileName = "NewFood", menuName = "ScriptableObjects/Food")]
     public class FoodSO : ScriptableObject
     {
-        public bool requirePlatform = false;
-
         public string foodName;
 
         public string description;
+
+        public bool isAvailable;
+
+        public float price;
 
         public Sprite foodIcon;
 
         public Transform prefab;
 
-        public float price;
+        public bool requirePlatform = false;
     }
 }
