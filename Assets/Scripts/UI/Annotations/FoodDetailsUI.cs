@@ -41,11 +41,6 @@ namespace DineEase.UI
             m_SelectionText.text = food.foodName;
         }
 
-        public void OnFoodMenuOpen()
-        {
-            m_FoodMenuUI.Open($"Select food from {Title} Category");
-        }
-
         public override void Close(int state)
         {
             if (state != 0)
@@ -55,6 +50,13 @@ namespace DineEase.UI
             }
 
             base.Close(state);
+        }
+
+        public override void OnSubmit()
+        {
+            m_FoodMenuUI.Open($"Select food from {Title} Category");
+
+            base.OnSubmit();
         }
     }
 }

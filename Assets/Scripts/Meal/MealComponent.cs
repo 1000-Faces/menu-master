@@ -6,10 +6,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace DineEase.Meal
 {
-    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
-    [RequireComponent(typeof(ExtendedSelectionInteractable))]
+    public class ToggleEventArgs : EventArgs
+    {
+        public bool Toggle { get; set; }
+    }
+    
     public class MealComponent : MonoBehaviour
     {
+        public static event EventHandler<ToggleEventArgs> OnPlaceholderSelectedEvent;
+
         [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
         [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
@@ -39,6 +44,14 @@ namespace DineEase.Meal
                 m_FoodVisualizer.SwapObject(m_Food.prefab);
             }
         }
+        
+        void Start()
+        {
+            // Set the default category to the placeholder(unknown)
+            Category = MealCategory.Unknown;
+
+            Utils.ShowToastMessage("Tap to change the category");
+        }
 
         public void OnSelectedFoodChange(FoodSO newFood)
         {
@@ -49,12 +62,27 @@ namespace DineEase.Meal
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            m_FoodDetailsWindow.Open(m_Category.ToString());
+            if (Category == MealCategory.Unknown)
+            {
+                OnPlaceholderSelectedEvent?.Invoke(this, new ToggleEventArgs { Toggle = true });
+            }
+            else
+            {
+                m_FoodDetailsWindow.Open(m_Category.ToString());
+            }
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
+            if (Category == MealCategory.Unknown)
+            {
+                OnPlaceholderSelectedEvent?.Invoke(this, new ToggleEventArgs { Toggle = true });
+            }
+            else
+            {
+                m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
+            }
+            
         }
     }
 }

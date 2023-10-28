@@ -8,36 +8,38 @@ namespace DineEase.UI
 {
     public class ComponentSelectionEventArgs : EventArgs
     {
-        public Placeholder Placeholder { get; set; }
+        public MealComponent Component { get; set; }
 
         public MealCategory Category { get; set; }
     }
 
     public class CategorySelectionUI : FormWindow
     {
-        public static event EventHandler<ComponentSelectionEventArgs> OnCategorySelectedEvent;
-
         [SerializeField] ToggleGroup m_ToggleGroup;
 
-        Placeholder m_Placeholder;
+        MealComponent m_Placeholder;
 
         void Start()
         {
             // subscribe to the placeholder selection event
-            Placeholder.OnPlaceholderSelectedEvent += OnPlaceholderSelected;
+            MealComponent.OnPlaceholderSelectedEvent += OnPlaceholderSelected;
         }
 
         void OnPlaceholderSelected(object sender, ToggleEventArgs e)
         {
             if (e.Toggle)
             {
-                m_Placeholder = (Placeholder)sender;
+                m_Placeholder = (MealComponent)sender;
+            }
+            else
+            {
+                if (IsOpened) Close(1);
             }
         }
 
         void OnCategorySelected(MealCategory category)
         {
-            if (m_Placeholder) OnCategorySelectedEvent?.Invoke(this, new ComponentSelectionEventArgs { Placeholder = m_Placeholder, Category = category });
+            if (m_Placeholder) m_Placeholder.Category = category;
         }
 
         public override void OnSubmit()
@@ -60,12 +62,12 @@ namespace DineEase.UI
                         OnCategorySelected(MealCategory.Dessert);
                         break;
                     default:
-                        OnCategorySelected(MealCategory.MainCourse);
+                        OnCategorySelected(MealCategory.Unknown);
                         break;
                 }
 
                 // close the window
-                Close(1);
+                Close(0);
             }
         }
     }

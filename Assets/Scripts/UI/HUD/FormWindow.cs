@@ -50,7 +50,7 @@ namespace DineEase.UI
             // transform.Find("Message").GetComponent<TextMeshProUGUI>().text = message;
         }
 
-        private void Hide()
+        protected virtual void Hide()
         {
             // hide the message box
             gameObject.SetActive(false);

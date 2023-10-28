@@ -35,12 +35,12 @@ namespace DineEase.UI
             base.Open(title);
         }
 
-        public override void Close(int state)
+        protected override void Hide()
         {
             // disable the annotation
             m_Annotation.IsEnabled = false;
 
-            base.Close(state);
+            base.Hide();
         }
     }
 }

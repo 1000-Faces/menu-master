@@ -39,8 +39,8 @@ RectTransform:
   - {fileID: 4551895620013496435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 720
+  m_MinWidth: 600
   m_MinHeight: 320
-  m_PreferredWidth: 720
+  m_PreferredWidth: 600
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b35a6090bc69a64c834d83cc0afeab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 4904483084041501114}
+  m_Title: {fileID: 4904483084041501114}
 --- !u!1 &4334812106081424355
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,12 +673,17 @@ PrefabInstance:
     - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClose
+      value: Close
       objectReference: {fileID: 0}
     - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DineEase.UI.MessageBox, Assembly-CSharp
+      value: DineEase.UI.FormWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8490105254164769131, guid: 7502372001b15864882024cc7ad4058b,
         type: 3}
@@ -718,6 +723,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.0999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4341420994126494076}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSubmit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.FormWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7340620276188530929, guid: a0fca63192bb0bc40bf208bead0b949f,
         type: 3}

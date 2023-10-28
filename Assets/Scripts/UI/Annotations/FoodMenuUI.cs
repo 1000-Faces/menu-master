@@ -9,22 +9,14 @@ namespace DineEase.UI
 {
     public class FoodMenuUI : ARAnnotationWindow
     {
+        [SerializeField] MealComponent m_MealComponent;
         [SerializeField] GameObject m_FoodListItemTemplate;
         [SerializeField] ToggleGroup m_ToggleGroup;
         [SerializeField] List<FoodSO> m_FoodList;
 
-        MealComponent m_MealComponent;
-
         FoodListItem m_CurrentFoodListItem;
 
         FoodListItem m_NewFoodListItem;
-
-        protected override void Awake()
-        {
-            m_MealComponent = GetComponentInParent<MealComponent>();
-
-            base.Awake();
-        }
 
         protected void Start()
         {

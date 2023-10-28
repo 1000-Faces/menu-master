@@ -232,7 +232,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6501946170742586028}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.9999921
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.042797573, y: 0.013104171}
+  m_AnchoredPosition: {x: -0.042797573, y: 0.04679916}
   m_SizeDelta: {x: -1.617344, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8752122685085265455
@@ -777,6 +777,81 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6975068939344080975}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSubmit
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.FoodMenuUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6975068939344080975}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.ARAnnotationWindow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2811559753260097268, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
@@ -1012,6 +1087,7 @@ MonoBehaviour:
   m_FoodListItemTemplate: {fileID: 6709221856358547233}
   m_ToggleGroup: {fileID: 4309043834578983305}
   m_FoodList: []
+  m_MealComponent: {fileID: 0}
 --- !u!1001 &6809458683484724060
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,46 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2955984184560745707}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.FoodDetailsUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289009489888747294, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3390458755175459621, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -116,22 +156,22 @@ PrefabInstance:
     - target: {fileID: 3531452981302346673, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3531452981302346673, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3531452981302346673, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 3531452981302346673, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -261.40396
       objectReference: {fileID: 0}
     - target: {fileID: 4975655953296474429, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
@@ -157,6 +197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoodDetailsWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487814140637196130, guid: b7b76fa24aa715945865a232d658e10d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -226,8 +271,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 614577552231610382, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 614577552231610382, guid: 26504feaef1893d48b9b52fdba1d1e38,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 2955984184560745707}
+    - target: {fileID: 614577552231610382, guid: 26504feaef1893d48b9b52fdba1d1e38,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSubmit
+      objectReference: {fileID: 0}
+    - target: {fileID: 614577552231610382, guid: 26504feaef1893d48b9b52fdba1d1e38,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DineEase.UI.FoodDetailsUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3517179217638128840, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}

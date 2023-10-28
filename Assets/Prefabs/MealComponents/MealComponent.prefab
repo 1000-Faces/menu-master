@@ -716,8 +716,8 @@ MonoBehaviour:
   m_ExcludeUITouches: 1
   m_ARSessionOrigin: {fileID: 0}
   m_AnnotationWindows:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7956207003138241028}
+  - {fileID: 473155269230678230}
 --- !u!1 &7828324788904883592
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SwappableObjects:
+  - m_CategoryName: 0
+    m_Prefab: {fileID: 5151340250684345997, guid: 4136c82981f38fd419236ea6e6e9a12d,
+      type: 3}
   - m_CategoryName: 1
     m_Prefab: {fileID: 46722697731825457, guid: 1ace52e1bdf852a439f2150be73427da,
       type: 3}
@@ -902,22 +905,22 @@ PrefabInstance:
     - target: {fileID: 743307514552181371, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 743307514552181371, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 743307514552181371, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 363.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 743307514552181371, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2955984184560745707, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
@@ -1069,25 +1072,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodDetailsWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5680198188906891589, guid: 34f1e122325eaa04a9ab48531dfa6c05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6590048540817433667, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6590048540817433667, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6590048540817433667, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 153.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6590048540817433667, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1330,6 +1338,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodMenuWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5680198188906891589, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6501946170742586028, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1345,6 +1358,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_MealComponent
+      value: 
+      objectReference: {fileID: 5742388378735547461}
     - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_FoodList.Array.size
