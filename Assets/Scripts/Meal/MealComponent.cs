@@ -6,14 +6,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 namespace DineEase.Meal
 {
-    public class ToggleEventArgs : EventArgs
+    public class MealSelectionChangedEventArgs : EventArgs
     {
-        public bool Toggle { get; set; }
+        public bool IsSelected { get; set; }
+
+        public MealCategory Category { get; set; }
     }
     
     public class MealComponent : MonoBehaviour
     {
-        public static event EventHandler<ToggleEventArgs> OnPlaceholderSelectedEvent;
+        public static event EventHandler<MealSelectionChangedEventArgs> OnMealSelectionChangedEvent;
 
         [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
@@ -62,27 +64,24 @@ namespace DineEase.Meal
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            if (Category == MealCategory.Unknown)
+            if (Category != MealCategory.Unknown)
             {
-                OnPlaceholderSelectedEvent?.Invoke(this, new ToggleEventArgs { Toggle = true });
+                m_FoodDetailsWindow.Open(m_Category.ToString(), Food);
+                
             }
-            else
-            {
-                m_FoodDetailsWindow.Open(m_Category.ToString());
-            }
+
+            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            if (Category == MealCategory.Unknown)
-            {
-                OnPlaceholderSelectedEvent?.Invoke(this, new ToggleEventArgs { Toggle = true });
-            }
-            else
+            if (Category != MealCategory.Unknown)
             {
                 m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
+                
             }
-            
+
+            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
         }
     }
 }

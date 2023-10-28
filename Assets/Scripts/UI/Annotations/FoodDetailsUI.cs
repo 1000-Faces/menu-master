@@ -11,7 +11,10 @@ namespace DineEase.UI
         const string SELECTION_TEXT_DEFAULT = "Select a food";
 
         [SerializeField] TextMeshProUGUI m_SelectionText;
+        [SerializeField] TextMeshProUGUI m_PriceText;
         [SerializeField] FoodMenuUI m_FoodMenuUI;
+
+        public FoodSO FoodSO { get; set; }
 
         protected override void Awake()
         {
@@ -36,9 +39,19 @@ namespace DineEase.UI
             }
         }
 
-        public void LoadSelectedFood(FoodSO food)
+        public void Open(string title, FoodSO food)
         {
-            m_SelectionText.text = food.foodName;
+            // Set the title
+            Title = title;
+
+            if (food)
+            {
+                // Set details
+                m_SelectionText.text = food.foodName;
+                m_PriceText.text = food.price.ToString();
+            }
+
+            base.Open(title);
         }
 
         public override void Close(int state)

@@ -16,7 +16,7 @@ namespace DineEase.UI
                 if (!backButtonPressed)
                 {
                     backButtonPressed = true;
-                    Utils.ShowToastMessage("Press again to Exit!");
+                    Utils.ShowToastMessage("Press again to Exit");
                     StartCoroutine(ResetBackButtonPressed());
                 }
                 else

@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.042797573, y: 0.04679916}
+  m_AnchoredPosition: {x: -0.042797573, y: -0.028758105}
   m_SizeDelta: {x: -1.617344, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8752122685085265455
@@ -1084,10 +1084,10 @@ MonoBehaviour:
     m_MaxFOVCenterOffsetAngle: 3.14
     m_MinAnnotationRange: 0.3
     m_MaxAnnotationRange: 5
+  m_MealComponent: {fileID: 0}
   m_FoodListItemTemplate: {fileID: 6709221856358547233}
   m_ToggleGroup: {fileID: 4309043834578983305}
   m_FoodList: []
-  m_MealComponent: {fileID: 0}
 --- !u!1001 &6809458683484724060
 PrefabInstance:
   m_ObjectHideFlags: 0

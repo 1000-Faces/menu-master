@@ -2,6 +2,7 @@ using DineEase.Meal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,8 @@ namespace DineEase.UI
         [SerializeField] MealComponent m_MealComponent;
         [SerializeField] GameObject m_FoodListItemTemplate;
         [SerializeField] ToggleGroup m_ToggleGroup;
-        [SerializeField] List<FoodSO> m_FoodList;
+        
+        List<FoodSO> m_FoodList;
 
         FoodListItem m_CurrentFoodListItem;
 
@@ -20,6 +22,16 @@ namespace DineEase.UI
 
         protected void Start()
         {
+            // Load the food list from resources
+            m_FoodList = Resources.LoadAll<FoodSO>("ScriptableObjects/Foods").ToList();
+
+            // Verify the food list is not empty
+            if (m_FoodList.Count == 0)
+            {
+                Debug.LogError("No food items found in the resources folder!");
+                return;
+            }
+            
             // Create the list of food items
             foreach (var item in m_FoodList)
             {

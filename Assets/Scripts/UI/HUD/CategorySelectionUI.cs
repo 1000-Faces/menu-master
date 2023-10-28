@@ -22,12 +22,12 @@ namespace DineEase.UI
         void Start()
         {
             // subscribe to the placeholder selection event
-            MealComponent.OnPlaceholderSelectedEvent += OnPlaceholderSelected;
+            MealComponent.OnMealSelectionChangedEvent += OnMealSelectionChanged;
         }
 
-        void OnPlaceholderSelected(object sender, ToggleEventArgs e)
+        void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
         {
-            if (e.Toggle)
+            if (e.IsSelected)
             {
                 m_Placeholder = (MealComponent)sender;
             }
