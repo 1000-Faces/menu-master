@@ -927,6 +927,11 @@ PrefabInstance:
       propertyPath: m_FoodMenuUI
       value: 
       objectReference: {fileID: 473155269230678230}
+    - target: {fileID: 2955984184560745707, guid: 34f1e122325eaa04a9ab48531dfa6c05,
+        type: 3}
+      propertyPath: m_MealComponent
+      value: 
+      objectReference: {fileID: 5742388378735547461}
     - target: {fileID: 2989101159200752140, guid: 34f1e122325eaa04a9ab48531dfa6c05,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1423,6 +1428,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_FoodDetailsUI
+      value: 
+      objectReference: {fileID: 7956207003138241028}
     - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_MealComponent

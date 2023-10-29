@@ -563,7 +563,9 @@ MonoBehaviour:
     m_MinAnnotationRange: 0.3
     m_MaxAnnotationRange: 5
   m_SelectionText: {fileID: 585408463886622285}
+  m_PriceText: {fileID: 4821676505779204749}
   m_FoodMenuUI: {fileID: 0}
+  m_MealComponent: {fileID: 0}
 --- !u!1001 &3600739371017062348
 PrefabInstance:
   m_ObjectHideFlags: 0

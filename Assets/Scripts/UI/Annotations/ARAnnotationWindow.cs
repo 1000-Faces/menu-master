@@ -27,12 +27,10 @@ namespace DineEase.UI
             gameObject.SetActive(false);
         }
 
-        public override void Open(string title)
+        public override void Open()
         {
             // enable the annotation
             m_Annotation.IsEnabled = true;
-
-            base.Open(title);
         }
 
         protected override void Hide()

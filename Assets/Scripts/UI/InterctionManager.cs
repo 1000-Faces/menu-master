@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
-namespace DineEase.UI
+namespace DineEase.Interactions
 {
     public class InterctionManager : MonoBehaviour
     {
+        const float DOUBLE_TAP_TIME_THRESHOLD = 1.0f;
+        
         private bool backButtonPressed = false;
-        private readonly float doubleTapTimeThreshold = 1.0f; // Adjust as needed.
 
         private void Update()
         {
@@ -29,7 +31,7 @@ namespace DineEase.UI
 
         private IEnumerator ResetBackButtonPressed()
         {
-            yield return new WaitForSeconds(doubleTapTimeThreshold);
+            yield return new WaitForSeconds(DOUBLE_TAP_TIME_THRESHOLD);
             backButtonPressed = false;
         }
 

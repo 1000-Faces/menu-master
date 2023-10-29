@@ -8,50 +8,39 @@ namespace DineEase.UI
 {
     public class FoodDetailsUI : ARAnnotationWindow
     {
-        const string SELECTION_TEXT_DEFAULT = "Select a food";
-
         [SerializeField] TextMeshProUGUI m_SelectionText;
         [SerializeField] TextMeshProUGUI m_PriceText;
         [SerializeField] FoodMenuUI m_FoodMenuUI;
 
-        public FoodSO FoodSO { get; set; }
+        private MealComponent m_MealComponent;
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            // set the default text
-            Title = SELECTION_TEXT_DEFAULT;
-        }
+        public FoodSO Food { get; set; }
 
         protected void Start()
         {
-            // subscribe to the FoodMenuUI response event
-            OnFormResponseEvent += OnFoodMenuFormResponse;
-        }
+            // get meal component object from the parent
+            m_MealComponent = GetComponentInParent<MealComponent>();
 
-        private void OnFoodMenuFormResponse(object sender, FormResponse e)
-        {
-            // if the food menu is closed in success, There is no need to show this. The response is 0 (success)
-            if (sender is FoodMenuUI && e.Response == 0 && IsOpened)
+            if (!m_MealComponent)
             {
-                Close(0);
+                Debug.LogError("MealComponent not found in the parent object");
             }
         }
 
-        public void Open(string title, FoodSO food)
+        private void OnEnable()
         {
-            // Set the title
-            Title = title;
+            // Load the food details
+            Food = m_MealComponent.Food;
 
-            if (food)
+            // Set the title
+            Title = Food.category.ToString();
+
+            if (Food)
             {
                 // Set details
-                m_SelectionText.text = food.foodName;
-                m_PriceText.text = food.price.ToString();
+                m_SelectionText.text = Food.foodName;
+                m_PriceText.text = Food.price.ToString();
             }
-
-            base.Open(title);
         }
 
         public override void Close(int state)
@@ -67,7 +56,7 @@ namespace DineEase.UI
 
         public override void OnSubmit()
         {
-            m_FoodMenuUI.Open($"Select food from {Title} Category");
+            m_FoodMenuUI.Open(Food);
 
             base.OnSubmit();
         }

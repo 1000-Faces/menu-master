@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DineEase.UI
+namespace DineEase.UI.HUD
 {
     public class ComponentSelectionEventArgs : EventArgs
     {
@@ -13,33 +13,33 @@ namespace DineEase.UI
         public MealCategory Category { get; set; }
     }
 
-    public class CategorySelectionUI : FormWindow
+    public class CategorySelectionUI : FormWindow, ILookMealComponent
     {
         [SerializeField] ToggleGroup m_ToggleGroup;
 
-        MealComponent m_Placeholder;
+        MealComponent m_Anchor;
 
         void Start()
         {
-            // subscribe to the placeholder selection event
-            MealComponent.OnMealSelectionChangedEvent += OnMealSelectionChanged;
+            // subscribe to the meal selection changed event
+            MealComponent.MealSelectionChangedEvent += OnMealSelectionChanged;
         }
 
-        void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
+        public void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
         {
-            if (e.IsSelected)
+            MealComponent component = sender as MealComponent;
+
+            // Check if the component is an anchor
+            if (component.IsAnchor)
             {
-                m_Placeholder = (MealComponent)sender;
-            }
-            else
-            {
-                if (IsOpened) Close(1);
+                m_Anchor = component;
             }
         }
 
         void OnCategorySelected(MealCategory category)
         {
-            if (m_Placeholder) m_Placeholder.Category = category;
+            Debug.Log($"Category selected: {category}, Target Meal Component: {m_Anchor}");
+            if (m_Anchor) m_Anchor.Category = category;
         }
 
         public override void OnSubmit()

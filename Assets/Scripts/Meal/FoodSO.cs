@@ -12,6 +12,8 @@ namespace DineEase.Meal
 
         public string description;
 
+        public MealCategory category;
+
         public bool isAvailable;
 
         public float price;

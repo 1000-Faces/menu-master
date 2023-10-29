@@ -13,25 +13,18 @@ namespace DineEase.UI
         [SerializeField] MealComponent m_MealComponent;
         [SerializeField] GameObject m_FoodListItemTemplate;
         [SerializeField] ToggleGroup m_ToggleGroup;
+        [SerializeField] FoodDetailsUI m_FoodDetailsUI;
         
         List<FoodSO> m_FoodList;
 
-        FoodListItem m_CurrentFoodListItem;
+        readonly List<FoodListItem> m_FoodListItemList;
 
-        FoodListItem m_NewFoodListItem;
+        FoodListItem m_SelectedFoodListItem;
 
         protected void Start()
         {
-            // Load the food list from resources
-            m_FoodList = Resources.LoadAll<FoodSO>("ScriptableObjects/Foods").ToList();
+            LoadFoodList();
 
-            // Verify the food list is not empty
-            if (m_FoodList.Count == 0)
-            {
-                Debug.LogError("No food items found in the resources folder!");
-                return;
-            }
-            
             // Create the list of food items
             foreach (var item in m_FoodList)
             {
@@ -39,14 +32,21 @@ namespace DineEase.UI
                 CreateFoodlistItem(item);
             }
 
-            // Select the current food item if available
-            if (m_CurrentFoodListItem != null)
-            {
-                m_CurrentFoodListItem.CheckBox.isOn = true;
-            }
-
             // Destroy the template list item
             Destroy(m_FoodListItemTemplate);
+        }
+
+        void LoadFoodList()
+        {
+            // Load the food list from resources
+            m_FoodList = Resources.LoadAll<FoodSO>("Foods/ScriptableObjects").ToList();
+
+            // Verify the food list is not empty
+            if (m_FoodList.Count == 0)
+            {
+                Debug.LogError("No food items found in the resources folder!");
+                return;
+            }
         }
 
         void CreateFoodlistItem(FoodSO food)
@@ -64,18 +64,51 @@ namespace DineEase.UI
             {
                 if (value)
                 {
-                    m_NewFoodListItem = foodListItemComponent;
+                    m_SelectedFoodListItem = foodListItemComponent;
                 }
             });
+
+            // push list item to the list
+            m_FoodListItemList.Add(foodListItemComponent);
+        }
+
+        FoodListItem GetFoodListItem(FoodSO food)
+        {
+            if (food == null) return null;
+
+            return m_FoodListItemList.Where(listItm => listItm.Food == food).FirstOrDefault();
+        }
+
+        public void Open(MealCategory category)
+        {
+            // Show the window
+            base.Open($"Select food from {category} Category");
+        }
+
+        public void Open(FoodSO currentFood)
+        {
+            // Select the current food item if available
+            m_SelectedFoodListItem = GetFoodListItem(currentFood);
+
+            if (m_SelectedFoodListItem != null)
+            {
+                m_SelectedFoodListItem.CheckBox.isOn = true;
+            }
+
+            // Show the window
+            base.Open($"Select food from {currentFood.category} Category");
         }
 
         public override void OnSubmit()
         {
-            // Change current food selection to the new one
-            if (m_NewFoodListItem) m_CurrentFoodListItem = m_NewFoodListItem;
-
             // Change the food selection in the meal component
-            m_MealComponent.OnSelectedFoodChange(m_CurrentFoodListItem.Food);
+            m_MealComponent.ChangeFood(m_SelectedFoodListItem.Food);
+
+            // Open the Food Details UI if its closed
+            if (!m_FoodDetailsUI.IsOpened)
+            {
+                m_FoodDetailsUI.Open();
+            }
 
             base.OnSubmit();
         }
