@@ -1,4 +1,5 @@
 using DineEase.Meal;
+using DineEase.State;
 using System;
 using System.Linq;
 using UnityEngine;
@@ -13,16 +14,22 @@ namespace DineEase.UI.HUD
         public MealCategory Category { get; set; }
     }
 
-    public class CategorySelectionUI : FormWindow, ILookMealComponent
+    public class CategorySelectionUI : FormWindow
     {
+        [SerializeField] DataStore m_DataStore;
         [SerializeField] ToggleGroup m_ToggleGroup;
 
         MealComponent m_Anchor;
 
-        void Start()
+        private void OnEnable()
         {
-            // subscribe to the meal selection changed event
-            MealComponent.MealSelectionChangedEvent += OnMealSelectionChanged;
+            if (m_DataStore.SelectedComponent.IsAnchor)
+            {
+                m_Anchor = m_DataStore.SelectedComponent;
+                return;
+            }
+            
+            Debug.LogError("CategorySelectionUI: Window is loaded but no anchor is selected");
         }
 
         public void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)

@@ -30,7 +30,13 @@ namespace DineEase.UI
         private void OnEnable()
         {
             // Load the food details
-            Food = m_MealComponent.Food;
+            Load(m_MealComponent.Food);
+        }
+
+        private void Load(FoodSO food)
+        {
+            // Load the food details
+            Food = food;
 
             // Set the title
             Title = Food.category.ToString();
@@ -41,6 +47,14 @@ namespace DineEase.UI
                 m_SelectionText.text = Food.foodName;
                 m_PriceText.text = Food.price.ToString();
             }
+        }
+
+        public void Open(FoodSO food)
+        {
+            // Load the food details
+            Load(food);
+
+            base.Open();
         }
 
         public override void Close(int state)

@@ -107,7 +107,7 @@ namespace DineEase.UI
             // Open the Food Details UI if its closed
             if (!m_FoodDetailsUI.IsOpened)
             {
-                m_FoodDetailsUI.Open();
+                m_FoodDetailsUI.Open(m_SelectedFoodListItem.Food);
             }
 
             base.OnSubmit();

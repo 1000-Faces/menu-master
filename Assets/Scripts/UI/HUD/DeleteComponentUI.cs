@@ -1,18 +1,20 @@
 using DineEase.Meal;
+using DineEase.State;
 using UnityEngine;
 
 namespace DineEase.UI.HUD
 {
-    public class DeleteComponentUI : FormWindow, ILookMealComponent
+    public class DeleteComponentUI : FormWindow
     {
+        [SerializeField] DataStore m_DataStore;
+
         MealComponent m_MealComponent;
 
-        void Start()
+        private void OnEnable()
         {
-            // subscribe to the meal selection changed event
-            MealComponent.MealSelectionChangedEvent += OnMealSelectionChanged;
+            m_MealComponent = m_DataStore.SelectedComponent;
         }
-        
+
         public void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
         {
             m_MealComponent = sender as MealComponent;

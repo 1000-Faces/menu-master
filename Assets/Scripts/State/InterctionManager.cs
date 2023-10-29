@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.AR;
 
-namespace DineEase.Interactions
+namespace DineEase.State
 {
     public class InterctionManager : MonoBehaviour
     {

@@ -1,6 +1,7 @@
 using DineEase.AR;
 using DineEase.UI;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.AR;
@@ -29,6 +30,8 @@ namespace DineEase.Meal
         [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
         [SerializeField] FoodMenuUI m_FoodMenuUI;
 
+        public FoodDetailsUI FoodDetailsWindow => m_FoodDetailsWindow;
+        public FoodMenuUI FoodMenuUI => m_FoodMenuUI;
 
         MealCategory m_Category;
 
@@ -79,6 +82,29 @@ namespace DineEase.Meal
 
             // fireoff the event
             SelectedFoodChangeEvent?.Invoke(this, new SelectedFoodChangeEventArgs { CurrentFood = newFood, PreviousFood = oldFood });
+        }
+
+        public void OpenUI()
+        {
+            if (IsAnchor) return;
+            else if (IsFood)
+            {
+                // Open the Food Details window
+                m_FoodDetailsWindow.Open();
+            }
+            else
+            {
+                // Open the Food Menu window with the selected category
+                m_FoodMenuUI.Open(Category);
+            }
+        }
+
+        public void CloseUI()
+        {
+            // Close the Food Details window
+            m_FoodDetailsWindow.Close(1);
+            // Close the Food Menu window
+            m_FoodMenuUI.Close(1);
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
