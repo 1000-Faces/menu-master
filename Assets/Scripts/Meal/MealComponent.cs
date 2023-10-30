@@ -1,28 +1,32 @@
-using DineEase.AR;
-using DineEase.UI;
+using DineEase.Meal.Annotation;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
 namespace DineEase.Meal
 {
-    [RequireComponent(typeof(ExtendedAnnotationInteractable))]
+    public class MealSelectionChangeEventArgs : EventArgs
+    {
+        public bool IsSelected { get; set; }
+    }
+
     public class MealComponent : MonoBehaviour
     {
-        [SerializeField] MealComponentVisual m_FoodCategoryVisualizer;
+        public static event EventHandler<MealSelectionChangeEventArgs> MealSelectionChangeEvent;
+        public static event EventHandler FoodChangeEvent;
 
-        [SerializeField] CategorySelectionUI m_CategorySelectionUI;
-
+        [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
+        [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
+        [SerializeField] FoodMenuUI m_FoodMenuUI;
 
-        [SerializeField] FoodSelectionUI m_FoodSelectionUI;
+        public FoodDetailsUI FoodDetailsWindow => m_FoodDetailsWindow;
+        public FoodMenuUI FoodMenuUI => m_FoodMenuUI;
 
+        MealCategory m_Category;
 
-        DineEase.MealCategory m_Category = DineEase.MealCategory.Unknown;
-
-        public DineEase.MealCategory Category
+        public MealCategory Category
         {
             get => m_Category;
             set
@@ -37,84 +41,79 @@ namespace DineEase.Meal
         public FoodSO Food
         {
             get => m_Food;
-            set
+            private set
             {
                 m_Food = value;
                 m_FoodVisualizer.SwapObject(m_Food.prefab);
             }
         }
 
-        void Awake()
-        {
-            // visualize the 'Unknown' meal component
-            Category = m_Category;
-        }
+        public bool IsFood => Food != null;
 
-        void Start()
+        public bool IsPlaceholder => Category != MealCategory.Unknown;
+
+        public bool IsAnchor => Category == MealCategory.Unknown;
+
+
+        private void Start()
         {
+            // Set the default category to the placeholder(unknown)
+            Category = MealCategory.Unknown;
+
             Utils.ShowToastMessage("Tap to change the category");
-
-            // subscribe to the category selection event
-            m_CategorySelectionUI.OnCategorySelectedEvent += OnCategorySelected;
-
-            // subscribe to the food selection changing event
-            m_FoodSelectionUI.OnFoodSelectedEvent += OnFoodSelected;
         }
 
-        void OnCategorySelected(object sender, ComponentSelectionEventArgs e)
+        public void ChangeFood(FoodSO newFood)
         {
-            Category = e.Category;
+            FoodSO oldFood = m_Food;
 
-            OpenFoodSelectionUI();
+            // load the new food into the meal component
+            m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
+            Food = newFood;
+
+            // fireoff the event
+            FoodChangeEvent?.Invoke(this, EventArgs.Empty);
         }
 
-        void OnFoodSelected(object sender, FoodSelectionChangedEventArgs e)
+        public void OpenUI()
         {
-            if (e.NewFoodSelection != null)
+            if (IsAnchor) return;
+            else if (IsFood)
             {
-                if (e.NewFoodSelection.requirePlatform)
-                {
-                    m_FoodCategoryVisualizer.ToggleVisibility(false);
-                }
-                else
-                {
-                    m_FoodCategoryVisualizer.ToggleVisibility(true);
-                }
-
-                Food = e.NewFoodSelection;
+                // Open the Food Details window
+                m_FoodDetailsWindow.Open();
+            }
+            else
+            {
+                // Open the Food Menu window with the selected category
+                m_FoodMenuUI.Open();
             }
         }
 
-        private void OpenFoodSelectionUI()
+        public void CloseUI()
         {
-            m_FoodSelectionUI.Title = m_Category.ToString();
-            m_FoodSelectionUI.Open();
+            // Close the Food Details window
+            m_FoodDetailsWindow.Close(1);
+            // Close the Food Menu window
+            m_FoodMenuUI.Close(1);
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            if (m_Category == DineEase.MealCategory.Unknown)
-            {
-                // Open the Category selection UI
-                m_CategorySelectionUI.Open();
-            }
-            else
-            {
-                OpenFoodSelectionUI();
-            }
+            // fireoff the event
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = true });
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            if (m_Category == DineEase.MealCategory.Unknown)
-            {
-                // Close the Category selection UI
-                m_CategorySelectionUI.Close();
-            }
-            else
-            {
-                m_FoodSelectionUI.Close();
-            }
+            // fireoff the event
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = false });
+        }
+
+        public void OnObjectPlaced(ARObjectPlacementEventArgs arg0)
+        {
+            // set active the placement object
+            arg0.placementObject.SetActive(true);
         }
     }
 }
