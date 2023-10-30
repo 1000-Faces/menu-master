@@ -2,13 +2,11 @@ using DineEase.Meal;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace DineEase.Meal.Annotation
 {
-    [RequireComponent(typeof(Toggle))]
     public class FoodListItem : MonoBehaviour
     {
         public FoodSO Food { get; set; }

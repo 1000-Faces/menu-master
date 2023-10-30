@@ -9,6 +9,8 @@ namespace DineEase.State
 {
     public class DataStore : MonoBehaviour
     {
+        public event EventHandler FoodListChangeEvent;
+
         public MealComponent SelectedComponent { get; private set; }
 
         public HashSet<MealComponent> FoodObjects { get; } = new HashSet<MealComponent>();
@@ -30,6 +32,9 @@ namespace DineEase.State
             Debug.Log($"Data Store: Food has changed in the {mealComponent}");
             // Add the food to the food objects list
             FoodObjects.Add(mealComponent);
+
+            // Invoke the food list change event
+            FoodListChangeEvent?.Invoke(this, EventArgs.Empty);
         }
 
         private void OnMealSelectionChange(object sender, MealSelectionChangeEventArgs e)
@@ -54,5 +59,4 @@ namespace DineEase.State
             return FoodObjects.Sum(food => food.Food.price);
         }
     }
-
 }
