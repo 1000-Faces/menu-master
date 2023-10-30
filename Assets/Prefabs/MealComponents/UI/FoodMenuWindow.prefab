@@ -776,7 +776,7 @@ PrefabInstance:
     - target: {fileID: 102784034920056091, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 936130930141776773, guid: b7b76fa24aa715945865a232d658e10d,
         type: 3}
@@ -1086,8 +1086,9 @@ MonoBehaviour:
     m_MaxAnnotationRange: 5
   m_MealComponent: {fileID: 0}
   m_FoodListItemTemplate: {fileID: 6709221856358547233}
-  m_ToggleGroup: {fileID: 4309043834578983305}
-  m_FoodList: []
+  m_FoodListItemContainer: {fileID: 0}
+  m_SubmitButton: {fileID: 0}
+  m_FoodDetailsUI: {fileID: 0}
 --- !u!1001 &6809458683484724060
 PrefabInstance:
   m_ObjectHideFlags: 0

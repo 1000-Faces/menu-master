@@ -563,6 +563,7 @@ MonoBehaviour:
     m_MinAnnotationRange: 0.3
     m_MaxAnnotationRange: 5
   m_SelectionText: {fileID: 585408463886622285}
+  m_PriceText: {fileID: 4821676505779204749}
   m_FoodMenuUI: {fileID: 0}
 --- !u!1001 &3600739371017062348
 PrefabInstance:
@@ -605,42 +606,42 @@ PrefabInstance:
     - target: {fileID: 4298869868272199095, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4298869868272199095, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4298869868272199095, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 363.86
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4298869868272199095, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677770236979667855, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677770236979667855, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677770236979667855, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 153.43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677770236979667855, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8337846150489558833, guid: 26504feaef1893d48b9b52fdba1d1e38,
         type: 3}

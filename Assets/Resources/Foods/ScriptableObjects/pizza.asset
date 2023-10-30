@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a677113b657e1a6408658a9b38a27b16, type: 3}
-  m_Name: burger
+  m_Name: pizza
   m_EditorClassIdentifier: 
-  requirePlatform: 0
-  foodName: Burger
-  description: Sample 2
+  foodName: Pizza
+  description: Sample Food
+  category: 1
+  isAvailable: 1
+  price: 1000
   foodIcon: {fileID: 0}
   prefab: {fileID: 8459644560754191326, guid: 29ed1a29e8831e443b1e5133d4ec892f, type: 3}
-  price: 2000
+  requirePlatform: 0

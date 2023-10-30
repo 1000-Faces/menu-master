@@ -1,32 +1,33 @@
-using DineEase.AR;
-using DineEase.UI;
+using DineEase.Meal.Annotation;
 using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
 namespace DineEase.Meal
 {
-    public class MealSelectionChangedEventArgs : EventArgs
+    public class MealSelectionChangeEventArgs : EventArgs
     {
         public bool IsSelected { get; set; }
-
-        public MealCategory Category { get; set; }
     }
-    
+
     public class MealComponent : MonoBehaviour
     {
-        public static event EventHandler<MealSelectionChangedEventArgs> OnMealSelectionChangedEvent;
+        public static event EventHandler<MealSelectionChangeEventArgs> MealSelectionChangeEvent;
+        public static event EventHandler FoodChangeEvent;
 
         [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
         [SerializeField] FoodDetailsUI m_FoodDetailsWindow;
         [SerializeField] FoodMenuUI m_FoodMenuUI;
 
+        public FoodDetailsUI FoodDetailsWindow => m_FoodDetailsWindow;
+        public FoodMenuUI FoodMenuUI => m_FoodMenuUI;
 
         MealCategory m_Category;
 
         public MealCategory Category
-        { 
+        {
             get => m_Category;
             set
             {
@@ -40,14 +41,21 @@ namespace DineEase.Meal
         public FoodSO Food
         {
             get => m_Food;
-            set
+            private set
             {
                 m_Food = value;
                 m_FoodVisualizer.SwapObject(m_Food.prefab);
             }
         }
-        
-        void Start()
+
+        public bool IsFood => Food != null;
+
+        public bool IsPlaceholder => Category != MealCategory.Unknown;
+
+        public bool IsAnchor => Category == MealCategory.Unknown;
+
+
+        private void Start()
         {
             // Set the default category to the placeholder(unknown)
             Category = MealCategory.Unknown;
@@ -55,33 +63,57 @@ namespace DineEase.Meal
             Utils.ShowToastMessage("Tap to change the category");
         }
 
-        public void OnSelectedFoodChange(FoodSO newFood)
+        public void ChangeFood(FoodSO newFood)
         {
-            m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
+            FoodSO oldFood = m_Food;
 
+            // load the new food into the meal component
+            m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
             Food = newFood;
+
+            // fireoff the event
+            FoodChangeEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void OpenUI()
+        {
+            if (IsAnchor) return;
+            else if (IsFood)
+            {
+                // Open the Food Details window
+                m_FoodDetailsWindow.Open();
+            }
+            else
+            {
+                // Open the Food Menu window with the selected category
+                m_FoodMenuUI.Open();
+            }
+        }
+
+        public void CloseUI()
+        {
+            // Close the Food Details window
+            m_FoodDetailsWindow.Close(1);
+            // Close the Food Menu window
+            m_FoodMenuUI.Close(1);
         }
 
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
-            if (Category != MealCategory.Unknown)
-            {
-                m_FoodDetailsWindow.Open(m_Category.ToString(), Food);
-                
-            }
-
-            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
+            // fireoff the event
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = true });
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
-            if (Category != MealCategory.Unknown)
-            {
-                m_FoodDetailsWindow.Close(1); // close without saving the selection (1 = close in failure)
-                
-            }
+            // fireoff the event
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = false });
+        }
 
-            OnMealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true, Category = m_Category });
+        public void OnObjectPlaced(ARObjectPlacementEventArgs arg0)
+        {
+            // set active the placement object
+            arg0.placementObject.SetActive(true);
         }
     }
 }

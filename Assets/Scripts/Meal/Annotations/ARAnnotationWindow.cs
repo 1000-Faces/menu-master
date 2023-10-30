@@ -1,10 +1,8 @@
 using DineEase.AR;
-using System.Data;
-using TMPro;
+using DineEase.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace DineEase.UI
+namespace DineEase.Meal.Annotation
 {
     public abstract class ARAnnotationWindow : FormWindow
     {
@@ -27,12 +25,10 @@ namespace DineEase.UI
             gameObject.SetActive(false);
         }
 
-        public override void Open(string title)
+        public override void Open()
         {
             // enable the annotation
             m_Annotation.IsEnabled = true;
-
-            base.Open(title);
         }
 
         protected override void Hide()
