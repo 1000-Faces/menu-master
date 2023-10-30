@@ -1,30 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace DineEase.Meal
+public class FoodVisual : MonoBehaviour, IObjectLoader<Transform>
 {
-    public class FoodVisual : MonoBehaviour, IObjectLoader<Transform>
+    private Transform _currentObject;
+
+    public void LoadObject(Transform obj)
     {
-        private Transform _currentObject;
+        // Instantiate the object
+        _currentObject = Instantiate(obj, transform);
+    }
 
-        public void LoadObject(Transform obj)
+    public void SwapObject(Transform obj)
+    {
+        // If the object exists, remove it
+        if (_currentObject != null)
         {
-            // Instantiate the object
-            _currentObject = Instantiate(obj, transform);
+            Destroy(_currentObject.gameObject);
         }
 
-        public void SwapObject(Transform obj)
-        {
-            // If the object exists, remove it
-            if (_currentObject != null)
-            {
-                Destroy(_currentObject.gameObject);
-            }
-
-            // spawn the new object
-            LoadObject(obj);
-        }
+        // spawn the new object
+        LoadObject(obj);
     }
 }

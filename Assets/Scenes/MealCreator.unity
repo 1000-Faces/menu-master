@@ -5051,7 +5051,7 @@ GameObject:
   - component: {fileID: 1700820795}
   - component: {fileID: 1700820796}
   m_Layer: 5
-  m_Name: DynamicButtons
+  m_Name: MealOptionButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

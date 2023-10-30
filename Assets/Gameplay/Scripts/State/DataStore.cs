@@ -1,62 +1,58 @@
-using DineEase.Meal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DineEase.State
+public class DataStore : MonoBehaviour
 {
-    public class DataStore : MonoBehaviour
+    public event EventHandler FoodListChangeEvent;
+
+    public MealComponent SelectedComponent { get; private set; }
+
+    public HashSet<MealComponent> FoodObjects { get; } = new HashSet<MealComponent>();
+
+
+    // Start is called before the first frame update
+    private void Start()
     {
-        public event EventHandler FoodListChangeEvent;
+        // subscribe to the meal selection changed event
+        MealComponent.MealSelectionChangeEvent += OnMealSelectionChange;
+        // subscribe to the food changed event
+        MealComponent.FoodChangeEvent += OnFoodChange;
+    }
 
-        public MealComponent SelectedComponent { get; private set; }
+    private void OnFoodChange(object sender, EventArgs e)
+    {
+        MealComponent mealComponent = sender as MealComponent;
 
-        public HashSet<MealComponent> FoodObjects { get; } = new HashSet<MealComponent>();
+        Debug.Log($"Data Store: Food has changed in the {mealComponent}");
+        // Add the food to the food objects list
+        FoodObjects.Add(mealComponent);
 
+        // Invoke the food list change event
+        FoodListChangeEvent?.Invoke(this, EventArgs.Empty);
+    }
 
-        // Start is called before the first frame update
-        private void Start()
+    private void OnMealSelectionChange(object sender, MealSelectionChangeEventArgs e)
+    {
+        MealComponent mealComponent = sender as MealComponent;
+
+        if (e.IsSelected)
         {
-            // subscribe to the meal selection changed event
-            MealComponent.MealSelectionChangeEvent += OnMealSelectionChange;
-            // subscribe to the food changed event
-            MealComponent.FoodChangeEvent += OnFoodChange;
+            SelectedComponent = mealComponent;
+            Debug.Log($"Data Store: {mealComponent} is selected");
         }
-
-        private void OnFoodChange(object sender, EventArgs e)
+        else
         {
-            MealComponent mealComponent = sender as MealComponent;
-
-            Debug.Log($"Data Store: Food has changed in the {mealComponent}");
-            // Add the food to the food objects list
-            FoodObjects.Add(mealComponent);
-
-            // Invoke the food list change event
-            FoodListChangeEvent?.Invoke(this, EventArgs.Empty);
+            SelectedComponent = null;
+            Debug.Log($"Data Store: {mealComponent} is unselected");
         }
+    }
 
-        private void OnMealSelectionChange(object sender, MealSelectionChangeEventArgs e)
-        {
-            MealComponent mealComponent = sender as MealComponent;
-            
-            if (e.IsSelected)
-            {
-                SelectedComponent = mealComponent;
-                Debug.Log($"Data Store: {mealComponent} is selected");
-            }
-            else
-            {
-                SelectedComponent = null;
-                Debug.Log($"Data Store: {mealComponent} is unselected");
-            }
-        }
-
-        public float GetTotalPrice()
-        {
-            // Calculate the total price of the food objects
-            return FoodObjects.Sum(food => food.Food.price);
-        }
+    public float GetTotalPrice()
+    {
+        // Calculate the total price of the food objects
+        return FoodObjects.Sum(food => food.Food.price);
     }
 }
