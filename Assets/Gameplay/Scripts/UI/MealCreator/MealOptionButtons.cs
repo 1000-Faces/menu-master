@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MealOptionButtons : MonoBehaviour
 {
-    [SerializeField] DataStore m_DataStore;
+    [SerializeField] MealDataStore m_DataStore;
     [SerializeField] Button m_ChangeMealCategoryButon;
     [SerializeField] Button m_ChangeFoodButon;
     [SerializeField] Button m_DeleteButon;

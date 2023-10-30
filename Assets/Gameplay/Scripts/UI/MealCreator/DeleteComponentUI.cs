@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeleteComponentUI : FormWindow
 {
-    [SerializeField] DataStore m_DataStore;
+    [SerializeField] MealDataStore m_DataStore;
 
     MealComponent m_MealComponent;
 

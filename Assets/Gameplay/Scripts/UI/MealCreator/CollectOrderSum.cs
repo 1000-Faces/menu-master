@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CollectOrderSum : MonoBehaviour
 {
-    [SerializeField] DataStore m_DataStore;
+    [SerializeField] MealDataStore m_DataStore;
     [SerializeField] TextMeshProUGUI m_OrderSumText;
 
     float m_OrderSum;

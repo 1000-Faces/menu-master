@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Title: {fileID: 518210796}
-  m_DataStore: {fileID: 977855674}
+  m_DataStore: {fileID: 977855675}
   m_ToggleGroup: {fileID: 1235084958}
 --- !u!1001 &582478189
 PrefabInstance:
@@ -3559,20 +3559,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7353783009779406105, guid: 9a9ed1099d6ea43429eefde06a1c1424,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 977855675}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9ed1099d6ea43429eefde06a1c1424, type: 3}
---- !u!114 &977855674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6916167224130547614, guid: 9a9ed1099d6ea43429eefde06a1c1424,
+--- !u!1 &977855674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7353783009779406105, guid: 9a9ed1099d6ea43429eefde06a1c1424,
     type: 3}
   m_PrefabInstance: {fileID: 977855673}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &977855675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977855674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1b000d2d2a6344085bb4e8d1032eda, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f9b5277b8182ff43bd00754967b360d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoodListChangeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1995593065}
+        m_TargetAssemblyTypeName: CollectOrderSum, Assembly-CSharp
+        m_MethodName: OnFoodListChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1034403618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5126,7 +5151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbb65a6171dfc646a9232f31c9010e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DataStore: {fileID: 977855674}
+  m_DataStore: {fileID: 977855675}
   m_ChangeMealCategoryButon: {fileID: 1989048120}
   m_ChangeFoodButon: {fileID: 1697542280}
   m_DeleteButon: {fileID: 1917761923}
@@ -6258,7 +6283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Title: {fileID: 1914799634}
-  m_DataStore: {fileID: 977855674}
+  m_DataStore: {fileID: 977855675}
   m_FoodListItemTemplate: {fileID: 260081929532466301, guid: 918861bd346114b45961a7002d895f86,
     type: 3}
   m_FoodListItemContainer: {fileID: 1034403619}
@@ -6713,7 +6738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Title: {fileID: 1906897078}
-  m_DataStore: {fileID: 977855674}
+  m_DataStore: {fileID: 977855675}
 --- !u!114 &1914799634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4904483084041501114, guid: ebbbdeacc52b44241bce994d6e30f0a9,
@@ -7317,7 +7342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2b980945608b14cae6152e6f80dc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DataStore: {fileID: 977855674}
+  m_DataStore: {fileID: 0}
   m_OrderSumText: {fileID: 1537481203}
 --- !u!114 &2027036043 stripped
 MonoBehaviour:

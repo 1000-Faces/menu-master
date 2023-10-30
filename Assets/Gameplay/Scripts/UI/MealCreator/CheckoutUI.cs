@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CheckoutUI : FormWindow
 {
-    [SerializeField] DataStore m_DataStore;
+    [SerializeField] MealDataStore m_DataStore;
     [SerializeField] GameObject m_FoodListItemTemplate;
     [SerializeField] Transform m_FoodListItemContainer;
     [SerializeField] TextMeshProUGUI m_OrderSumText;

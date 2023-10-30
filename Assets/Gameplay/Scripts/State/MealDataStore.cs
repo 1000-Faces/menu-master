@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DataStore : MonoBehaviour
+public class MealDataStore : MonoBehaviour
 {
     public MealComponent SelectedComponent { get; private set; }
 

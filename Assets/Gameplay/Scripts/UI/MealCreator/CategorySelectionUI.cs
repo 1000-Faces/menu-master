@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CategorySelectionUI : FormWindow
 {
-    [SerializeField] DataStore m_DataStore;
+    [SerializeField] MealDataStore m_DataStore;
     [SerializeField] ToggleGroup m_ToggleGroup;
 
     MealComponent m_Anchor;
