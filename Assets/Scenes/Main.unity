@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 7353783009779406105, guid: 9a9ed1099d6ea43429eefde06a1c1424,
         type: 3}
       propertyPath: m_Name
-      value: State Manager
+      value: StateManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -773,7 +773,7 @@ PrefabInstance:
     - target: {fileID: 8746241985925192628, guid: df9a639e8698d1948b4011b1e4d8cf3f,
         type: 3}
       propertyPath: m_Name
-      value: Heads Up Display
+      value: HeadsUpDisplay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
