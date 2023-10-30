@@ -20,13 +20,7 @@ public class CollectOrderSum : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // subscribe to the food changed event
-        m_DataStore.FoodListChangeEvent += OnFoodListChange;
-    }
-
-    private void OnFoodListChange(object sender, EventArgs e)
+    public void OnFoodListChange()
     {
         OrderSum = m_DataStore.GetTotalPrice();
     }

@@ -1,9 +1,10 @@
+using DineEase.Utilities;
 using System.Collections;
 using UnityEngine;
 
 public class InterctionManager : MonoBehaviour
 {
-    const float DOUBLE_TAP_TIME_THRESHOLD = 1.0f;
+    private const float DOUBLE_TAP_TIME_THRESHOLD = 1.0f;
 
     private bool backButtonPressed = false;
 
@@ -14,7 +15,7 @@ public class InterctionManager : MonoBehaviour
             if (!backButtonPressed)
             {
                 backButtonPressed = true;
-                Utils.ShowToastMessage("Press again to Exit");
+                AndroidUtilities.ShowToastMessage("Press again to Exit");
                 StartCoroutine(ResetBackButtonPressed());
             }
             else

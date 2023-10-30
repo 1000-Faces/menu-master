@@ -887,6 +887,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: BtnCommand
       objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1289723474}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631324258563939712, guid: a0fca63192bb0bc40bf208bead0b949f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7340620276188530929, guid: a0fca63192bb0bc40bf208bead0b949f,
         type: 3}
       propertyPath: m_Text
@@ -1386,6 +1421,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 603592705}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5462315488151183831, guid: 668d0aee8067258478e567243d3017e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1289723474}
     - targetCorrespondingSourceObject: {fileID: 2629591036011625790, guid: 668d0aee8067258478e567243d3017e9,
         type: 3}
       insertIndex: -1
@@ -1435,6 +1474,27 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1289723473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5462315488151183831, guid: 668d0aee8067258478e567243d3017e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1289723468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289723474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289723473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd88a81cdcc1996499021f58c4ae42b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad:
+    sceneAsset: {fileID: 102900000, guid: 6bdce89659816455b9f906fc62d19910, type: 3}
+    sceneName: Scenes/MealCreator
 --- !u!1001 &1486394142
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DataStore : MonoBehaviour
 {
-    public event EventHandler FoodListChangeEvent;
-
     public MealComponent SelectedComponent { get; private set; }
 
     public HashSet<MealComponent> FoodObjects { get; } = new HashSet<MealComponent>();
+
+    [Header("Events")]
+    public UnityEvent FoodListChangeEvent;
 
 
     // Start is called before the first frame update
@@ -31,7 +33,7 @@ public class DataStore : MonoBehaviour
         FoodObjects.Add(mealComponent);
 
         // Invoke the food list change event
-        FoodListChangeEvent?.Invoke(this, EventArgs.Empty);
+        FoodListChangeEvent.Invoke();
     }
 
     private void OnMealSelectionChange(object sender, MealSelectionChangeEventArgs e)

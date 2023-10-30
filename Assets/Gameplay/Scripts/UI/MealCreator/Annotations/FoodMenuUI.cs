@@ -62,7 +62,7 @@ public class FoodMenuUI : ARAnnotationWindow
     private List<FoodData> LoadFoodList()
     {
         // Load the food list from resources
-        return Resources.LoadAll<FoodData>("Foods/ScriptableObjects").ToList();
+        return Resources.LoadAll<FoodData>("Foods/_Data").ToList();
     }
 
     private void CreateFoodlistItem(FoodData food)

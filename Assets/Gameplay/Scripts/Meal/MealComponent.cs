@@ -1,8 +1,18 @@
 using DineEase;
+using DineEase.Utilities;
 using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.AR;
+
+public enum MealCategory
+{
+    Unknown,
+    MainCourse,
+    SideDish,
+    Beverage,
+    Dessert,
+}
 
 public class MealSelectionChangeEventArgs : EventArgs
 {
@@ -58,7 +68,7 @@ public class MealComponent : MonoBehaviour
         // Set the default category to the placeholder(unknown)
         Category = MealCategory.Unknown;
 
-        Utils.ShowToastMessage("Tap to change the category");
+        AndroidUtilities.ShowToastMessage("Tap to change the category");
     }
 
     public void ChangeFood(FoodData newFood)
