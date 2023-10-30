@@ -32,21 +32,10 @@ namespace DineEase.UI.HUD
             Debug.LogError("CategorySelectionUI: Window is loaded but no anchor is selected");
         }
 
-        public void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
-        {
-            MealComponent component = sender as MealComponent;
-
-            // Check if the component is an anchor
-            if (component.IsAnchor)
-            {
-                m_Anchor = component;
-            }
-        }
-
         void OnCategorySelected(MealCategory category)
         {
+            m_Anchor.Category = category;
             Debug.Log($"Category selected: {category}, Target Meal Component: {m_Anchor}");
-            if (m_Anchor) m_Anchor.Category = category;
         }
 
         public override void OnSubmit()

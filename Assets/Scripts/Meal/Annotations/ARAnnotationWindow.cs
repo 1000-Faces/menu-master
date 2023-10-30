@@ -1,10 +1,8 @@
 using DineEase.AR;
-using System.Data;
-using TMPro;
+using DineEase.UI;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace DineEase.UI
+namespace DineEase.Meal.Annotation
 {
     public abstract class ARAnnotationWindow : FormWindow
     {

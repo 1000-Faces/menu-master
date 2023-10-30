@@ -1,29 +1,20 @@
-using DineEase.AR;
-using DineEase.UI;
+using DineEase.Meal.Annotation;
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.AR;
 
 namespace DineEase.Meal
 {
-    public class MealSelectionChangedEventArgs : EventArgs
+    public class MealSelectionChangeEventArgs : EventArgs
     {
         public bool IsSelected { get; set; }
     }
 
-    public class SelectedFoodChangeEventArgs : EventArgs
-    {
-        public FoodSO CurrentFood { get; set; }
-
-        public FoodSO PreviousFood { get; set; }
-    }
-    
     public class MealComponent : MonoBehaviour
     {
-        public static event EventHandler<MealSelectionChangedEventArgs> MealSelectionChangedEvent;
-        public static event EventHandler<SelectedFoodChangeEventArgs> SelectedFoodChangeEvent;
+        public static event EventHandler<MealSelectionChangeEventArgs> MealSelectionChangeEvent;
+        public static event EventHandler FoodChangeEvent;
 
         [SerializeField] MealComponentBaseVisual m_FoodCategoryVisualizer;
         [SerializeField] FoodVisual m_FoodVisualizer;
@@ -36,7 +27,7 @@ namespace DineEase.Meal
         MealCategory m_Category;
 
         public MealCategory Category
-        { 
+        {
             get => m_Category;
             set
             {
@@ -63,8 +54,8 @@ namespace DineEase.Meal
 
         public bool IsAnchor => Category == MealCategory.Unknown;
 
-        
-        void Start()
+
+        private void Start()
         {
             // Set the default category to the placeholder(unknown)
             Category = MealCategory.Unknown;
@@ -75,13 +66,13 @@ namespace DineEase.Meal
         public void ChangeFood(FoodSO newFood)
         {
             FoodSO oldFood = m_Food;
-            
+
             // load the new food into the meal component
             m_FoodCategoryVisualizer.ToggleVisibility(newFood.requirePlatform);
             Food = newFood;
 
             // fireoff the event
-            SelectedFoodChangeEvent?.Invoke(this, new SelectedFoodChangeEventArgs { CurrentFood = newFood, PreviousFood = oldFood });
+            FoodChangeEvent?.Invoke(this, EventArgs.Empty);
         }
 
         public void OpenUI()
@@ -95,7 +86,7 @@ namespace DineEase.Meal
             else
             {
                 // Open the Food Menu window with the selected category
-                m_FoodMenuUI.Open(Category);
+                m_FoodMenuUI.Open();
             }
         }
 
@@ -110,13 +101,13 @@ namespace DineEase.Meal
         public void OnSelectEntered(SelectEnterEventArgs arg0)
         {
             // fireoff the event
-            MealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = true });
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = true });
         }
 
         public void OnSelectExited(SelectExitEventArgs arg0)
         {
             // fireoff the event
-            MealSelectionChangedEvent?.Invoke(this, new MealSelectionChangedEventArgs { IsSelected = false });
+            MealSelectionChangeEvent?.Invoke(this, new MealSelectionChangeEventArgs { IsSelected = false });
         }
 
         public void OnObjectPlaced(ARObjectPlacementEventArgs arg0)

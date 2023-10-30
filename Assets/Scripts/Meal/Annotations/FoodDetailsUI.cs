@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 
-namespace DineEase.UI
+namespace DineEase.Meal.Annotation
 {
     public class FoodDetailsUI : ARAnnotationWindow
     {
@@ -16,21 +16,16 @@ namespace DineEase.UI
 
         public FoodSO Food { get; set; }
 
-        protected void Start()
+        private void OnEnable()
         {
             // get meal component object from the parent
             m_MealComponent = GetComponentInParent<MealComponent>();
 
-            if (!m_MealComponent)
+            if (m_MealComponent.IsFood)
             {
-                Debug.LogError("MealComponent not found in the parent object");
+                // Load the food details
+                Load(m_MealComponent.Food);
             }
-        }
-
-        private void OnEnable()
-        {
-            // Load the food details
-            Load(m_MealComponent.Food);
         }
 
         private void Load(FoodSO food)
@@ -51,10 +46,10 @@ namespace DineEase.UI
 
         public void Open(FoodSO food)
         {
+            base.Open();
+
             // Load the food details
             Load(food);
-
-            base.Open();
         }
 
         public override void Close(int state)
@@ -70,7 +65,7 @@ namespace DineEase.UI
 
         public override void OnSubmit()
         {
-            m_FoodMenuUI.Open(Food);
+            m_FoodMenuUI.Open();
 
             base.OnSubmit();
         }

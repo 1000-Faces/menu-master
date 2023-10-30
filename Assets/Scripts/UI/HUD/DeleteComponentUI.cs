@@ -15,16 +15,10 @@ namespace DineEase.UI.HUD
             m_MealComponent = m_DataStore.SelectedComponent;
         }
 
-        public void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
-        {
-            m_MealComponent = sender as MealComponent;
-
-            Debug.Log($"Deleted {m_MealComponent}");
-        }
-
         public override void OnSubmit()
         {
             if (m_MealComponent) Destroy(m_MealComponent.gameObject);
+            Debug.Log($"Deleted {m_MealComponent}");
 
             base.OnSubmit();
         }

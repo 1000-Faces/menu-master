@@ -1,5 +1,6 @@
 using DineEase.Meal;
 using DineEase.State;
+using System;
 using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,14 +16,32 @@ namespace DineEase.UI.HUD
 
         MealComponent m_MealComponent;
 
+        private void Start()
+        {
+            // Subscribe to the category selection ui form response event
+            FormWindow.FormResponseEvent += OnFormResponse;
+        }
+
         private void OnEnable()
         {
             m_MealComponent = m_DataStore.SelectedComponent;
-            
+
+            Refresh();
+        }
+
+        private void OnFormResponse(object sender, FormResponse e)
+        {
+            if (sender is CategorySelectionUI && e.Response == 0)
+            {
+                Refresh();
+            }
+        }
+
+        private void Refresh()
+        {
             // Check if the component is an anchor
             if (m_MealComponent.IsAnchor)
             {
-                Debug.Log($"Dynamic HUD: An anchor selected. ({m_MealComponent.name})");
                 // Show meal category button
                 m_ChangeMealCategoryButon.gameObject.SetActive(true);
                 // Hide food button
@@ -30,7 +49,6 @@ namespace DineEase.UI.HUD
             }
             else
             {
-                Debug.Log($"Dynamic HUD: A {m_MealComponent.Category} selected. ({m_MealComponent.name})");
                 // Hide meal category button
                 m_ChangeMealCategoryButon.gameObject.SetActive(false);
                 // Show food button

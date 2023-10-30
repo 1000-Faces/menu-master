@@ -2,6 +2,7 @@ using DineEase.Meal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DineEase.State
@@ -9,26 +10,48 @@ namespace DineEase.State
     public class DataStore : MonoBehaviour
     {
         public MealComponent SelectedComponent { get; private set; }
-        
+
+        public HashSet<MealComponent> FoodObjects { get; } = new HashSet<MealComponent>();
+
+
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             // subscribe to the meal selection changed event
-            MealComponent.MealSelectionChangedEvent += OnMealSelectionChanged;
+            MealComponent.MealSelectionChangeEvent += OnMealSelectionChange;
+            // subscribe to the food changed event
+            MealComponent.FoodChangeEvent += OnFoodChange;
         }
 
-        private void OnMealSelectionChanged(object sender, MealSelectionChangedEventArgs e)
+        private void OnFoodChange(object sender, EventArgs e)
         {
+            MealComponent mealComponent = sender as MealComponent;
+
+            Debug.Log($"Data Store: Food has changed in the {mealComponent}");
+            // Add the food to the food objects list
+            FoodObjects.Add(mealComponent);
+        }
+
+        private void OnMealSelectionChange(object sender, MealSelectionChangeEventArgs e)
+        {
+            MealComponent mealComponent = sender as MealComponent;
+            
             if (e.IsSelected)
             {
-                SelectedComponent = sender as MealComponent;
-                Debug.Log($"Data Store: {SelectedComponent} is selected");
+                SelectedComponent = mealComponent;
+                Debug.Log($"Data Store: {mealComponent} is selected");
             }
             else
             {
-                Debug.Log($"Data Store: {SelectedComponent} is unselected");
                 SelectedComponent = null;
+                Debug.Log($"Data Store: {mealComponent} is unselected");
             }
+        }
+
+        public float GetTotalPrice()
+        {
+            // Calculate the total price of the food objects
+            return FoodObjects.Sum(food => food.Food.price);
         }
     }
 

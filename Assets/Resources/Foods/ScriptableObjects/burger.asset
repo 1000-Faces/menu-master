@@ -15,7 +15,7 @@ MonoBehaviour:
   foodName: Burger
   description: Sample 2
   category: 1
-  isAvailable: 0
+  isAvailable: 1
   price: 2000
   foodIcon: {fileID: 0}
   prefab: {fileID: 8459644560754191326, guid: 29ed1a29e8831e443b1e5133d4ec892f, type: 3}

@@ -1216,6 +1216,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 759966992053396140, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1554692664453479422, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1376,6 +1381,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4309043834578983305, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_AllowSwitchOff
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4452393660988730990, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -1441,6 +1451,16 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6709221856358547233, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_SubmitButton
+      value: 
+      objectReference: {fileID: 7842844996640358965}
     - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: m_FoodDetailsUI
@@ -1456,6 +1476,17 @@ PrefabInstance:
       propertyPath: m_FoodList.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_FoodListItemTemplate
+      value: 
+      objectReference: {fileID: 260081929532466301, guid: 0f412aa1536b4c74597a526c6ca1cddc,
+        type: 3}
+    - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+        type: 3}
+      propertyPath: m_FoodListItemContainer
+      value: 
+      objectReference: {fileID: 6599607966364634871}
     - target: {fileID: 6975068939344080975, guid: 5105da2ca5a4a8e4cbb471a560047f05,
         type: 3}
       propertyPath: 'm_FoodList.Array.data[0]'
@@ -1499,7 +1530,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6709221856358547233, guid: 5105da2ca5a4a8e4cbb471a560047f05, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5105da2ca5a4a8e4cbb471a560047f05, type: 3}
@@ -1521,3 +1553,21 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7375928667977785497}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &6599607966364634871 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4452393660988730990, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 7375928667977785497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7842844996640358965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 759966992053396140, guid: 5105da2ca5a4a8e4cbb471a560047f05,
+    type: 3}
+  m_PrefabInstance: {fileID: 7375928667977785497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

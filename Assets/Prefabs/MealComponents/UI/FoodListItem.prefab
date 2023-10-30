@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36b79f41451da84cb2c6fc3c7410075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Food: {fileID: 11400000, guid: 020398d7bce561e48b0c37db509bce12, type: 2}
   m_Image: {fileID: 4552302553670663179}
   m_NameText: {fileID: 8385535744764465481}
   m_DescriptionText: {fileID: 2240611452169693446}

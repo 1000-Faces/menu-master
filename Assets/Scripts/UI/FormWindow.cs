@@ -15,7 +15,7 @@ namespace DineEase.UI
     
     public class FormWindow : MonoBehaviour
     {
-        public static event EventHandler<FormResponse> OnFormResponseEvent;
+        public static event EventHandler<FormResponse> FormResponseEvent;
 
         [SerializeField] private TextMeshProUGUI m_Title;
 
@@ -61,7 +61,7 @@ namespace DineEase.UI
             OnCloseExtraFunction?.Invoke();
 
             // fire the event. The message box is closed after this operation is complete / incomplete
-            OnFormResponseEvent?.Invoke(this, new FormResponse { Response = state });
+            FormResponseEvent?.Invoke(this, new FormResponse { Response = state });
         }
 
         public virtual void OnSubmit()
@@ -69,7 +69,7 @@ namespace DineEase.UI
             Hide();
 
             // fire the event. The message box is closed after this operation is completed
-            OnFormResponseEvent?.Invoke(this, new FormResponse { Response = 0 });
+            FormResponseEvent?.Invoke(this, new FormResponse { Response = 0 });
         }
     }
 }
