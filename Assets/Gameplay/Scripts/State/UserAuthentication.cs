@@ -2,17 +2,48 @@ using Firebase.Auth;
 using Firebase;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
+
+public class User
+{
+    public string uid;
+
+    public string username;
+
+    public string email;
+
+    public string password;
+
+    public Uri photoUrl;
+}
 
 public class UserAuthentication : MonoBehaviour
 {
+    public static UserAuthentication Instance { get; private set; }
+
+    FirebaseAuth auth;
+    FirebaseUser user;
+
     // Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;
-    public FirebaseUser user;
+
+    public event EventHandler UserChanged;
+
+    public bool IsLoggedIn => auth.CurrentUser != null;
 
     void Awake()
     {
+        // If there is an instance, and it's not me, delete myself.
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
             var dependencyStatus = task.Result;
             if (dependencyStatus == DependencyStatus.Available)
@@ -20,6 +51,7 @@ public class UserAuthentication : MonoBehaviour
                 InitializeFirebase();
 
                 // Set a flag here to indicate whether Firebase is ready to use by your app.
+                Debug.Log("Firebase initialized");
             }
             else
             {
@@ -61,6 +93,8 @@ public class UserAuthentication : MonoBehaviour
                 //displayName = user.DisplayName ?? "";
                 //emailAddress = user.Email ?? "";
                 //photoUrl = user.PhotoUrl ?? "";
+
+                UserChanged?.Invoke(this, EventArgs.Empty);
             }
         }
     }
@@ -104,5 +138,32 @@ public class UserAuthentication : MonoBehaviour
             Debug.LogFormat("Firebase Auth: User signed in successfully: {0} ({1})",
                 result.User.DisplayName, result.User.UserId);
         });
+    }
+
+    public void SignOut()
+    {
+        auth.SignOut();
+    }
+
+    public User GetUser()
+    {
+        FirebaseUser user = auth.CurrentUser;
+        if (user != null)
+        {
+            User userObj = new()
+            {
+                // The user's Id, unique to the Firebase project.
+                // Do NOT use this value to authenticate with your backend server, if you
+                // have one; use User.TokenAsync() instead.
+                uid = user.UserId,
+                username = user.DisplayName,
+                email = user.Email,
+                photoUrl = user.PhotoUrl
+            };
+
+            return userObj;
+        }
+
+        return null;
     }
 }
