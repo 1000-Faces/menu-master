@@ -24,12 +24,6 @@ public class UnityAuthentication : MonoBehaviour
         SetupEvents();
     }
 
-    private async void Start()
-    {
-        // Sign in anonymously
-        await SignInAnonymouslyAsync();
-    }
-
     // Setup authentication event handlers if desired
     private void SetupEvents()
     {
@@ -79,5 +73,11 @@ public class UnityAuthentication : MonoBehaviour
             // Notify the player with the proper error message
             Debug.LogException(ex);
         }
+    }
+
+    public async Task SignIn()
+    {
+        // Sign in anonymously for Debugging
+        await SignInAnonymouslyAsync();
     }
 }

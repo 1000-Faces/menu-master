@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460397347857",
+    "project_id": "dineease-1fcdb",
+    "storage_bucket": "dineease-1fcdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460397347857:android:de1c54b2b68123c20cddb0",
+        "android_client_info": {
+          "package_name": "com.dineease.menumaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELGN_oHdUVGX_38-thPz6Ca6JTnmjwm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
