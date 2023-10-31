@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 48
+  controlID: 103
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 188
     height: 432
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -224,7 +224,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 16}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -244,15 +244,15 @@ MonoBehaviour:
     y: 432
     width: 1175.2
     height: 298.8
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -911,9 +911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 1, z: 0, w: 0}
   m_Size:
-    m_Target: 0.012936242
+    m_Target: 0.000047532034
     speed: 2
-    m_Value: 0.012936242
+    m_Value: 0.000047532034
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -960,9 +960,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 230.40001
+    x: 188
     y: 73.6
-    width: 942.7999
+    width: 985.19995
     height: 411
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1552,7 +1552,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Foods
+    - Assets/Materials/Foods/Pasta
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1562,16 +1562,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/Foods
+  - Assets/Materials/Foods/Pasta
   m_LastFoldersGridSize: 64
   m_LastProjectPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 414.2}
-    m_SelectedIDs: 9e710000
-    m_LastClickedID: 29086
-    m_ExpandedIDs: 000000007c7100007e7100008071000082710000847100009a71000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 430.2}
+    m_SelectedIDs: 2a720000
+    m_LastClickedID: 29226
+    m_ExpandedIDs: 00000000a4710000a6710000a8710000aa710000ac710000c271000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1599,7 +1599,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c7100007e710000807100008271000084710000
+    m_ExpandedIDs: 00000000a4710000a6710000a8710000aa710000ac710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1626,8 +1626,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e4b50000ea6f0000000000009e7600009e790000a8760000c6760000a27100009071000098790000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000e4b50000ea6f00009e7600009e790000a8760000c6760000a2710000907100009879000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1803,10 +1803,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Git for Unity\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1470
-    y: 73
-    width: 449
-    height: 918
+    x: 1175.2001
+    y: 73.6
+    width: 359.80005
+    height: 709.8
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1818,10 +1818,10 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 952.1760163
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
+  currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 1
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
@@ -1912,39 +1912,54 @@ MonoBehaviour:
   changesView:
     currentBranchHasUpdate: 1
     currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
-    currentBranch: feature/ui
+    currentBranch: dev
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 652960599d8c4485a9ae38409999891a
-        - 32553174355e3a84ba39c93afa89d06f
-        - 8638f987f22d16249baa8e7599dff282
-        - f686fef33db9dee479044545dc43b0b6
-        - 5e92237d8dc4389429ac7799049a5972
-        - b9bc644b2e079e64a86dee20c3257ee7
-        - db5bc8f84a3bd304e88f12cb667fad1d
-        - 319dafa5c80f29f428dc1e0d03f04177
-        - d93dd55b5e3f13549ab7e819935c2b3f
-        - 6c6d684cb56fa7d4f869594e9a2dddb5
-        - a0ea40bd139aedc43b0e8374d6139437
-        - b3830b3b2f190ee46a9c88433e985221
-        - 6ac303adce39adb499d7f5c90a77c1c1
-        - 2e16046ebcbcb6742a86569d82e56cce
-        - f585a443d5224c19adcc94a236a4b2d6
-        - 2fd3e07afe5b461490fb8e314976b1b0
-        - b84cd05e1160fe34cab2585022c8cd99
-        - ad818c36731146e994540a1896ad8f24
-        - e71c638c311acc546a63dbfa61f89ab6
-        - beb4e2871579447497fe41dfb108e2cd
-        - 9e8d040e5e602e4429d8792c25d675fc
-        - 76f3439a0ae796e4b81bee3f91f888ee
-        - 5cd47ffe85058e34b872a21e75f08d40
-        - 6bdce89659816455b9f906fc62d19910
+        - 0a1aa25d695ea4175bf4920feb2742e1
+        - 3414b1fe53b791f4482901887f9fa15c
+        - 4572ed60ec131fd44b094b7e20b16037
+        - 5bf651ed084b5894f8ec087ea361d910
+        - e85576a102e006d429fd8aa2a44afbae
+        - 09fedaab458a71c4fbc86ad1b8774445
+        - 4ab55fc2469121347991e1afd9335f01
+        - 1aee3def8513ff1419e7889fd42300ce
+        - cab3e2eebea084641bb520f78c942722
+        - d58022dc3c115af43a40672bab231f9b
+        - 53adf83a5dd36834a858e8586edc55ea
+        - 59700d6c42320754b80995f8a6eb4aab
+        - e03d75cec8cf77643acf6e79bde9a7be
+        - 3155adcc072090843aab773a44289861
+        - b1e57c343da6a4445a7ebcbefb308346
+        - bb40a2c6b089e9149a90a6672eeb1dfb
+        - 9f8b27ce75ca7204399cb9b8ba57704b
+        - 0b2c7b7a23e71ee4b9ba8bc69c3db188
+        - e3b86140a0d44b04aac356dacb36b071
+        - 262e742d15f1b4d1487c6709552f51e9
+        - ce51e3d34fb32814e9baf91ee0027cfb
+        - 0a5a5fe6b874a2647ab90ee9980e3491
+        - 73c5b3b87d47f9f4b9442bc38fa52ba8
+        - 2aab7ef822b354523935cb8a8fdb23fc
+        - a686623747f1d8b4f9b543a01de45488
+        - bd6d81be35dad664a8a8c1584593f9a0
+        - ad68c89f8177ad340ba9aa95d381e20c
+        - 8a27ea5214b60d64582f3783ee91f00c
+        - 16f1770f52218a94ba108f7f7157b56f
+        - 51b4a5d30641f1743a60fdbe05e9c228
+        - 2075965e3525290439de4fc912a828ac
+        - e1d453a43aef21648b8c6fd92b5222c8
+        - 4d57bb993116a1c4ab027502a6defc99
+        - c65a9885e17f09e41bd4d5ccce472e60
+        - a654386cb30798543bd3e9cf773a3fca
+        - 13365554197979d4a8ba7a9d0dfb7eb4
+        - 5485aa561a7925744bbaa39bcbb9d20b
+        - 70d524f75b7edf64ea617eaab7199cac
+        - a70c80b337bd87044baa918727121281
         values:
         - path: Assets
           label: Assets
@@ -1964,8 +1979,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
+        - path: Assets\Materials
+          label: Materials
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1982,8 +1997,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs\MealComponents
-          label: MealComponents
+        - path: Assets\Materials\Foods
+          label: Foods
           level: 2
           isFolder: 1
           isContainer: 0
@@ -2000,62 +2015,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs\MealComponents\MealComponent.prefab
-          label: MealComponent.prefab
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\MealComponents\MealComponent.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MealComponent.prefab
-            projectPath: Assets\Prefabs\MealComponents\MealComponent.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples
-          label: Samples
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit
-          label: XR Interaction Toolkit
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3
-          label: 2.4.3
+        - path: Assets\Materials\Foods\Sushi
+          label: Sushi
           level: 3
           isFolder: 1
           isContainer: 0
@@ -2072,9 +2033,99 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
-          label: Starter Assets
+        - path: Assets\Materials\Foods\Sushi\Bowl1.mat
+          label: Bowl1.mat
           level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\Sushi\Bowl1.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Bowl1.mat
+            projectPath: Assets\Materials\Foods\Sushi\Bowl1.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\Sushi\Chop.mat
+          label: Chop.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\Sushi\Chop.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Chop.mat
+            projectPath: Assets\Materials\Foods\Sushi\Chop.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\Sushi\Rice.mat
+          label: Rice.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\Sushi\Rice.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Rice.mat
+            projectPath: Assets\Materials\Foods\Sushi\Rice.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\Sushi\Sushi.mat
+          label: Sushi.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\Sushi\Sushi.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Sushi.mat
+            projectPath: Assets\Materials\Foods\Sushi\Sushi.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\Sushi\Table1.mat
+          label: Table1.mat
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\Sushi\Table1.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Table1.mat
+            projectPath: Assets\Materials\Foods\Sushi\Table1.mat
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea
+          label: tea
+          level: 3
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2090,11 +2141,11 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-          label: DemoScene.unity
-          level: 5
+        - path: Assets\Materials\Foods\tea\Cup_color.mat
+          label: Cup_color.mat
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2102,55 +2153,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+            path: Assets\Materials\Foods\tea\Cup_color.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.mat
+            projectPath: Assets\Materials\Foods\tea\Cup_color.mat
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
-          label: Prefabs
-          level: 5
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
-          label: Climb
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-            Wall.prefab
-          label: Climbing Wall.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Cup_color.png
+          label: Cup_color.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2158,20 +2171,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-              Wall.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-              Wall.prefab
+            path: Assets\Materials\Foods\tea\Cup_color.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.png
+            projectPath: Assets\Materials\Foods\tea\Cup_color.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-          label: Ladder.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Cup_nmap.png
+          label: Cup_nmap.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2179,37 +2189,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+            path: Assets\Materials\Foods\tea\Cup_nmap.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_nmap.png
+            projectPath: Assets\Materials\Foods\tea\Cup_nmap.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
-          label: Interactables
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-            Simple Cube.prefab
-          label: Interactable Simple Cube.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Napkin_color.mat
+          label: Napkin_color.mat
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2217,40 +2207,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-              Simple Cube.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-              Simple Cube.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-              Simple Cube.prefab
+            path: Assets\Materials\Foods\tea\Napkin_color.mat
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.mat
+            projectPath: Assets\Materials\Foods\tea\Napkin_color.mat
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
-          label: Interactors
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-            Interactor.prefab
-          label: Direct Interactor.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Napkin_color.png
+          label: Napkin_color.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2258,22 +2225,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-              Interactor.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-              Interactor.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-              Interactor.prefab
+            path: Assets\Materials\Foods\tea\Napkin_color.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.png
+            projectPath: Assets\Materials\Foods\tea\Napkin_color.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-            Interactor.prefab
-          label: Gaze Interactor.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Napkin_nmap.png
+          label: Napkin_nmap.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2281,21 +2243,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-              Interactor.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-              Interactor.prefab
+            path: Assets\Materials\Foods\tea\Napkin_nmap.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_nmap.png
+            projectPath: Assets\Materials\Foods\tea\Napkin_nmap.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-            Interactor.prefab
-          label: Ray Interactor.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Wine_1_color.png
+          label: Wine_1_color.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2303,39 +2261,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-              Interactor.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-              Interactor.prefab
+            path: Assets\Materials\Foods\tea\Wine_1_color.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_color.png
+            projectPath: Assets\Materials\Foods\tea\Wine_1_color.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
-          label: Teleport
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-            Area.prefab
-          label: Teleport Area.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Wine_1_nmap.png
+          label: Wine_1_nmap.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2343,40 +2279,17 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-              Area.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-              Area.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-              Area.prefab
+            path: Assets\Materials\Foods\tea\Wine_1_nmap.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_nmap.png
+            projectPath: Assets\Materials\Foods\tea\Wine_1_nmap.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
-          label: UI_3D
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-            Button.prefab
-          label: Push Button.prefab
-          level: 7
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Wine_2_color.png
+          label: Wine_2_color.png
+          level: 4
           isFolder: 0
-          isContainer: 0
+          isContainer: 1
           isCollapsed: 0
           isHidden: 0
           isActive: 0
@@ -2384,17 +2297,32 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-              Button.prefab
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-              Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
-            projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-              Button.prefab
+            path: Assets\Materials\Foods\tea\Wine_2_color.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_color.png
+            projectPath: Assets\Materials\Foods\tea\Wine_2_color.png
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes
-          label: Scenes
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Materials\Foods\tea\Wine_2_nmap.png
+          label: Wine_2_nmap.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\Foods\tea\Wine_2_nmap.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_nmap.png
+            projectPath: Assets\Materials\Foods\tea\Wine_2_nmap.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models
+          label: Models
           level: 1
           isFolder: 1
           isContainer: 0
@@ -2411,10 +2339,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes\MealCustomizer.unity
-          label: MealCustomizer.unity
+        - path: Assets\Models\Foods
+          label: Foods
           level: 2
-          isFolder: 0
+          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -2423,31 +2351,348 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Scenes\MealCustomizer.unity
-            fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scenes\MealCustomizer.unity
-            projectPath: Assets\Scenes\MealCustomizer.unity
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
             indexStatus: 0
-            workTreeStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Models\Foods\Sushi.fbx
+          label: Sushi.fbx
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Foods\Sushi.fbx
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Sushi.fbx
+            projectPath: Assets\Models\Foods\Sushi.fbx
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Models\Foods\Tea.fbx
+          label: Tea.fbx
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Models\Foods\Tea.fbx
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Tea.fbx
+            projectPath: Assets\Models\Foods\Tea.fbx
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures
+          label: Textures
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Textures\Foods
+          label: Foods
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Textures\Foods\sushi
+          label: sushi
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+          label: Sushi_SP_Bowl1_BaseColor.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+          label: Sushi_SP_Bowl1_Metallic.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+          label: Sushi_SP_Bowl1_Roughness.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+          label: Sushi_SP_Chop_BaseColor.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+          label: Sushi_SP_Chop_Roughness.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+          label: Sushi_SP_Rice_Metallic.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+          label: Sushi_SP_Rice_Normal.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+          label: Sushi_SP_Rice_Roughness.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+          label: Sushi_SP_Sushi_BaseColor.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+          label: Sushi_SP_Sushi_Metallic.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+          label: Sushi_SP_Sushi_Roughness.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+          label: Sushi_SP_Table1_BaseColor.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+          label: Sushi_SP_Table1_Roughness.png
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+            fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+            projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
       folders:
         keys:
         - Assets
-        - Assets\Prefabs
-        - Assets\Prefabs\MealComponents
-        - Assets\Samples
-        - Assets\Samples\XR Interaction Toolkit
-        - Assets\Samples\XR Interaction Toolkit\2.4.3
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
-        - Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
-        - Assets\Scenes
-        - ProjectSettings
-        - UserSettings
-        - UserSettings\Layouts
+        - Assets\Materials
+        - Assets\Materials\Foods
+        - Assets\Materials\Foods\Sushi
+        - Assets\Materials\Foods\tea
+        - Assets\Models
+        - Assets\Models\Foods
+        - Assets\Textures
+        - Assets\Textures\Foods
+        - Assets\Textures\Foods\sushi
         values:
         - path: Assets
           label: Assets
@@ -2467,8 +2712,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
+        - path: Assets\Materials
+          label: Materials
           level: 1
           isFolder: 1
           isContainer: 0
@@ -2485,8 +2730,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Prefabs\MealComponents
-          label: MealComponents
+        - path: Assets\Materials\Foods
+          label: Foods
           level: 2
           isFolder: 1
           isContainer: 0
@@ -2503,44 +2748,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Samples
-          label: Samples
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit
-          label: XR Interaction Toolkit
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3
-          label: 2.4.3
+        - path: Assets\Materials\Foods\Sushi
+          label: Sushi
           level: 3
           isFolder: 1
           isContainer: 0
@@ -2557,9 +2766,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
-          label: Starter Assets
-          level: 4
+        - path: Assets\Materials\Foods\tea
+          label: tea
+          level: 3
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2575,116 +2784,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
-          label: Prefabs
-          level: 5
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
-          label: Climb
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
-          label: Interactables
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
-          label: Interactors
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
-          label: Teleport
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
-          label: UI_3D
-          level: 6
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+        - path: Assets\Models
+          label: Models
           level: 1
           isFolder: 1
           isContainer: 0
@@ -2701,9 +2802,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
-          level: 0
+        - path: Assets\Models\Foods
+          label: Foods
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2719,27 +2820,45 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
+        - path: Assets\Textures
+          label: Textures
           level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Textures\Foods
+          label: Foods
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Textures\Foods\sushi
+          label: sushi
+          level: 3
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -2801,8 +2920,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Prefabs
-        label: Prefabs
+      - path: Assets\Materials
+        label: Materials
         level: 1
         isFolder: 1
         isContainer: 0
@@ -2819,8 +2938,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Prefabs\MealComponents
-        label: MealComponents
+      - path: Assets\Materials\Foods
+        label: Foods
         level: 2
         isFolder: 1
         isContainer: 0
@@ -2837,8 +2956,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Prefabs\MealComponents\MealComponent.prefab
-        label: MealComponent.prefab
+      - path: Assets\Materials\Foods\Sushi.meta
+        label: Sushi.meta
         level: 3
         isFolder: 0
         isContainer: 0
@@ -2849,50 +2968,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Prefabs\MealComponents\MealComponent.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MealComponent.prefab
-          projectPath: Assets\Prefabs\MealComponents\MealComponent.prefab
+          path: Assets\Materials\Foods\Sushi.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi.meta
+          projectPath: Assets\Materials\Foods\Sushi.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples
-        label: Samples
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit
-        label: XR Interaction Toolkit
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3
-        label: 2.4.3
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi
+        label: Sushi
         level: 3
         isFolder: 1
         isContainer: 0
@@ -2909,11 +2992,11 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets
-        label: Starter Assets
+      - path: Assets\Materials\Foods\Sushi\Bowl1.mat
+        label: Bowl1.mat
         level: 4
-        isFolder: 1
-        isContainer: 0
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -2921,14 +3004,14 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\Sushi\Bowl1.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Bowl1.mat
+          projectPath: Assets\Materials\Foods\Sushi\Bowl1.mat
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-        label: DemoScene.unity
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Bowl1.mat.meta
+        label: Bowl1.mat.meta
         level: 5
         isFolder: 0
         isContainer: 0
@@ -2939,16 +3022,177 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+          path: Assets\Materials\Foods\Sushi\Bowl1.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Bowl1.mat.meta
+          projectPath: Assets\Materials\Foods\Sushi\Bowl1.mat.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs
-        label: Prefabs
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Chop.mat
+        label: Chop.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Chop.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Chop.mat
+          projectPath: Assets\Materials\Foods\Sushi\Chop.mat
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Chop.mat.meta
+        label: Chop.mat.meta
         level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Chop.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Chop.mat.meta
+          projectPath: Assets\Materials\Foods\Sushi\Chop.mat.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Rice.mat
+        label: Rice.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Rice.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Rice.mat
+          projectPath: Assets\Materials\Foods\Sushi\Rice.mat
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Rice.mat.meta
+        label: Rice.mat.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Rice.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Rice.mat.meta
+          projectPath: Assets\Materials\Foods\Sushi\Rice.mat.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Sushi.mat
+        label: Sushi.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Sushi.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Sushi.mat
+          projectPath: Assets\Materials\Foods\Sushi\Sushi.mat
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Sushi.mat.meta
+        label: Sushi.mat.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Sushi.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Sushi.mat.meta
+          projectPath: Assets\Materials\Foods\Sushi\Sushi.mat.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Table1.mat
+        label: Table1.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Table1.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Table1.mat
+          projectPath: Assets\Materials\Foods\Sushi\Table1.mat
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\Sushi\Table1.mat.meta
+        label: Table1.mat.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\Sushi\Table1.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Table1.mat.meta
+          projectPath: Assets\Materials\Foods\Sushi\Table1.mat.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea.meta
+        label: tea.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea.meta
+          projectPath: Assets\Materials\Foods\tea.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea
+        label: tea
+        level: 3
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -2964,11 +3208,11 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb
-        label: Climb
-        level: 6
-        isFolder: 1
-        isContainer: 0
+      - path: Assets\Materials\Foods\tea\Cup_color.mat
+        label: Cup_color.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -2976,16 +3220,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\tea\Cup_color.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.mat
+          projectPath: Assets\Materials\Foods\tea\Cup_color.mat
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-          Wall.prefab
-        label: Climbing Wall.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Cup_color.mat.meta
+        label: Cup_color.mat.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -2995,18 +3238,33 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-            Wall.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-            Wall.prefab
+          path: Assets\Materials\Foods\tea\Cup_color.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.mat.meta
+          projectPath: Assets\Materials\Foods\tea\Cup_color.mat.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-        label: Ladder.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Cup_color.png
+        label: Cup_color.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Cup_color.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.png
+          projectPath: Assets\Materials\Foods\tea\Cup_color.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Cup_color.png.meta
+        label: Cup_color.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3016,18 +3274,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+          path: Assets\Materials\Foods\tea\Cup_color.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.png.meta
+          projectPath: Assets\Materials\Foods\tea\Cup_color.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables
-        label: Interactables
-        level: 6
-        isFolder: 1
-        isContainer: 0
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Cup_nmap.png
+        label: Cup_nmap.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -3035,16 +3292,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\tea\Cup_nmap.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_nmap.png
+          projectPath: Assets\Materials\Foods\tea\Cup_nmap.png
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-          Simple Cube.prefab
-        label: Interactable Simple Cube.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Cup_nmap.png.meta
+        label: Cup_nmap.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3054,21 +3310,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-            Simple Cube.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-            Simple Cube.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-            Simple Cube.prefab
+          path: Assets\Materials\Foods\tea\Cup_nmap.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_nmap.png.meta
+          projectPath: Assets\Materials\Foods\tea\Cup_nmap.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors
-        label: Interactors
-        level: 6
-        isFolder: 1
-        isContainer: 0
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_color.mat
+        label: Napkin_color.mat
+        level: 4
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -3076,16 +3328,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\tea\Napkin_color.mat
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.mat
+          projectPath: Assets\Materials\Foods\tea\Napkin_color.mat
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-          Interactor.prefab
-        label: Direct Interactor.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_color.mat.meta
+        label: Napkin_color.mat.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3095,19 +3346,33 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-            Interactor.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct Interactor.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-            Interactor.prefab
+          path: Assets\Materials\Foods\tea\Napkin_color.mat.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.mat.meta
+          projectPath: Assets\Materials\Foods\tea\Napkin_color.mat.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-          Interactor.prefab
-        label: Gaze Interactor.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_color.png
+        label: Napkin_color.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Napkin_color.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.png
+          projectPath: Assets\Materials\Foods\tea\Napkin_color.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_color.png.meta
+        label: Napkin_color.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3117,19 +3382,33 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-            Interactor.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-            Interactor.prefab
+          path: Assets\Materials\Foods\tea\Napkin_color.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.png.meta
+          projectPath: Assets\Materials\Foods\tea\Napkin_color.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-          Interactor.prefab
-        label: Ray Interactor.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_nmap.png
+        label: Napkin_nmap.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Napkin_nmap.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_nmap.png
+          projectPath: Assets\Materials\Foods\tea\Napkin_nmap.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+        label: Napkin_nmap.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3139,20 +3418,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-            Interactor.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-            Interactor.prefab
+          path: Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+          projectPath: Assets\Materials\Foods\tea\Napkin_nmap.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport
-        label: Teleport
-        level: 6
-        isFolder: 1
-        isContainer: 0
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_1_color.png
+        label: Wine_1_color.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -3160,16 +3436,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\tea\Wine_1_color.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_color.png
+          projectPath: Assets\Materials\Foods\tea\Wine_1_color.png
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-          Area.prefab
-        label: Teleport Area.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_1_color.png.meta
+        label: Wine_1_color.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3179,20 +3454,17 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-            Area.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport Area.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-            Area.prefab
+          path: Assets\Materials\Foods\tea\Wine_1_color.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_color.png.meta
+          projectPath: Assets\Materials\Foods\tea\Wine_1_color.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D
-        label: UI_3D
-        level: 6
-        isFolder: 1
-        isContainer: 0
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_1_nmap.png
+        label: Wine_1_nmap.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
         isCollapsed: 0
         isHidden: 0
         isActive: 0
@@ -3200,16 +3472,15 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Materials\Foods\tea\Wine_1_nmap.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_nmap.png
+          projectPath: Assets\Materials\Foods\tea\Wine_1_nmap.png
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-          Button.prefab
-        label: Push Button.prefab
-        level: 7
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+        label: Wine_1_nmap.png.meta
+        level: 5
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3219,17 +3490,86 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-            Button.prefab
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-            Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
-          projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-            Button.prefab
+          path: Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+          projectPath: Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes
-        label: Scenes
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_2_color.png
+        label: Wine_2_color.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Wine_2_color.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_color.png
+          projectPath: Assets\Materials\Foods\tea\Wine_2_color.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_2_color.png.meta
+        label: Wine_2_color.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Wine_2_color.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_color.png.meta
+          projectPath: Assets\Materials\Foods\tea\Wine_2_color.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_2_nmap.png
+        label: Wine_2_nmap.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Wine_2_nmap.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_nmap.png
+          projectPath: Assets\Materials\Foods\tea\Wine_2_nmap.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+        label: Wine_2_nmap.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+          projectPath: Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models
+        label: Models
         level: 1
         isFolder: 1
         isContainer: 0
@@ -3246,27 +3586,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scenes\MealCustomizer.unity
-        label: MealCustomizer.unity
+      - path: Assets\Models\Foods
+        label: Foods
         level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\MealCustomizer.unity
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scenes\MealCustomizer.unity
-          projectPath: Assets\Scenes\MealCustomizer.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: ProjectSettings
-        label: ProjectSettings
-        level: 0
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -3282,9 +3604,27 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: ProjectSettings\PackageManagerSettings.asset
-        label: PackageManagerSettings.asset
-        level: 1
+      - path: Assets\Models\Foods\Sushi.fbx
+        label: Sushi.fbx
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Foods\Sushi.fbx
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Sushi.fbx
+          projectPath: Assets\Models\Foods\Sushi.fbx
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Foods\Sushi.fbx.meta
+        label: Sushi.fbx.meta
+        level: 4
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3294,15 +3634,51 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: ProjectSettings\PackageManagerSettings.asset
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\ProjectSettings\PackageManagerSettings.asset
-          projectPath: ProjectSettings\PackageManagerSettings.asset
+          path: Assets\Models\Foods\Sushi.fbx.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Sushi.fbx.meta
+          projectPath: Assets\Models\Foods\Sushi.fbx.meta
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Foods\Tea.fbx
+        label: Tea.fbx
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Foods\Tea.fbx
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Tea.fbx
+          projectPath: Assets\Models\Foods\Tea.fbx
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Models\Foods\Tea.fbx.meta
+        label: Tea.fbx.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Models\Foods\Tea.fbx.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Tea.fbx.meta
+          projectPath: Assets\Models\Foods\Tea.fbx.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures
+        label: Textures
+        level: 1
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -3318,45 +3694,27 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2023.dwlt
-        label: default-2023.dwlt
+      - path: Assets\Textures\Foods
+        label: Foods
         level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Textures\Foods\sushi.meta
+        label: sushi.meta
+        level: 3
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
@@ -3366,12 +3724,498 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: UserSettings\Layouts\default-2023.dwlt
-          fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\Layouts\default-2023.dwlt
-          projectPath: UserSettings\Layouts\default-2023.dwlt
+          path: Assets\Textures\Foods\sushi.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi.meta
+          projectPath: Assets\Textures\Foods\sushi.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi
+        label: sushi
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+        label: Sushi_SP_Bowl1_BaseColor.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+        label: Sushi_SP_Bowl1_BaseColor.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+        label: Sushi_SP_Bowl1_Metallic.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+        label: Sushi_SP_Bowl1_Metallic.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+        label: Sushi_SP_Bowl1_Roughness.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+        label: Sushi_SP_Bowl1_Roughness.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+        label: Sushi_SP_Chop_BaseColor.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+        label: Sushi_SP_Chop_BaseColor.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+        label: Sushi_SP_Chop_Roughness.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+        label: Sushi_SP_Chop_Roughness.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+        label: Sushi_SP_Rice_Metallic.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+        label: Sushi_SP_Rice_Metallic.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+        label: Sushi_SP_Rice_Normal.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+        label: Sushi_SP_Rice_Normal.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+        label: Sushi_SP_Rice_Roughness.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+        label: Sushi_SP_Rice_Roughness.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+        label: Sushi_SP_Sushi_BaseColor.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+        label: Sushi_SP_Sushi_BaseColor.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+        label: Sushi_SP_Sushi_Metallic.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+        label: Sushi_SP_Sushi_Metallic.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+        label: Sushi_SP_Sushi_Roughness.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+        label: Sushi_SP_Sushi_Roughness.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+        label: Sushi_SP_Table1_BaseColor.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+        label: Sushi_SP_Table1_BaseColor.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+        label: Sushi_SP_Table1_Roughness.png
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+        label: Sushi_SP_Table1_Roughness.png.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+          fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+          projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       selectedNode:
         path: 
         label: 
@@ -3392,120 +4236,390 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Prefabs\MealComponents\MealComponent.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Prefabs\MealComponents\MealComponent.prefab
-      projectPath: Assets\Prefabs\MealComponents\MealComponent.prefab
+    - path: Assets\Materials\Foods\Sushi.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi.meta
+      projectPath: Assets\Materials\Foods\Sushi.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\DemoScene.unity
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Bowl1.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Bowl1.mat
+      projectPath: Assets\Materials\Foods\Sushi\Bowl1.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-        Wall.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing Wall.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Climbing
-        Wall.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Bowl1.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Bowl1.mat.meta
+      projectPath: Assets\Materials\Foods\Sushi\Bowl1.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Climb\Ladder.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Chop.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Chop.mat
+      projectPath: Assets\Materials\Foods\Sushi\Chop.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-        Simple Cube.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-        Simple Cube.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactables\Interactable
-        Simple Cube.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Chop.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Chop.mat.meta
+      projectPath: Assets\Materials\Foods\Sushi\Chop.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-        Interactor.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct Interactor.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Direct
-        Interactor.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Rice.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Rice.mat
+      projectPath: Assets\Materials\Foods\Sushi\Rice.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-        Interactor.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze Interactor.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Gaze
-        Interactor.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Rice.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Rice.mat.meta
+      projectPath: Assets\Materials\Foods\Sushi\Rice.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-        Interactor.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray Interactor.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Interactors\Ray
-        Interactor.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Sushi.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Sushi.mat
+      projectPath: Assets\Materials\Foods\Sushi\Sushi.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-        Area.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport Area.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\Teleport\Teleport
-        Area.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Sushi.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Sushi.mat.meta
+      projectPath: Assets\Materials\Foods\Sushi\Sushi.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-        Button.prefab
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Samples\XR
-        Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push Button.prefab
-      projectPath: Assets\Samples\XR Interaction Toolkit\2.4.3\Starter Assets\Prefabs\UI_3D\Push
-        Button.prefab
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Table1.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Table1.mat
+      projectPath: Assets\Materials\Foods\Sushi\Table1.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\MealCustomizer.unity
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\Assets\Scenes\MealCustomizer.unity
-      projectPath: Assets\Scenes\MealCustomizer.unity
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\Sushi\Table1.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\Sushi\Table1.mat.meta
+      projectPath: Assets\Materials\Foods\Sushi\Table1.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: ProjectSettings\PackageManagerSettings.asset
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\ProjectSettings\PackageManagerSettings.asset
-      projectPath: ProjectSettings\PackageManagerSettings.asset
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea.meta
+      projectPath: Assets\Materials\Foods\tea.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_color.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.mat
+      projectPath: Assets\Materials\Foods\tea\Cup_color.mat
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2023.dwlt
-      fullPath: C:\Users\dashe\My Projects\DineEase\Menu Master\UserSettings\Layouts\default-2023.dwlt
-      projectPath: UserSettings\Layouts\default-2023.dwlt
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_color.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.mat.meta
+      projectPath: Assets\Materials\Foods\tea\Cup_color.mat.meta
       originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 14 changed files
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_color.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.png
+      projectPath: Assets\Materials\Foods\tea\Cup_color.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_color.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_color.png.meta
+      projectPath: Assets\Materials\Foods\tea\Cup_color.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_nmap.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_nmap.png
+      projectPath: Assets\Materials\Foods\tea\Cup_nmap.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Cup_nmap.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Cup_nmap.png.meta
+      projectPath: Assets\Materials\Foods\tea\Cup_nmap.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_color.mat
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.mat
+      projectPath: Assets\Materials\Foods\tea\Napkin_color.mat
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_color.mat.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.mat.meta
+      projectPath: Assets\Materials\Foods\tea\Napkin_color.mat.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_color.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.png
+      projectPath: Assets\Materials\Foods\tea\Napkin_color.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_color.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_color.png.meta
+      projectPath: Assets\Materials\Foods\tea\Napkin_color.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_nmap.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_nmap.png
+      projectPath: Assets\Materials\Foods\tea\Napkin_nmap.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+      projectPath: Assets\Materials\Foods\tea\Napkin_nmap.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_1_color.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_color.png
+      projectPath: Assets\Materials\Foods\tea\Wine_1_color.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_1_color.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_color.png.meta
+      projectPath: Assets\Materials\Foods\tea\Wine_1_color.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_1_nmap.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_nmap.png
+      projectPath: Assets\Materials\Foods\tea\Wine_1_nmap.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+      projectPath: Assets\Materials\Foods\tea\Wine_1_nmap.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_2_color.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_color.png
+      projectPath: Assets\Materials\Foods\tea\Wine_2_color.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_2_color.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_color.png.meta
+      projectPath: Assets\Materials\Foods\tea\Wine_2_color.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_2_nmap.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_nmap.png
+      projectPath: Assets\Materials\Foods\tea\Wine_2_nmap.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+      projectPath: Assets\Materials\Foods\tea\Wine_2_nmap.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Foods\Sushi.fbx
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Sushi.fbx
+      projectPath: Assets\Models\Foods\Sushi.fbx
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Foods\Sushi.fbx.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Sushi.fbx.meta
+      projectPath: Assets\Models\Foods\Sushi.fbx.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Foods\Tea.fbx
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Tea.fbx
+      projectPath: Assets\Models\Foods\Tea.fbx
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Models\Foods\Tea.fbx.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Models\Foods\Tea.fbx.meta
+      projectPath: Assets\Models\Foods\Tea.fbx.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi.meta
+      projectPath: Assets\Textures\Foods\sushi.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_BaseColor.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Metallic.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Bowl1_Roughness.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_BaseColor.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Chop_Roughness.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Metallic.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Normal.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Rice_Roughness.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_BaseColor.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Metallic.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Sushi_Roughness.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_BaseColor.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+      fullPath: D:\All_works\2023\3rd year project\AR-models\dev\menu-master\Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+      projectPath: Assets\Textures\Foods\sushi\Sushi_SP_Table1_Roughness.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    changedFilesText: 63 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-10-31T09:15:53.074+05:30
+      updatedTimeString: 2023-10-31T19:44:58.176+05:30
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-10-31T09:21:02.851+05:30
+      updatedTimeString: 2023-10-31T19:45:00.411+05:30
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -13222,31 +14336,31 @@ MonoBehaviour:
       m_Tooltip: 
       m_TextWithWhitespace: "Release Lock (forced)\u200B"
   hasRemote: 1
-  currentRemoteName: D-Naveenz
-  currentBranch: feature/core
-  currentRemoteUrl: https://github.com/D-Naveenz/menu-master.git
+  currentRemoteName: origin
+  currentBranch: dev
+  currentRemoteUrl: https://github.com/Amandi130/menu-master.git
   statusAhead: 0
   statusBehind: 0
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
-    m_Text: feature/core
+    m_Text: dev
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
-    m_TextWithWhitespace: "feature/core\u200B"
+    m_TextWithWhitespace: "dev\u200B"
   currentRemoteUrlContent:
-    m_Text: https://github.com/D-Naveenz/menu-master.git
+    m_Text: https://github.com/Amandi130/menu-master.git
     m_Image: {fileID: 0}
-    m_Tooltip: Url of the D-Naveenz remote
-    m_TextWithWhitespace: "https://github.com/D-Naveenz/menu-master.git\u200B"
+    m_Tooltip: Url of the origin remote
+    m_TextWithWhitespace: "https://github.com/Amandi130/menu-master.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
     updatedTimeString: 2023-09-14T21:32:27.304+05:30
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-09-14T21:41:14.106+05:30
+    updatedTimeString: 2023-10-31T19:40:23.288+05:30
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-09-14T21:41:14.093+05:30
+    updatedTimeString: 2023-10-31T19:40:23.273+05:30
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -13268,7 +14382,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: 
     m_TextWithWhitespace: "Fetch\u200B"
-  repositoryProgressValue: 1
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
