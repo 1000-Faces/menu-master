@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LoginWindow : FormWindow
 {
-    [SerializeField] InputField m_EmailText;
-    [SerializeField] InputField m_PasswordText;
+    [SerializeField] TMP_InputField m_EmailText;
+    [SerializeField] TMP_InputField m_PasswordText;
 
     public override void OnSubmit()
     {
