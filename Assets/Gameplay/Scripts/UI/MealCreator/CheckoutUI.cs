@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 
 [Serializable]
@@ -98,33 +97,16 @@ public class CheckoutUI : FormWindow
             foodIDList.Add(item.Food.guid);
         }
 
-        // create the meal
-        StartCoroutine(CreateMeal(foodIDList));
-
-        base.OnSubmit();
-    }
-
-    IEnumerator CreateMeal(List<string> foodIDList)
-    {
         // Serialize the foodIDList to JSON
         string json = JsonUtility.ToJson(new FoodIDList { foodIDs = foodIDList });
 
-        // Create the UnityWebRequest
-        // TODO: Change the URL to the API URL
-        using UnityWebRequest request = new("https://dineease-api.azurewebsites.net/myapi", "POST");
-        request.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
+        // create the meal
+        StartCoroutine(HttpRequest.PostRequest("https://dineaase.azurewebsites.net/api/Meal?email=" + HttpRequest.MakeEmailString(UserAuthentication.Instance.GetUser().email), 
+            json, (string jsonResponse) =>
+            {
+                Debug.Log("Meal created: " + jsonResponse);
+            }));
 
-        yield return request.SendWebRequest();
-
-        if (request.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log(request.error);
-        }
-        else
-        {
-            Debug.Log("Form upload complete!");
-        }
+        base.OnSubmit();
     }
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a677113b657e1a6408658a9b38a27b16, type: 3}
+  m_Name: pork_bun
+  m_EditorClassIdentifier: 
+  guid: 
+  foodName: Pork Bun
+  description: 
+  category: 2
+  price: 600
+  foodIcon: {fileID: 0}
+  prefab: {fileID: 6444438640303507083, guid: c83ece1a9e371e349b250fce839aed67, type: 3}
+  isAvailable: 1
+  requirePlatform: 0
