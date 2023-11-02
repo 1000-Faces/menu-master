@@ -1,3 +1,4 @@
+using Google.MiniJSON;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ public class UserDisplay : MonoBehaviour
         {
             m_UsernameObject.SetActive(true);
             // Set the username text to the user's username
-            m_UsernameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = user.username;
+            GetUsername(UserAuthentication.Instance.GetUser().email);
         }
     }
 
@@ -47,5 +48,26 @@ public class UserDisplay : MonoBehaviour
         {
             m_LoginWindow.Open();
         }
+    }
+
+    public void GetUsername(string email)
+    {
+        StartCoroutine(HttpRequest.GetRequest("https://dineaase.azurewebsites.net/api/user/get?email=" + HttpRequest.MakeEmailString(email), (string jsonResponse) =>
+        {
+            if (jsonResponse == null)
+            {
+                Debug.LogError("Error: jsonResponse is null");
+                return;
+            }
+
+            // Parse the JSON response into a dictionary.
+            var dict = Json.Deserialize(jsonResponse) as Dictionary<string, object>;
+
+            // Get the user's username
+            string username = dict["username"] as string;
+
+            // Set the username text to the user's username
+            m_UsernameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = username;
+        }));
     }
 }
